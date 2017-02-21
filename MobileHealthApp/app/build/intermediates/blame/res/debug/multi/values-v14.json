@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v14/values-v14.xml",
+        "outputFile": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v14/values-v14.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 94
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-v14/dimens.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-v14/dimens.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -31,7 +31,7 @@
                     "endOffset": 370
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-v14/values-v14.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-v14/values-v14.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -51,7 +51,7 @@
                     "endOffset": 441
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-v14/values-v14.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-v14/values-v14.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -70,7 +70,7 @@
                     "endOffset": 524
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-v14/values-v14.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-v14/values-v14.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -90,7 +90,7 @@
                     "endOffset": 934
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-v14/values-v14.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-v14/values-v14.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -111,7 +111,7 @@
                     "endOffset": 1356
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-v14/values-v14.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-v14/values-v14.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -131,7 +131,7 @@
                     "endOffset": 1476
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-v14/values-v14.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-v14/values-v14.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
@@ -150,7 +150,7 @@
                     "endOffset": 1539
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-v14/values-v14.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-v14/values-v14.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,
@@ -170,7 +170,7 @@
                     "endOffset": 1693
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-v14/values-v14.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-v14/values-v14.xml",
                     "position": {
                         "startLine": 23,
                         "startColumn": 4,
@@ -190,7 +190,7 @@
                     "endOffset": 1756
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-v14/values-v14.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-v14/values-v14.xml",
                     "position": {
                         "startLine": 26,
                         "startColumn": 4,
@@ -209,7 +209,7 @@
                     "endOffset": 1888
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-v14/values-v14.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-v14/values-v14.xml",
                     "position": {
                         "startLine": 27,
                         "startColumn": 4,

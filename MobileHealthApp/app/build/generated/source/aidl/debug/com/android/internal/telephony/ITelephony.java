@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: /home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/aidl/com/android/internal/telephony/ITelephony.aidl
+ * Original file: /home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/aidl/com/android/internal/telephony/ITelephony.aidl
  */
 package com.android.internal.telephony;
 public interface ITelephony extends android.os.IInterface

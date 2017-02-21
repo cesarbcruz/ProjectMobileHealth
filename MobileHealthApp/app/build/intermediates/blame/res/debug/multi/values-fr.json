@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fr/values-fr.xml",
+        "outputFile": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fr/values-fr.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 93
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 348,
                         "startColumn": 2,
@@ -30,7 +30,7 @@
                     "endOffset": 140
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 302,
                         "startColumn": 2,
@@ -49,7 +49,7 @@
                     "endOffset": 185
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 349,
                         "startColumn": 2,
@@ -68,7 +68,7 @@
                     "endOffset": 311
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 286,
                         "startColumn": 2,
@@ -87,7 +87,7 @@
                     "endOffset": 359
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 136,
                         "startColumn": 2,
@@ -106,7 +106,7 @@
                     "endOffset": 470
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -125,7 +125,7 @@
                     "endOffset": 578
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -144,7 +144,7 @@
                     "endOffset": 701
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -163,7 +163,7 @@
                     "endOffset": 816
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -182,7 +182,7 @@
                     "endOffset": 927
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -201,7 +201,7 @@
                     "endOffset": 1009
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -220,7 +220,7 @@
                     "endOffset": 1115
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -239,7 +239,7 @@
                     "endOffset": 1245
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -258,7 +258,7 @@
                     "endOffset": 1328
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -277,7 +277,7 @@
                     "endOffset": 1408
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -296,7 +296,7 @@
                     "endOffset": 1494
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -315,7 +315,7 @@
                     "endOffset": 1604
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -334,7 +334,7 @@
                     "endOffset": 1716
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -353,7 +353,7 @@
                     "endOffset": 1819
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -372,7 +372,7 @@
                     "endOffset": 1930
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -391,7 +391,7 @@
                     "endOffset": 2037
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -410,7 +410,7 @@
                     "endOffset": 2144
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -429,7 +429,7 @@
                     "endOffset": 2266
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -448,7 +448,7 @@
                     "endOffset": 2365
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -467,7 +467,7 @@
                     "endOffset": 2440
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 270,
                         "startColumn": 2,
@@ -486,7 +486,7 @@
                     "endOffset": 2524
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 272,
                         "startColumn": 2,
@@ -505,7 +505,7 @@
                     "endOffset": 2607
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 271,
                         "startColumn": 2,
@@ -524,7 +524,7 @@
                     "endOffset": 2683
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 273,
                         "startColumn": 2,
@@ -543,7 +543,7 @@
                     "endOffset": 2759
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 319,
                         "startColumn": 2,
@@ -562,7 +562,7 @@
                     "endOffset": 2809
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 2,
@@ -581,7 +581,7 @@
                     "endOffset": 2882
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 159,
                         "startColumn": 2,
@@ -600,7 +600,7 @@
                     "endOffset": 2930
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 2,
@@ -619,7 +619,7 @@
                     "endOffset": 2985
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 2,
@@ -638,7 +638,7 @@
                     "endOffset": 3325
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 321,
                         "startColumn": 2,
@@ -658,7 +658,7 @@
                     "endOffset": 3845
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 322,
                         "startColumn": 2,
@@ -678,7 +678,7 @@
                     "endOffset": 3965
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 325,
                         "startColumn": 2,
@@ -697,7 +697,7 @@
                     "endOffset": 4035
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 288,
                         "startColumn": 2,
@@ -716,7 +716,7 @@
                     "endOffset": 4091
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 290,
                         "startColumn": 2,
@@ -735,7 +735,7 @@
                     "endOffset": 4157
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 291,
                         "startColumn": 2,
@@ -754,7 +754,7 @@
                     "endOffset": 4257
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 297,
                         "startColumn": 2,
@@ -773,7 +773,7 @@
                     "endOffset": 4322
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 292,
                         "startColumn": 2,
@@ -792,7 +792,7 @@
                     "endOffset": 4395
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 289,
                         "startColumn": 2,
@@ -811,7 +811,7 @@
                     "endOffset": 4488
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 241,
                         "startColumn": 2,
@@ -830,7 +830,7 @@
                     "endOffset": 4545
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 296,
                         "startColumn": 2,
@@ -849,7 +849,7 @@
                     "endOffset": 4593
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 220,
                         "startColumn": 2,
@@ -868,7 +868,7 @@
                     "endOffset": 4641
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 216,
                         "startColumn": 2,
@@ -887,7 +887,7 @@
                     "endOffset": 4689
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 221,
                         "startColumn": 2,
@@ -906,7 +906,7 @@
                     "endOffset": 4755
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 222,
                         "startColumn": 2,
@@ -925,7 +925,7 @@
                     "endOffset": 4803
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 215,
                         "startColumn": 2,
@@ -944,7 +944,7 @@
                     "endOffset": 4851
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 219,
                         "startColumn": 2,
@@ -963,7 +963,7 @@
                     "endOffset": 4899
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 217,
                         "startColumn": 2,
@@ -982,7 +982,7 @@
                     "endOffset": 4947
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 218,
                         "startColumn": 2,
@@ -1001,7 +1001,7 @@
                     "endOffset": 4991
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 72,
                         "startColumn": 2,
@@ -1020,7 +1020,7 @@
                     "endOffset": 5108
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 162,
                         "startColumn": 2,
@@ -1039,7 +1039,7 @@
                     "endOffset": 5161
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 32,
                         "startColumn": 2,
@@ -1058,7 +1058,7 @@
                     "endOffset": 5301
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 152,
                         "startColumn": 2,
@@ -1077,7 +1077,7 @@
                     "endOffset": 5359
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 33,
                         "startColumn": 2,
@@ -1096,7 +1096,7 @@
                     "endOffset": 5409
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 2,
@@ -1115,7 +1115,7 @@
                     "endOffset": 5468
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 179,
                         "startColumn": 2,
@@ -1134,7 +1134,7 @@
                     "endOffset": 5571
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 24,
                         "startColumn": 2,
@@ -1153,7 +1153,7 @@
                     "endOffset": 5652
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 2,
@@ -1172,7 +1172,7 @@
                     "endOffset": 5715
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 25,
                         "startColumn": 2,
@@ -1191,7 +1191,7 @@
                     "endOffset": 5783
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 26,
                         "startColumn": 2,
@@ -1210,7 +1210,7 @@
                     "endOffset": 5873
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 27,
                         "startColumn": 2,
@@ -1229,7 +1229,7 @@
                     "endOffset": 5968
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 28,
                         "startColumn": 2,
@@ -1248,7 +1248,7 @@
                     "endOffset": 6043
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 2,
@@ -1267,7 +1267,7 @@
                     "endOffset": 6125
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 2,
@@ -1286,7 +1286,7 @@
                     "endOffset": 6221
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 29,
                         "startColumn": 2,
@@ -1305,7 +1305,7 @@
                     "endOffset": 6322
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 30,
                         "startColumn": 2,
@@ -1324,7 +1324,7 @@
                     "endOffset": 6439
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 31,
                         "startColumn": 2,
@@ -1343,7 +1343,7 @@
                     "endOffset": 6500
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 2,
@@ -1362,7 +1362,7 @@
                     "endOffset": 6587
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 2,
@@ -1381,7 +1381,7 @@
                     "endOffset": 6653
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 23,
                         "startColumn": 2,
@@ -1400,7 +1400,7 @@
                     "endOffset": 6717
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 155,
                         "startColumn": 2,
@@ -1419,7 +1419,7 @@
                     "endOffset": 6813
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 298,
                         "startColumn": 2,
@@ -1438,7 +1438,7 @@
                     "endOffset": 6861
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 295,
                         "startColumn": 2,
@@ -1457,7 +1457,7 @@
                     "endOffset": 6921
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 293,
                         "startColumn": 2,
@@ -1476,7 +1476,7 @@
                     "endOffset": 6998
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 294,
                         "startColumn": 2,
@@ -1495,7 +1495,7 @@
                     "endOffset": 7077
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 141,
                         "startColumn": 2,
@@ -1514,7 +1514,7 @@
                     "endOffset": 7167
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 140,
                         "startColumn": 2,
@@ -1533,7 +1533,7 @@
                     "endOffset": 7262
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 188,
                         "startColumn": 2,
@@ -1552,7 +1552,7 @@
                     "endOffset": 7339
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 182,
                         "startColumn": 2,
@@ -1571,7 +1571,7 @@
                     "endOffset": 7415
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 230,
                         "startColumn": 2,
@@ -1590,7 +1590,7 @@
                     "endOffset": 7538
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 146,
                         "startColumn": 2,
@@ -1609,7 +1609,7 @@
                     "endOffset": 7633
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 225,
                         "startColumn": 2,
@@ -1628,7 +1628,7 @@
                     "endOffset": 7677
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 257,
                         "startColumn": 2,
@@ -1647,7 +1647,7 @@
                     "endOffset": 7746
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 305,
                         "startColumn": 2,
@@ -1666,7 +1666,7 @@
                     "endOffset": 7793
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 132,
                         "startColumn": 2,
@@ -1685,7 +1685,7 @@
                     "endOffset": 7851
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 131,
                         "startColumn": 2,
@@ -1704,7 +1704,7 @@
                     "endOffset": 7907
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 135,
                         "startColumn": 2,
@@ -1723,7 +1723,7 @@
                     "endOffset": 7975
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 134,
                         "startColumn": 2,
@@ -1742,7 +1742,7 @@
                     "endOffset": 8079
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 210,
                         "startColumn": 2,
@@ -1761,7 +1761,7 @@
                     "endOffset": 8165
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 209,
                         "startColumn": 2,
@@ -1780,7 +1780,7 @@
                     "endOffset": 8242
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 2,
@@ -1799,7 +1799,7 @@
                     "endOffset": 8375
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 2,
@@ -1818,7 +1818,7 @@
                     "endOffset": 8451
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 2,
@@ -1837,7 +1837,7 @@
                     "endOffset": 8516
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 2,
@@ -1856,7 +1856,7 @@
                     "endOffset": 8591
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 2,
@@ -1875,7 +1875,7 @@
                     "endOffset": 8676
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 2,
@@ -1894,7 +1894,7 @@
                     "endOffset": 8763
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 229,
                         "startColumn": 2,
@@ -1913,7 +1913,7 @@
                     "endOffset": 8851
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 213,
                         "startColumn": 2,
@@ -1932,7 +1932,7 @@
                     "endOffset": 8937
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 2,
@@ -1951,7 +1951,7 @@
                     "endOffset": 9024
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 2,
@@ -1970,7 +1970,7 @@
                     "endOffset": 9089
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 284,
                         "startColumn": 2,
@@ -1989,7 +1989,7 @@
                     "endOffset": 9139
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 283,
                         "startColumn": 2,
@@ -2008,7 +2008,7 @@
                     "endOffset": 9229
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 228,
                         "startColumn": 2,
@@ -2027,7 +2027,7 @@
                     "endOffset": 9368
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 338,
                         "startColumn": 2,
@@ -2046,7 +2046,7 @@
                     "endOffset": 9477
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 341,
                         "startColumn": 2,
@@ -2065,7 +2065,7 @@
                     "endOffset": 9592
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 342,
                         "startColumn": 2,
@@ -2084,7 +2084,7 @@
                     "endOffset": 9701
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 339,
                         "startColumn": 2,
@@ -2103,7 +2103,7 @@
                     "endOffset": 9842
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 343,
                         "startColumn": 2,
@@ -2122,7 +2122,7 @@
                     "endOffset": 10038
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 344,
                         "startColumn": 2,
@@ -2141,7 +2141,7 @@
                     "endOffset": 10138
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 328,
                         "startColumn": 2,
@@ -2160,7 +2160,7 @@
                     "endOffset": 10245
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 332,
                         "startColumn": 2,
@@ -2179,7 +2179,7 @@
                     "endOffset": 10415
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 337,
                         "startColumn": 2,
@@ -2198,7 +2198,7 @@
                     "endOffset": 10497
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 327,
                         "startColumn": 2,
@@ -2217,7 +2217,7 @@
                     "endOffset": 10587
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 329,
                         "startColumn": 2,
@@ -2236,7 +2236,7 @@
                     "endOffset": 10675
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 331,
                         "startColumn": 2,
@@ -2255,7 +2255,7 @@
                     "endOffset": 10783
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 335,
                         "startColumn": 2,
@@ -2274,7 +2274,7 @@
                     "endOffset": 10922
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 334,
                         "startColumn": 2,
@@ -2293,7 +2293,7 @@
                     "endOffset": 11059
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 333,
                         "startColumn": 2,
@@ -2312,7 +2312,7 @@
                     "endOffset": 11196
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 346,
                         "startColumn": 2,
@@ -2331,7 +2331,7 @@
                     "endOffset": 11347
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 345,
                         "startColumn": 2,
@@ -2350,7 +2350,7 @@
                     "endOffset": 11414
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 347,
                         "startColumn": 2,
@@ -2369,7 +2369,7 @@
                     "endOffset": 11607
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 330,
                         "startColumn": 2,
@@ -2388,7 +2388,7 @@
                     "endOffset": 11734
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 336,
                         "startColumn": 2,
@@ -2407,7 +2407,7 @@
                     "endOffset": 11961
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 340,
                         "startColumn": 2,
@@ -2426,7 +2426,7 @@
                     "endOffset": 12118
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 326,
                         "startColumn": 2,
@@ -2445,7 +2445,7 @@
                     "endOffset": 12176
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 300,
                         "startColumn": 2,
@@ -2464,7 +2464,7 @@
                     "endOffset": 12227
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 299,
                         "startColumn": 2,
@@ -2483,7 +2483,7 @@
                     "endOffset": 12290
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 274,
                         "startColumn": 2,
@@ -2502,7 +2502,7 @@
                     "endOffset": 12347
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 160,
                         "startColumn": 2,
@@ -2521,7 +2521,7 @@
                     "endOffset": 12675
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 180,
                         "startColumn": 2,
@@ -2540,7 +2540,7 @@
                     "endOffset": 12724
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 181,
                         "startColumn": 2,
@@ -2559,7 +2559,7 @@
                     "endOffset": 12794
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 158,
                         "startColumn": 2,
@@ -2578,7 +2578,7 @@
                     "endOffset": 12862
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 157,
                         "startColumn": 2,
@@ -2597,7 +2597,7 @@
                     "endOffset": 12977
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 301,
                         "startColumn": 2,
@@ -2616,7 +2616,7 @@
                     "endOffset": 13018
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 173,
                         "startColumn": 2,
@@ -2635,7 +2635,7 @@
                     "endOffset": 13206
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 151,
                         "startColumn": 2,
@@ -2654,7 +2654,7 @@
                     "endOffset": 13386
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 39,
                         "startColumn": 2,
@@ -2673,7 +2673,7 @@
                     "endOffset": 13548
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 38,
                         "startColumn": 2,
@@ -2692,7 +2692,7 @@
                     "endOffset": 13674
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 243,
                         "startColumn": 2,
@@ -2711,7 +2711,7 @@
                     "endOffset": 13765
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 247,
                         "startColumn": 2,
@@ -2730,7 +2730,7 @@
                     "endOffset": 13895
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 278,
                         "startColumn": 2,
@@ -2749,7 +2749,7 @@
                     "endOffset": 13979
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 147,
                         "startColumn": 2,
@@ -2768,7 +2768,7 @@
                     "endOffset": 14076
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 309,
                         "startColumn": 2,
@@ -2788,7 +2788,7 @@
                     "endOffset": 14681
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 310,
                         "startColumn": 2,
@@ -2808,7 +2808,7 @@
                     "endOffset": 14732
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 154,
                         "startColumn": 2,
@@ -2827,7 +2827,7 @@
                     "endOffset": 14788
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 187,
                         "startColumn": 2,
@@ -2846,7 +2846,7 @@
                     "endOffset": 14864
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 149,
                         "startColumn": 2,
@@ -2865,7 +2865,7 @@
                     "endOffset": 14950
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 150,
                         "startColumn": 2,
@@ -2884,7 +2884,7 @@
                     "endOffset": 15085
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 231,
                         "startColumn": 2,
@@ -2903,7 +2903,7 @@
                     "endOffset": 15239
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 234,
                         "startColumn": 2,
@@ -2922,7 +2922,7 @@
                     "endOffset": 15323
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 148,
                         "startColumn": 2,
@@ -2941,7 +2941,7 @@
                     "endOffset": 15363
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 175,
                         "startColumn": 2,
@@ -2960,7 +2960,7 @@
                     "endOffset": 15448
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 266,
                         "startColumn": 2,
@@ -2979,7 +2979,7 @@
                     "endOffset": 15518
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 306,
                         "startColumn": 2,
@@ -2998,7 +2998,7 @@
                     "endOffset": 15604
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 269,
                         "startColumn": 2,
@@ -3017,7 +3017,7 @@
                     "endOffset": 15678
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 265,
                         "startColumn": 2,
@@ -3036,7 +3036,7 @@
                     "endOffset": 15770
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 268,
                         "startColumn": 2,
@@ -3055,7 +3055,7 @@
                     "endOffset": 15844
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 267,
                         "startColumn": 2,
@@ -3074,7 +3074,7 @@
                     "endOffset": 15918
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 258,
                         "startColumn": 2,
@@ -3093,7 +3093,7 @@
                     "endOffset": 15957
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 172,
                         "startColumn": 2,
@@ -3112,7 +3112,7 @@
                     "endOffset": 16061
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 169,
                         "startColumn": 2,
@@ -3131,7 +3131,7 @@
                     "endOffset": 16162
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 285,
                         "startColumn": 2,
@@ -3150,7 +3150,7 @@
                     "endOffset": 16239
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 282,
                         "startColumn": 2,
@@ -3169,7 +3169,7 @@
                     "endOffset": 16371
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 40,
                         "startColumn": 2,
@@ -3188,7 +3188,7 @@
                     "endOffset": 16623
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 42,
                         "startColumn": 2,
@@ -3207,7 +3207,7 @@
                     "endOffset": 16829
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 41,
                         "startColumn": 2,
@@ -3226,7 +3226,7 @@
                     "endOffset": 16914
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 245,
                         "startColumn": 2,
@@ -3245,7 +3245,7 @@
                     "endOffset": 17011
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 277,
                         "startColumn": 2,
@@ -3264,7 +3264,7 @@
                     "endOffset": 17095
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 246,
                         "startColumn": 2,
@@ -3283,7 +3283,7 @@
                     "endOffset": 17188
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 244,
                         "startColumn": 2,
@@ -3302,7 +3302,7 @@
                     "endOffset": 17321
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 178,
                         "startColumn": 2,
@@ -3321,7 +3321,7 @@
                     "endOffset": 17475
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 177,
                         "startColumn": 2,
@@ -3340,7 +3340,7 @@
                     "endOffset": 17533
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 183,
                         "startColumn": 2,
@@ -3359,7 +3359,7 @@
                     "endOffset": 17678
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 281,
                         "startColumn": 2,
@@ -3378,7 +3378,7 @@
                     "endOffset": 17757
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 227,
                         "startColumn": 2,
@@ -3397,7 +3397,7 @@
                     "endOffset": 17886
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 280,
                         "startColumn": 2,
@@ -3416,7 +3416,7 @@
                     "endOffset": 17992
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 279,
                         "startColumn": 2,
@@ -3435,7 +3435,7 @@
                     "endOffset": 18053
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 199,
                         "startColumn": 2,
@@ -3454,7 +3454,7 @@
                     "endOffset": 18131
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 190,
                         "startColumn": 2,
@@ -3473,7 +3473,7 @@
                     "endOffset": 18168
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 153,
                         "startColumn": 2,
@@ -3492,7 +3492,7 @@
                     "endOffset": 18209
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 74,
                         "startColumn": 2,
@@ -3511,7 +3511,7 @@
                     "endOffset": 18264
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 130,
                         "startColumn": 2,
@@ -3530,7 +3530,7 @@
                     "endOffset": 18358
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 237,
                         "startColumn": 2,
@@ -3549,7 +3549,7 @@
                     "endOffset": 18452
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 238,
                         "startColumn": 2,
@@ -3568,7 +3568,7 @@
                     "endOffset": 18537
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 236,
                         "startColumn": 2,
@@ -3587,7 +3587,7 @@
                     "endOffset": 18616
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 235,
                         "startColumn": 2,
@@ -3606,7 +3606,7 @@
                     "endOffset": 18656
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 174,
                         "startColumn": 2,
@@ -3625,7 +3625,7 @@
                     "endOffset": 18713
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 164,
                         "startColumn": 2,
@@ -3644,7 +3644,7 @@
                     "endOffset": 18804
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 168,
                         "startColumn": 2,
@@ -3663,7 +3663,7 @@
                     "endOffset": 18895
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 165,
                         "startColumn": 2,
@@ -3682,7 +3682,7 @@
                     "endOffset": 18983
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 167,
                         "startColumn": 2,
@@ -3701,7 +3701,7 @@
                     "endOffset": 19081
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 166,
                         "startColumn": 2,
@@ -3720,7 +3720,7 @@
                     "endOffset": 19264
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 233,
                         "startColumn": 2,
@@ -3739,7 +3739,7 @@
                     "endOffset": 19378
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 232,
                         "startColumn": 2,
@@ -3758,7 +3758,7 @@
                     "endOffset": 19467
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 248,
                         "startColumn": 2,
@@ -3777,7 +3777,7 @@
                     "endOffset": 19534
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 251,
                         "startColumn": 2,
@@ -3796,7 +3796,7 @@
                     "endOffset": 19629
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 249,
                         "startColumn": 2,
@@ -3815,7 +3815,7 @@
                     "endOffset": 19729
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 250,
                         "startColumn": 2,
@@ -3834,7 +3834,7 @@
                     "endOffset": 19989
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 354,
                         "startColumn": 2,
@@ -3853,7 +3853,7 @@
                     "endOffset": 20054
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 80,
                         "startColumn": 2,
@@ -3872,7 +3872,7 @@
                     "endOffset": 20142
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 79,
                         "startColumn": 2,
@@ -3891,7 +3891,7 @@
                     "endOffset": 20237
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 78,
                         "startColumn": 2,
@@ -3910,7 +3910,7 @@
                     "endOffset": 20321
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 77,
                         "startColumn": 2,
@@ -3929,7 +3929,7 @@
                     "endOffset": 20373
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 49,
                         "startColumn": 2,
@@ -3948,7 +3948,7 @@
                     "endOffset": 20452
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 89,
                         "startColumn": 2,
@@ -3967,7 +3967,7 @@
                     "endOffset": 20529
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 81,
                         "startColumn": 2,
@@ -3986,7 +3986,7 @@
                     "endOffset": 20592
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 50,
                         "startColumn": 2,
@@ -4005,7 +4005,7 @@
                     "endOffset": 20664
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 86,
                         "startColumn": 2,
@@ -4024,7 +4024,7 @@
                     "endOffset": 20732
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 45,
                         "startColumn": 2,
@@ -4043,7 +4043,7 @@
                     "endOffset": 20793
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 106,
                         "startColumn": 2,
@@ -4062,7 +4062,7 @@
                     "endOffset": 20861
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 60,
                         "startColumn": 2,
@@ -4081,7 +4081,7 @@
                     "endOffset": 20925
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 75,
                         "startColumn": 2,
@@ -4100,7 +4100,7 @@
                     "endOffset": 21002
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 184,
                         "startColumn": 2,
@@ -4119,7 +4119,7 @@
                     "endOffset": 21087
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 202,
                         "startColumn": 2,
@@ -4138,7 +4138,7 @@
                     "endOffset": 21188
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 105,
                         "startColumn": 2,
@@ -4157,7 +4157,7 @@
                     "endOffset": 21292
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 104,
                         "startColumn": 2,
@@ -4176,7 +4176,7 @@
                     "endOffset": 21372
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 103,
                         "startColumn": 2,
@@ -4195,7 +4195,7 @@
                     "endOffset": 21452
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 362,
                         "startColumn": 2,
@@ -4214,7 +4214,7 @@
                     "endOffset": 21542
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 204,
                         "startColumn": 2,
@@ -4233,7 +4233,7 @@
                     "endOffset": 21634
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 203,
                         "startColumn": 2,
@@ -4252,7 +4252,7 @@
                     "endOffset": 21714
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 206,
                         "startColumn": 2,
@@ -4271,7 +4271,7 @@
                     "endOffset": 21805
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 207,
                         "startColumn": 2,
@@ -4290,7 +4290,7 @@
                     "endOffset": 21895
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 208,
                         "startColumn": 2,
@@ -4309,7 +4309,7 @@
                     "endOffset": 22002
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 205,
                         "startColumn": 2,
@@ -4328,7 +4328,7 @@
                     "endOffset": 22086
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 201,
                         "startColumn": 2,
@@ -4347,7 +4347,7 @@
                     "endOffset": 22164
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 191,
                         "startColumn": 2,
@@ -4366,7 +4366,7 @@
                     "endOffset": 22343
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 101,
                         "startColumn": 2,
@@ -4385,7 +4385,7 @@
                     "endOffset": 22529
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 52,
                         "startColumn": 2,
@@ -4404,7 +4404,7 @@
                     "endOffset": 22735
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 261,
                         "startColumn": 2,
@@ -4423,7 +4423,7 @@
                     "endOffset": 22873
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 95,
                         "startColumn": 2,
@@ -4442,7 +4442,7 @@
                     "endOffset": 23013
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 97,
                         "startColumn": 2,
@@ -4461,7 +4461,7 @@
                     "endOffset": 23211
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 262,
                         "startColumn": 2,
@@ -4480,7 +4480,7 @@
                     "endOffset": 23384
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 111,
                         "startColumn": 2,
@@ -4499,7 +4499,7 @@
                     "endOffset": 23527
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 264,
                         "startColumn": 2,
@@ -4518,7 +4518,7 @@
                     "endOffset": 23681
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 58,
                         "startColumn": 2,
@@ -4537,7 +4537,7 @@
                     "endOffset": 23833
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 59,
                         "startColumn": 2,
@@ -4556,7 +4556,7 @@
                     "endOffset": 23966
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 69,
                         "startColumn": 2,
@@ -4575,7 +4575,7 @@
                     "endOffset": 24110
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 65,
                         "startColumn": 2,
@@ -4594,7 +4594,7 @@
                     "endOffset": 24266
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 123,
                         "startColumn": 2,
@@ -4613,7 +4613,7 @@
                     "endOffset": 24507
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 119,
                         "startColumn": 2,
@@ -4632,7 +4632,7 @@
                     "endOffset": 24743
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 115,
                         "startColumn": 2,
@@ -4651,7 +4651,7 @@
                     "endOffset": 24899
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 117,
                         "startColumn": 2,
@@ -4671,7 +4671,7 @@
                     "endOffset": 25137
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 317,
                         "startColumn": 2,
@@ -4691,7 +4691,7 @@
                     "endOffset": 25322
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 121,
                         "startColumn": 2,
@@ -4710,7 +4710,7 @@
                     "endOffset": 25436
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 357,
                         "startColumn": 2,
@@ -4729,7 +4729,7 @@
                     "endOffset": 25596
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 99,
                         "startColumn": 2,
@@ -4748,7 +4748,7 @@
                     "endOffset": 25761
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 71,
                         "startColumn": 2,
@@ -4767,7 +4767,7 @@
                     "endOffset": 25812
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 55,
                         "startColumn": 2,
@@ -4786,7 +4786,7 @@
                     "endOffset": 25863
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 54,
                         "startColumn": 2,
@@ -4805,7 +4805,7 @@
                     "endOffset": 25936
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 48,
                         "startColumn": 2,
@@ -4824,7 +4824,7 @@
                     "endOffset": 26051
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 100,
                         "startColumn": 2,
@@ -4843,7 +4843,7 @@
                     "endOffset": 26141
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 76,
                         "startColumn": 2,
@@ -4862,7 +4862,7 @@
                     "endOffset": 26219
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 84,
                         "startColumn": 2,
@@ -4881,7 +4881,7 @@
                     "endOffset": 26297
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 85,
                         "startColumn": 2,
@@ -4900,7 +4900,7 @@
                     "endOffset": 26360
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 82,
                         "startColumn": 2,
@@ -4919,7 +4919,7 @@
                     "endOffset": 26436
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 83,
                         "startColumn": 2,
@@ -4938,7 +4938,7 @@
                     "endOffset": 26523
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 51,
                         "startColumn": 2,
@@ -4957,7 +4957,7 @@
                     "endOffset": 26597
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 87,
                         "startColumn": 2,
@@ -4976,7 +4976,7 @@
                     "endOffset": 26708
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 260,
                         "startColumn": 2,
@@ -4995,7 +4995,7 @@
                     "endOffset": 26796
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 94,
                         "startColumn": 2,
@@ -5014,7 +5014,7 @@
                     "endOffset": 26904
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 96,
                         "startColumn": 2,
@@ -5033,7 +5033,7 @@
                     "endOffset": 27036
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 46,
                         "startColumn": 2,
@@ -5052,7 +5052,7 @@
                     "endOffset": 27122
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 47,
                         "startColumn": 2,
@@ -5071,7 +5071,7 @@
                     "endOffset": 27221
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 276,
                         "startColumn": 2,
@@ -5090,7 +5090,7 @@
                     "endOffset": 27276
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 56,
                         "startColumn": 2,
@@ -5109,7 +5109,7 @@
                     "endOffset": 27354
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 107,
                         "startColumn": 2,
@@ -5128,7 +5128,7 @@
                     "endOffset": 27444
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 110,
                         "startColumn": 2,
@@ -5147,7 +5147,7 @@
                     "endOffset": 27510
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 108,
                         "startColumn": 2,
@@ -5166,7 +5166,7 @@
                     "endOffset": 27578
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 109,
                         "startColumn": 2,
@@ -5185,7 +5185,7 @@
                     "endOffset": 27709
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 263,
                         "startColumn": 2,
@@ -5204,7 +5204,7 @@
                     "endOffset": 27806
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 57,
                         "startColumn": 2,
@@ -5223,7 +5223,7 @@
                     "endOffset": 27881
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 68,
                         "startColumn": 2,
@@ -5242,7 +5242,7 @@
                     "endOffset": 27960
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 62,
                         "startColumn": 2,
@@ -5261,7 +5261,7 @@
                     "endOffset": 28058
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 66,
                         "startColumn": 2,
@@ -5280,7 +5280,7 @@
                     "endOffset": 28137
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 64,
                         "startColumn": 2,
@@ -5299,7 +5299,7 @@
                     "endOffset": 28214
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 61,
                         "startColumn": 2,
@@ -5318,7 +5318,7 @@
                     "endOffset": 28278
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 63,
                         "startColumn": 2,
@@ -5337,7 +5337,7 @@
                     "endOffset": 28369
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 90,
                         "startColumn": 2,
@@ -5356,7 +5356,7 @@
                     "endOffset": 28461
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 122,
                         "startColumn": 2,
@@ -5375,7 +5375,7 @@
                     "endOffset": 28540
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 118,
                         "startColumn": 2,
@@ -5394,7 +5394,7 @@
                     "endOffset": 28636
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 114,
                         "startColumn": 2,
@@ -5413,7 +5413,7 @@
                     "endOffset": 28736
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 116,
                         "startColumn": 2,
@@ -5432,7 +5432,7 @@
                     "endOffset": 28856
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 316,
                         "startColumn": 2,
@@ -5451,7 +5451,7 @@
                     "endOffset": 28946
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 120,
                         "startColumn": 2,
@@ -5470,7 +5470,7 @@
                     "endOffset": 29016
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 102,
                         "startColumn": 2,
@@ -5489,7 +5489,7 @@
                     "endOffset": 29107
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 124,
                         "startColumn": 2,
@@ -5508,7 +5508,7 @@
                     "endOffset": 29180
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 88,
                         "startColumn": 2,
@@ -5527,7 +5527,7 @@
                     "endOffset": 29265
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 91,
                         "startColumn": 2,
@@ -5546,7 +5546,7 @@
                     "endOffset": 29343
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 92,
                         "startColumn": 2,
@@ -5565,7 +5565,7 @@
                     "endOffset": 29425
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 93,
                         "startColumn": 2,
@@ -5584,7 +5584,7 @@
                     "endOffset": 29497
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 127,
                         "startColumn": 2,
@@ -5603,7 +5603,7 @@
                     "endOffset": 29584
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 356,
                         "startColumn": 2,
@@ -5622,7 +5622,7 @@
                     "endOffset": 29665
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 98,
                         "startColumn": 2,
@@ -5641,7 +5641,7 @@
                     "endOffset": 29716
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 53,
                         "startColumn": 2,
@@ -5660,7 +5660,7 @@
                     "endOffset": 29785
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 126,
                         "startColumn": 2,
@@ -5679,7 +5679,7 @@
                     "endOffset": 29854
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 70,
                         "startColumn": 2,
@@ -5698,7 +5698,7 @@
                     "endOffset": 29912
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 125,
                         "startColumn": 2,
@@ -5717,7 +5717,7 @@
                     "endOffset": 30004
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 67,
                         "startColumn": 2,
@@ -5736,7 +5736,7 @@
                     "endOffset": 30081
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 186,
                         "startColumn": 2,
@@ -5755,7 +5755,7 @@
                     "endOffset": 30193
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 170,
                         "startColumn": 2,
@@ -5774,7 +5774,7 @@
                     "endOffset": 30273
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 129,
                         "startColumn": 2,
@@ -5793,7 +5793,7 @@
                     "endOffset": 30348
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 171,
                         "startColumn": 2,
@@ -5812,7 +5812,7 @@
                     "endOffset": 30457
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 128,
                         "startColumn": 2,
@@ -5831,7 +5831,7 @@
                     "endOffset": 30498
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 176,
                         "startColumn": 2,
@@ -5850,7 +5850,7 @@
                     "endOffset": 30567
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 189,
                         "startColumn": 2,
@@ -5869,7 +5869,7 @@
                     "endOffset": 30631
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 239,
                         "startColumn": 2,
@@ -5888,7 +5888,7 @@
                     "endOffset": 30732
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-fr/values-fr.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
@@ -5907,7 +5907,7 @@
                     "endOffset": 30832
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 145,
                         "startColumn": 2,
@@ -5926,7 +5926,7 @@
                     "endOffset": 30957
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 143,
                         "startColumn": 2,
@@ -5945,7 +5945,7 @@
                     "endOffset": 31090
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 142,
                         "startColumn": 2,
@@ -5964,7 +5964,7 @@
                     "endOffset": 31202
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 144,
                         "startColumn": 2,
@@ -5983,7 +5983,7 @@
                     "endOffset": 31240
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 137,
                         "startColumn": 2,
@@ -6002,7 +6002,7 @@
                     "endOffset": 31307
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 138,
                         "startColumn": 2,
@@ -6021,7 +6021,7 @@
                     "endOffset": 31437
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 139,
                         "startColumn": 2,
@@ -6040,7 +6040,7 @@
                     "endOffset": 31484
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 360,
                         "startColumn": 2,
@@ -6059,7 +6059,7 @@
                     "endOffset": 31535
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 361,
                         "startColumn": 2,
@@ -6078,7 +6078,7 @@
                     "endOffset": 31612
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 214,
                         "startColumn": 2,
@@ -6097,7 +6097,7 @@
                     "endOffset": 31692
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 161,
                         "startColumn": 2,
@@ -6116,7 +6116,7 @@
                     "endOffset": 31777
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 35,
                         "startColumn": 2,
@@ -6135,7 +6135,7 @@
                     "endOffset": 31859
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 2,
@@ -6154,7 +6154,7 @@
                     "endOffset": 31924
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 211,
                         "startColumn": 2,
@@ -6173,7 +6173,7 @@
                     "endOffset": 31994
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 2,
@@ -6192,7 +6192,7 @@
                     "endOffset": 32078
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 320,
                         "startColumn": 2,
@@ -6211,7 +6211,7 @@
                     "endOffset": 32136
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 2,
@@ -6230,7 +6230,7 @@
                     "endOffset": 32211
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 156,
                         "startColumn": 2,
@@ -6249,7 +6249,7 @@
                     "endOffset": 32313
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 37,
                         "startColumn": 2,
@@ -6268,7 +6268,7 @@
                     "endOffset": 32395
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 163,
                         "startColumn": 2,
@@ -6287,7 +6287,7 @@
                     "endOffset": 32476
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 308,
                         "startColumn": 2,
@@ -6306,7 +6306,7 @@
                     "endOffset": 32560
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 353,
                         "startColumn": 2,
@@ -6325,7 +6325,7 @@
                     "endOffset": 32636
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 212,
                         "startColumn": 2,
@@ -6344,7 +6344,7 @@
                     "endOffset": 32699
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 44,
                         "startColumn": 2,
@@ -6363,7 +6363,7 @@
                     "endOffset": 32775
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 185,
                         "startColumn": 2,
@@ -6382,7 +6382,7 @@
                     "endOffset": 32838
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 351,
                         "startColumn": 2,
@@ -6401,7 +6401,7 @@
                     "endOffset": 32916
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 113,
                         "startColumn": 2,
@@ -6420,7 +6420,7 @@
                     "endOffset": 33021
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 112,
                         "startColumn": 2,
@@ -6439,7 +6439,7 @@
                     "endOffset": 33073
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 359,
                         "startColumn": 2,
@@ -6458,7 +6458,7 @@
                     "endOffset": 33120
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 358,
                         "startColumn": 2,
@@ -6477,7 +6477,7 @@
                     "endOffset": 33175
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 133,
                         "startColumn": 2,
@@ -6496,7 +6496,7 @@
                     "endOffset": 33288
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 304,
                         "startColumn": 2,
@@ -6515,7 +6515,7 @@
                     "endOffset": 33422
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 253,
                         "startColumn": 2,
@@ -6534,7 +6534,7 @@
                     "endOffset": 33529
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 254,
                         "startColumn": 2,
@@ -6553,7 +6553,7 @@
                     "endOffset": 33674
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 255,
                         "startColumn": 2,
@@ -6572,7 +6572,7 @@
                     "endOffset": 33776
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 303,
                         "startColumn": 2,
@@ -6591,7 +6591,7 @@
                     "endOffset": 33934
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 252,
                         "startColumn": 2,
@@ -6610,7 +6610,7 @@
                     "endOffset": 34042
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 256,
                         "startColumn": 2,
@@ -6629,7 +6629,7 @@
                     "endOffset": 34120
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 242,
                         "startColumn": 2,
@@ -6648,7 +6648,7 @@
                     "endOffset": 34209
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 275,
                         "startColumn": 2,
@@ -6667,7 +6667,7 @@
                     "endOffset": 34341
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 226,
                         "startColumn": 2,
@@ -6686,7 +6686,7 @@
                     "endOffset": 34488
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 223,
                         "startColumn": 2,
@@ -6705,7 +6705,7 @@
                     "endOffset": 34583
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 224,
                         "startColumn": 2,
@@ -6724,7 +6724,7 @@
                     "endOffset": 34648
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 198,
                         "startColumn": 2,
@@ -6743,7 +6743,7 @@
                     "endOffset": 34704
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 195,
                         "startColumn": 2,
@@ -6762,7 +6762,7 @@
                     "endOffset": 34763
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 194,
                         "startColumn": 2,
@@ -6781,7 +6781,7 @@
                     "endOffset": 34823
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 197,
                         "startColumn": 2,
@@ -6800,7 +6800,7 @@
                     "endOffset": 34881
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 193,
                         "startColumn": 2,
@@ -6819,7 +6819,7 @@
                     "endOffset": 34944
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 192,
                         "startColumn": 2,
@@ -6838,7 +6838,7 @@
                     "endOffset": 35013
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 196,
                         "startColumn": 2,
@@ -6857,7 +6857,7 @@
                     "endOffset": 35063
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 200,
                         "startColumn": 2,
@@ -6876,7 +6876,7 @@
                     "endOffset": 35139
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 287,
                         "startColumn": 2,
@@ -6895,7 +6895,7 @@
                     "endOffset": 35547
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 355,
                         "startColumn": 2,
@@ -6914,7 +6914,7 @@
                     "endOffset": 35652
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 259,
                         "startColumn": 2,
@@ -6933,7 +6933,7 @@
                     "endOffset": 35726
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 240,
                         "startColumn": 2,
@@ -6952,7 +6952,7 @@
                     "endOffset": 35796
                 },
                 "from": {
-                    "file": "/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/src/main/res/values-fr/strings.xml",
+                    "file": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/values-fr/strings.xml",
                     "position": {
                         "startLine": 73,
                         "startColumn": 2,

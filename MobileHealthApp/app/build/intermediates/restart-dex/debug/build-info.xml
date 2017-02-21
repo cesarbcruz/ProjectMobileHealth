@@ -5,39 +5,32 @@
     density="xxxhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="5560687209588"
-    token="5327032859851700985"
-    verifier="COMPATIBLE" >
+    timestamp="6962439467643"
+    token="8456951780275958484"
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="2408" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="1334" />
     <task
         name="verifier"
-        duration="0" />
+        duration="105" />
 
     <artifact
-        location="/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
-        type="RESOURCES" />
+        location="/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/outputs/apk/app-debug.apk"
+        type="MAIN" />
 
     <build
-        timestamp="929830399985"
+        timestamp="6962439467643"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/outputs/apk/app-debug.apk"
-            type="MAIN" />
-    </build>
-    <build
-        timestamp="39117660139926"
-        verifier="FULL_BUILD_REQUESTED" >
-        <artifact
-            location="/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/outputs/apk/app-debug.apk"
+            location="/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
 

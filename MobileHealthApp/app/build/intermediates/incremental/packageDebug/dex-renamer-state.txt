@@ -1,7 +1,4 @@
-#Sun Feb 19 14:01:54 BRT 2017
-base.0=/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_a92d39a65bbb1338da85cefaaa724e2c0179d5b3
-renamed.1=classes2.dex
+#Sun Feb 19 15:43:55 BRT 2017
+base.0=/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.0=classes.dex
-file.1=/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_a1e0661b4cba51078709ca1ad0062a6e03fac250/classes.dex
-base.1=/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_a1e0661b4cba51078709ca1ad0062a6e03fac250
-file.0=/home/cesar/Desenvolvimento/repositorio/github/Gadgetbridge/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_a92d39a65bbb1338da85cefaaa724e2c0179d5b3/classes.dex
+file.0=/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
