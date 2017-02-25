@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd52a478-d50c-4871-960e-d921ea658290" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/index.html" afterPath="$PROJECT_DIR$/core/templates/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/djangoecommerce/__init__.py" afterPath="$PROJECT_DIR$/mobilehealth/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/djangoecommerce/local_settings.py.example" afterPath="$PROJECT_DIR$/mobilehealth/local_settings.py.example" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/djangoecommerce/settings.py" afterPath="$PROJECT_DIR$/mobilehealth/settings.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/djangoecommerce/urls.py" afterPath="$PROJECT_DIR$/mobilehealth/urls.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/djangoecommerce/wsgi.py" afterPath="$PROJECT_DIR$/mobilehealth/wsgi.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manage.py" afterPath="$PROJECT_DIR$/manage.py" />
     </list>
     <ignored path="MobileHealthWeb.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,7 +29,7 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/djangoecommerce/settings.py">
+        <entry file="file://$PROJECT_DIR$/mobilehealth/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="527">
               <caret line="142" column="20" selection-start-line="142" selection-start-column="20" selection-end-line="142" selection-end-column="20" />
@@ -73,21 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/core/templates/index.html">
+      <file leaf-file-name="local_settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mobilehealth/local_settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="157" selection-start-line="7" selection-start-column="157" selection-end-line="7" selection-end-column="157" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="local_settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/djangoecommerce/local_settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="40" column="7" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
+            <state relative-caret-position="90">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -170,7 +165,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="djangoecommerce" />
+              <option name="myItemId" value="mobilehealth" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -396,15 +391,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/djangoecommerce/local_settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="7" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/djangoecommerce/settings.py">
+    <entry file="file://$PROJECT_DIR$/mobilehealth/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="142" column="20" selection-start-line="142" selection-start-column="20" selection-end-line="142" selection-end-column="20" />
@@ -436,6 +423,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/core/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/core/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -444,10 +439,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/mobilehealth/local_settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="157" selection-start-line="7" selection-start-column="157" selection-end-line="7" selection-end-column="157" />
+        <state relative-caret-position="90">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding />
         </state>
       </provider>

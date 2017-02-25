@@ -59,7 +59,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'djangoecommerce.urls'
+ROOT_URLCONF = 'mobilehealth.urls'
 
 TEMPLATES = [
     {
@@ -79,7 +79,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'djangoecommerce.wsgi.application'
+WSGI_APPLICATION = 'mobilehealth.wsgi.application'
 
 
 # Database
