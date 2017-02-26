@@ -34,3 +34,10 @@ def contact(request):
         'success': success
     }
     return render(request, 'contact.html', context)
+
+
+def apresentacao(request):
+    return render(request, 'presentation.html')
+
+def solucao(request):
+    return render(request, 'solution.html')

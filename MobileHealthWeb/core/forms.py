@@ -17,6 +17,6 @@ class ContactForm(forms.Form):
         message = self.cleaned_data['message']
         message = 'Nome: {0}\nE-mail:{1}\n{2}'.format(name, email, message)
         send_mail(
-            'Contato do Django E-Commerce', message, settings.DEFAULT_FROM_EMAIL,
+            'Contato do Mobile Health', message, settings.DEFAULT_FROM_EMAIL,
             [settings.DEFAULT_FROM_EMAIL]
         )
