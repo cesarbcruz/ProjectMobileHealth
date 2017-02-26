@@ -15,7 +15,7 @@ public class TimestampValueFormatter implements IAxisValueFormatter {
     private DateFormat dateFormat;
 
     public TimestampValueFormatter() {
-        this(new SimpleDateFormat("HH:mm:ss"));
+        this(new SimpleDateFormat("HH:mm"));
 
     }
 
