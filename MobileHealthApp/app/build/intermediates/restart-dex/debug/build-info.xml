@@ -5,19 +5,19 @@
     density="xxxhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="10611341905809"
+    timestamp="19365012474482"
     token="8456951780275958484"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="7326" />
+        duration="1823" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="134" />
+        duration="64" />
     <task
         name="verifier"
         duration="2" />
@@ -27,7 +27,7 @@
         type="MAIN" />
 
     <build
-        timestamp="10611341905809"
+        timestamp="19365012474482"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/outputs/apk/app-debug.apk"

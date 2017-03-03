@@ -12,12 +12,12 @@
         "source": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/drawable-xhdpi/ic_device_hplus_disabled.png"
     },
     {
-        "merged": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/res/merged/debug/drawable-xhdpi/ic_device_miband_disabled.png",
-        "source": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/drawable-xhdpi/ic_device_miband_disabled.png"
-    },
-    {
         "merged": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/res/merged/debug/drawable-xhdpi/ic_device_lovetoy.png",
         "source": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/drawable-xhdpi/ic_device_lovetoy.png"
+    },
+    {
+        "merged": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/res/merged/debug/drawable-xhdpi/ic_device_miband_disabled.png",
+        "source": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/drawable-xhdpi/ic_device_miband_disabled.png"
     },
     {
         "merged": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/res/merged/debug/drawable-xhdpi/ic_information_outline_grey600_24dp.png",

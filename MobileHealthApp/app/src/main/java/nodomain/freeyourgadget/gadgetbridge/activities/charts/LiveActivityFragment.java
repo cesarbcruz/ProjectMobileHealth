@@ -38,6 +38,8 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+import api.ClientRest;
+import api.Monitoring;
 import nodomain.freeyourgadget.gadgetbridge.GBApplication;
 import nodomain.freeyourgadget.gadgetbridge.R;
 import nodomain.freeyourgadget.gadgetbridge.activities.HeartRateUtils;
@@ -217,9 +219,15 @@ public class LiveActivityFragment extends AbstractChartFragment {
         }
         mHistorySet.addEntry(new Entry(timestamp, stepsPerMinute));
         int hr = getCurrentHeartRate();
+
+        if(hr >= 0){
+            new ClientRest().execute(new Monitoring(hr));
+        }
+
         if (hr < 0) {
             hr = 0;
         }
+
         mHeartRateSet.addEntry(new Entry(timestamp, hr));
     }
 

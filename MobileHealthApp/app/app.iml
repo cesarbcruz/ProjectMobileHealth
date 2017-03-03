@@ -159,6 +159,7 @@
     <orderEntry type="library" exported="" scope="TEST" name="shadows-core-v23-3.1.2" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="maven-ant-tasks-2.1.3" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="ant-1.8.0" level="project" />
+    <orderEntry type="library" exported="" name="gson-2.6.2" level="project" />
     <orderEntry type="library" exported="" name="greendao-1998d7cd2d21f662c6044f6ccf3b3a251bbad341" level="project" />
     <orderEntry type="library" exported="" name="1_greendao-1998d7cd2d21f662c6044f6ccf3b3a251bbad341" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="ant-launcher-1.8.0" level="project" />
@@ -187,5 +188,6 @@
     <orderEntry type="library" exported="" scope="TEST" name="vtd-xml-2.11" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="junit-4.12" level="project" />
     <orderEntry type="library" exported="" name="logback-android-classic-1.1.1-4" level="project" />
+    <orderEntry type="library" exported="" name="org.apache.http.legacy-android-23" level="project" />
   </component>
 </module>
