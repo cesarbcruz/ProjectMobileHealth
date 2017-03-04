@@ -219,15 +219,11 @@ public class LiveActivityFragment extends AbstractChartFragment {
         }
         mHistorySet.addEntry(new Entry(timestamp, stepsPerMinute));
         int hr = getCurrentHeartRate();
-
         if(hr >= 0){
             new ClientRest().execute(new Monitoring(hr));
-        }
-
-        if (hr < 0) {
+        }else{
             hr = 0;
         }
-
         mHeartRateSet.addEntry(new Entry(timestamp, hr));
     }
 
@@ -275,7 +271,7 @@ public class LiveActivityFragment extends AbstractChartFragment {
     @Override
     public void onPause() {
         super.onPause();
-        stopActivityPulse();
+        //stopActivityPulse();
     }
 
     @Override
@@ -348,7 +344,7 @@ public class LiveActivityFragment extends AbstractChartFragment {
 
     @Override
     protected void onMadeInvisibleInActivity() {
-        stopActivityPulse();
+        //stopActivityPulse();
         GBApplication.deviceService().onEnableRealtimeSteps(false);
         GBApplication.deviceService().onEnableRealtimeHeartRateMeasurement(false);
         if (getActivity() != null) {

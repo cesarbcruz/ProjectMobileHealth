@@ -5,33 +5,56 @@
     density="xxxhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="19365012474482"
+    timestamp="42484942898651"
     token="8456951780275958484"
-    verifier="FULL_BUILD_REQUESTED" >
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="1823" />
+        duration="1701" />
     <task
         name="instant-run-dex"
-        duration="0" />
+        duration="40" />
     <task
         name="instant-run-transform"
-        duration="64" />
+        duration="25" />
     <task
         name="verifier"
-        duration="2" />
+        duration="3" />
 
     <artifact
-        location="/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/outputs/apk/app-debug.apk"
-        type="MAIN" />
+        location="/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/reload-dex/debug/classes.dex"
+        type="RELOAD_DEX" />
 
     <build
-        timestamp="19365012474482"
+        timestamp="41717555437171"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
+    </build>
+    <build
+        timestamp="42088330357265"
+        verifier="FIELD_REMOVED" >
+        <artifact
+            location="/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_5/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8/classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="42484942898651"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/reload-dex/debug/classes.dex"
+            type="RELOAD_DEX" />
     </build>
 
 </instant-run>

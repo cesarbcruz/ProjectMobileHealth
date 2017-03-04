@@ -61,6 +61,8 @@ public class GBDevice implements Parcelable {
     private String mBusyTask;
     private List<ItemWithDetails> mDeviceInfos;
 
+
+
     public GBDevice(String address, String name, DeviceType deviceType) {
         this(address, null, name, deviceType);
     }
@@ -291,6 +293,8 @@ public class GBDevice implements Parcelable {
         }
         return GBApplication.getContext().getString(R.string.unknown_state);
     }
+
+
 
     /**
      * Returns the general type of this device. For more detailed information,
