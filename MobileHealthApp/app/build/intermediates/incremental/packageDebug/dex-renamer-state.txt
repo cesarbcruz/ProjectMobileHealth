@@ -1,4 +1,4 @@
-#Fri Mar 03 21:17:21 BRT 2017
+#Sun Mar 05 11:32:01 BRT 2017
 base.0=/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_054b80a04a71fd5582e694b4d6b5e6f613a7df2b
 renamed.1=classes.dex
 renamed.0=classes2.dex

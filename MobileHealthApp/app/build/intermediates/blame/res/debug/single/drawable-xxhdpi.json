@@ -56,12 +56,12 @@
         "source": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/drawable-xxhdpi/ic_notification_low_battery.png"
     },
     {
-        "merged": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_notification_disconnected.png",
-        "source": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/drawable-xxhdpi/ic_notification_disconnected.png"
-    },
-    {
         "merged": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_device_lovetoy.png",
         "source": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/drawable-xxhdpi/ic_device_lovetoy.png"
+    },
+    {
+        "merged": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_notification_disconnected.png",
+        "source": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/drawable-xxhdpi/ic_notification_disconnected.png"
     },
     {
         "merged": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_activitytracker.png",

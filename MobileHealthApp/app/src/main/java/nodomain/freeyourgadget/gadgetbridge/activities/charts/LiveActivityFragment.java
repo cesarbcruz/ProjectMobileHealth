@@ -328,7 +328,7 @@ public class LiveActivityFragment extends AbstractChartFragment {
     }
 
     private int getPulseIntervalMillis() {
-        return 1000;
+        return 60000;
     }
 
     @Override
@@ -345,8 +345,8 @@ public class LiveActivityFragment extends AbstractChartFragment {
     @Override
     protected void onMadeInvisibleInActivity() {
         //stopActivityPulse();
-        GBApplication.deviceService().onEnableRealtimeSteps(false);
-        GBApplication.deviceService().onEnableRealtimeHeartRateMeasurement(false);
+        //GBApplication.deviceService().onEnableRealtimeSteps(false);
+        //GBApplication.deviceService().onEnableRealtimeHeartRateMeasurement(false);
         if (getActivity() != null) {
             getActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         }

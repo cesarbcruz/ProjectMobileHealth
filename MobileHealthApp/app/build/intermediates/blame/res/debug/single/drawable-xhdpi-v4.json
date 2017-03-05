@@ -84,12 +84,12 @@
         "source": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/drawable-xhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png"
     },
     {
-        "merged": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png",
-        "source": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/drawable-xhdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png"
-    },
-    {
         "merged": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png",
         "source": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png"
+    },
+    {
+        "merged": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png",
+        "source": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/drawable-xhdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
         "merged": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_star_half_black_16dp.png",
@@ -172,12 +172,12 @@
         "source": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/drawable-xhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
-        "merged": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_star_black_16dp.png",
-        "source": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/drawable-xhdpi-v4/abc_ic_star_black_16dp.png"
-    },
-    {
         "merged": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_list_selector_disabled_holo_light.9.png",
         "source": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/drawable-xhdpi-v4/abc_list_selector_disabled_holo_light.9.png"
+    },
+    {
+        "merged": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_star_black_16dp.png",
+        "source": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/drawable-xhdpi-v4/abc_ic_star_black_16dp.png"
     },
     {
         "merged": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_btn_check_to_on_mtrl_015.png",

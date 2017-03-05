@@ -47,9 +47,9 @@ public abstract class RealtimeSamplesSupport {
 
     public synchronized void stop() {
         if (realtimeStorageTimer != null) {
-            realtimeStorageTimer.cancel();
-            realtimeStorageTimer.purge();
-            realtimeStorageTimer = null;
+           realtimeStorageTimer.cancel();
+           realtimeStorageTimer.purge();
+           realtimeStorageTimer = null;
         }
     }
 
