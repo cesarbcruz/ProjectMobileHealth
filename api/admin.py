@@ -24,7 +24,7 @@ class MonitoringAdmin(admin.ModelAdmin):
             return format_html("<textarea readonly>" + address + "</textarea>")
         else:
             return 'Não identificado'
-    show_address.short_description = 'Endereço aproximado'
+    show_address.short_description = 'Endereço aproximado '
     show_address.allow_tags = True
 
     list_display = ('user', 'date_time', 'heart_rate', 'show_location', 'show_address')
