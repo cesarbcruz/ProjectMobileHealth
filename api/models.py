@@ -1,6 +1,7 @@
 from accounts.models import User
 from django.db import models
 from django.utils.timezone import localtime
+from geopy.geocoders import GoogleV3
 
 class Monitoring(models.Model):
     date_time = models.DateTimeField('Data/Hora', blank=False)
@@ -23,4 +24,19 @@ class Monitoring(models.Model):
             return '%s,%s' %  (self.latitude, self.longitude)
         else:
             return None;
+
+    def address(self):
+        try:
+            geolocator = GoogleV3()
+            locations = None
+            if self.location:
+                locations = geolocator.reverse(self.location)
+            if locations:
+                address = ''
+                for l in locations:
+                    address += l.address + "\n"
+            else:
+                return 'Não identificado'
+        except Exception as e:
+            return "Erro: {0}".format(e)
 
