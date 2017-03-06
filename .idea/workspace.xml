@@ -27,7 +27,7 @@
         <entry file="file://$PROJECT_DIR$/api/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
-              <caret line="22" column="44" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="44" />
+              <caret line="22" column="61" selection-start-line="22" selection-start-column="61" selection-end-line="22" selection-end-column="61" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -38,7 +38,7 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mobilehealth/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1755">
+            <state relative-caret-position="222">
               <caret line="118" column="9" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="9" />
               <folding />
             </state>
@@ -78,8 +78,8 @@
       <file leaf-file-name="admin.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="58" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
+            <state relative-caret-position="180">
+              <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -765,22 +765,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -788,14 +772,6 @@
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mobilehealth/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1755">
-          <caret line="118" column="9" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -825,10 +801,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobilehealth/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="118" column="9" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/api/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
-          <caret line="22" column="44" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="44" />
+          <caret line="22" column="61" selection-start-line="22" selection-start-column="61" selection-end-line="22" selection-end-column="61" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
@@ -837,8 +837,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="58" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
+        <state relative-caret-position="180">
+          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
