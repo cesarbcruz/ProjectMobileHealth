@@ -19,4 +19,8 @@ class Monitoring(models.Model):
         return '%s | %s' % (self.user, localtime(self.date_time).strftime("%s %s" % (DATE_FORMAT, TIME_FORMAT)))
 
     def location(self):
-        return 'http://maps.google.com/maps?q=%s,%s' %  (self.latitude, self.longitude)
+        if (self.latitude and self.longitude) and (self.latitude != 0 and self.longitude != 0):
+            return '%s,%s' %  (self.latitude, self.longitude)
+        else:
+            return None;
+

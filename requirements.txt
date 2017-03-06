@@ -6,3 +6,4 @@ model-mommy==1.2.6
 whitenoise==3.2
 django-widget-tweaks==1.4.1
 djangorestframework==3.5.4
+geopy==1.11.0
