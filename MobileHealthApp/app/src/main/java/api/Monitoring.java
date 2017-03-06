@@ -11,11 +11,15 @@ public class Monitoring {
     private String date_time;
     private int heart_rate;
     private int user;
+    private double latitude;
+    private double longitude;
 
-    public Monitoring(int heart_rate) {
+    public Monitoring(int heart_rate, double latitude, double longitude) {
         this.date_time = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(GregorianCalendar.getInstance().getTime());
         this.heart_rate = heart_rate;
         this.user = 1;
+        this.latitude = latitude;
+        this.longitude = longitude;
     }
 
     public String getDate_time() {

@@ -182,6 +182,17 @@
     <string name="miband_prefs_reserve_alarm_calendar">Alarmes para reserva de eventos futuros</string>
     <string name="miband_prefs_vibration">Vibração</string>
     <string name="miband_prefs_wearside">Seu Mi Band está em qual braço?</string>
+    <string msgid="8327680881775995150" name="mr_media_route_button_content_description">"Transmitir"</string>
+    <string msgid="7553005460920830010" name="mr_media_route_chooser_searching">"Procurando dispositivos…"</string>
+    <string msgid="7106830097177242655" name="mr_media_route_chooser_title">"Conectar ao dispositivo"</string>
+    <string msgid="109793632378378069" name="mr_media_route_controller_disconnect">"Desconectar"</string>
+    <string msgid="3641544772007543920" name="mr_media_route_controller_no_info_available">"Nenhuma informação disponível"</string>
+    <string msgid="8315773974194466049" name="mr_media_route_controller_pause">"Pausar"</string>
+    <string msgid="5214423499524760404" name="mr_media_route_controller_play">"Reproduzir"</string>
+    <string msgid="379358765881274425" name="mr_media_route_controller_settings_description">"Configurações de rota"</string>
+    <string msgid="5398645111664294430" name="mr_media_route_controller_stop">"Interromper transmissão"</string>
+    <string msgid="5441529851481176817" name="mr_system_route_name">"Sistema"</string>
+    <string msgid="7498112907524977311" name="mr_user_route_category_name">"Dispositivos"</string>
     <string name="n_a">N/A</string>
     <string name="never">Nunca</string>
     <string name="not_connected">não conectado</string>
@@ -310,6 +321,7 @@
     <string name="preferences_miband_settings">Configurar Mi Band</string>
     <string name="prefs_title_all_day_heart_rate">Medição da frequência cardíaca durante todo o dia</string>
     <string name="right">à direita</string>
+    <string msgid="146198913615257606" name="search_menu_title">"Pesquisar"</string>
     <string name="sleep_activity_date_range">De %1$s até %2$s</string>
     <string name="sleepchart_your_sleep">Seu sono</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>

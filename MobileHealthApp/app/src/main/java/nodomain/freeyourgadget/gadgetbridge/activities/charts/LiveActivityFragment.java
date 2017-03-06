@@ -40,6 +40,7 @@ import java.util.concurrent.TimeUnit;
 
 import api.ClientRest;
 import api.Monitoring;
+import api.ObtainGPS;
 import nodomain.freeyourgadget.gadgetbridge.GBApplication;
 import nodomain.freeyourgadget.gadgetbridge.R;
 import nodomain.freeyourgadget.gadgetbridge.activities.HeartRateUtils;
@@ -220,7 +221,8 @@ public class LiveActivityFragment extends AbstractChartFragment {
         mHistorySet.addEntry(new Entry(timestamp, stepsPerMinute));
         int hr = getCurrentHeartRate();
         if(hr >= 0){
-            new ClientRest().execute(new Monitoring(hr));
+            ObtainGPS gps = new ObtainGPS(getContext());
+            new ClientRest().execute(new Monitoring(hr, gps.getLatitude(), gps.getLongitude()));
         }else{
             hr = 0;
         }

@@ -1,7 +1,7 @@
-#Sun Mar 05 11:32:01 BRT 2017
-base.0=/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_054b80a04a71fd5582e694b4d6b5e6f613a7df2b
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_643dd431ab64dd08967d39f016e1edda9b25db3e/classes.dex
-base.1=/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_643dd431ab64dd08967d39f016e1edda9b25db3e
-file.0=/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_054b80a04a71fd5582e694b4d6b5e6f613a7df2b/classes.dex
+#Mon Mar 06 13:06:47 BRT 2017
+base.0=/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes2.dex
+base.1=/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
+file.0=/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
