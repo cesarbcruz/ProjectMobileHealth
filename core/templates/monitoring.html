@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% load widget_tweaks %}
+
+{% block title %}
+    Monitoramento | {{ block.super }}
+{% endblock %}
+
+{% block container %}
+<div class="page-header">
+    <h1>Monitoramento</h1>
+    <form class="form-horizontal" action="" method="post">
+        {% csrf_token %}
+        <fieldset>
+            {% for field in form %}
+            <div class="form-group{% if field.errors %} has-error{% endif %}">
+              <label for="{{ field.auto_id }}" class="col-md-3 control-label">{{ field.label }}</label>
+              <div class="col-md-9">
+                {% render_field field class='form-control' %}
+                {% for error in field.errors %}
+                <span class="help-block">{{ error }}</span>
+                {% endfor %}
+              </div>
+            </div>
+            {% endfor %}
+            <div class="form-group">
+              <div class="col-md-9 col-md-offset-3">
+                <button type="submit" class="btn btn-primary">Buscar</button>
+              </div>
+            </div>
+        </fieldset>
+    </form>
+
+    <hr>
+    {% if monitorings %}
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-xs-6 col-md-3">
+
+                <div class="panel status panel-info">
+                    <div class="panel-heading">
+                        <h1 class="panel-title text-center">{{ min_heart_rate }}</h1>
+                        <h5 class="panel-title text-center">bpm <i class="fa fa-heart" aria-hidden="true"></i></h5>
+                    </div>
+                    <div class="panel-body text-center">
+                        <strong>Mínimo</strong>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-xs-6 col-md-3">
+
+                <div class="panel status panel-success">
+                    <div class="panel-heading">
+                        <h1 class="panel-title text-center">{{ avg_heart_rate }}</h1>
+                        <h5 class="panel-title text-center">bpm <i class="fa fa-heart" aria-hidden="true"></i></h5>
+                    </div>
+                    <div class="panel-body text-center">
+                        <strong>Média</strong>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-xs-6 col-md-3">
+
+                <div class="panel status panel-warning">
+                    <div class="panel-heading">
+                        <h1 class="panel-title text-center">{{ max_heart_rate }}</h1>
+                        <h5 class="panel-title text-center">bpm <i class="fa fa-heart" aria-hidden="true"></i></h5>
+                    </div>
+                    <div class="panel-body text-center">
+                        <strong>Máximo</strong>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-xs-6 col-md-3">
+
+                <div class="panel status panel-danger">
+
+                    <div class="panel-heading">
+                            <h1 class="panel-title text-center">{{ last_monitoring.heart_rate }} </h1>
+                            <h5 class="panel-title text-center">bpm <i class="fa fa-heart" aria-hidden="true"></i></h5>
+                    </div>
+                    <div class="panel-body text-center">
+                        <strong>Última: {{ last_monitoring.date_time |date:'d/m/Y H:i'  }}</strong>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    {% endif %}
+
+
+
+</div>
+{% endblock %}

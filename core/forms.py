@@ -1,5 +1,5 @@
 # coding=utf-8
-
+from api.models import Monitoring
 from django import forms
 from django.core.mail import send_mail
 from django.conf import settings
@@ -20,3 +20,8 @@ class ContactForm(forms.Form):
             'Contato do Mobile Health', message, settings.DEFAULT_FROM_EMAIL,
             [settings.DEFAULT_FROM_EMAIL]
         )
+class MonitoringForm(forms.Form):
+    date = forms.DateField(label='Data',widget=forms.widgets.DateInput(attrs={'type': 'date'}))
+
+    def buscar(self):
+        return Monitoring.objects.filter(date_time__date=self.cleaned_data['date'])
