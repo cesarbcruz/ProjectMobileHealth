@@ -145,3 +145,10 @@
 .timeline-body > p + p {
   margin-top: 5px;
 }
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
