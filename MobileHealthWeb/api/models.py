@@ -30,13 +30,16 @@ class Monitoring(models.Model):
             geolocator = GoogleV3()
             locations = None
             if self.location:
-                locations = geolocator.reverse(self.location)
+                locations = geolocator.reverse(self.location())
             if locations:
                 address = ''
                 for l in locations:
-                    address += l.address + "\n"
+                    address += l.address + "<br>"
+                return address
             else:
                 return 'Não identificado'
         except Exception as e:
             return "Erro: {0}".format(e)
 
+    def map(self):
+        return "<iframe width='100%' height='450' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/place?q="+self.location()+"&amp;key=AIzaSyATsuuNRa7lkmJ2jgyNjLg7vvS8wb7nU-g'></iframe>"
