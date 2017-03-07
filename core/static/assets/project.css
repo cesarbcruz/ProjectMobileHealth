@@ -145,8 +145,3 @@
 .timeline-body > p + p {
   margin-top: 5px;
 }
-
-.equal, .equal > div[class*='col-'] {
-display: -webkit-flex;
-display: flex;
-}
