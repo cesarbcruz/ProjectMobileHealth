@@ -45,7 +45,7 @@
                         <h5 class="panel-title text-center">bpm <i class="fa fa-heart" aria-hidden="true"></i></h5>
                     </div>
                     <div class="panel-body text-center">
-                        <strong>Mínimo: {{ min_monitoring.date_time |date:'d/m/Y H:i'  }}</strong>
+                        <strong>Mínimo: {{ min_monitoring.date_time |date:'H:i'  }} <i class="fa fa-clock-o" aria-hidden="true"></i></strong>
                     </div>
                 </div>
 
@@ -71,7 +71,7 @@
                         <h5 class="panel-title text-center">bpm <i class="fa fa-heart" aria-hidden="true"></i></h5>
                     </div>
                     <div class="panel-body text-center">
-                        <strong>Máximo: {{ max_monitoring.date_time |date:'d/m/Y H:i'  }}</strong>
+                        <strong>Máximo: {{ max_monitoring.date_time |date:'H:i'  }} <i class="fa fa-clock-o" aria-hidden="true"></i></strong>
                     </div>
                 </div>
 
@@ -85,15 +85,28 @@
                             <h5 class="panel-title text-center">bpm <i class="fa fa-heart" aria-hidden="true"></i></h5>
                     </div>
                     <div class="panel-body text-center">
-                        <strong>Última: {{ last_monitoring.date_time |date:'d/m/Y H:i'  }}</strong>
+                        <strong>Última: {{ last_monitoring.date_time |date:'H:i'  }} <i class="fa fa-clock-o" aria-hidden="true"></i></strong>
                     </div>
                 </div>
-
             </div>
         </div>
-
-
     </div>
+
+    <hr>
+    <div class="panel-group">
+      <div class="panel panel-default">
+          <div class="panel-heading">Última localização: {{ last_monitoring.date_time |date:'H:i'  }} <i class="fa fa-clock-o" aria-hidden="true"></i></div>
+        <div class="panel-body">{{ last_monitoring.map | safe  }}</div>
+      </div>
+      <div class="panel panel-default">
+          <div class="panel-heading">Endereços próximos:</div>
+        <div class="panel-body">{{ last_monitoring.address | safe }}</div>
+      </div>
+    </div>
+
+
+
+
     {% endif %}
 
 
