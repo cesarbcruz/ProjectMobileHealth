@@ -39,7 +39,7 @@
         <entry file="file://$PROJECT_DIR$/core/templates/monitoring.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="310">
-              <caret line="60" column="92" selection-start-line="60" selection-start-column="92" selection-end-line="60" selection-end-column="92" />
+              <caret line="60" column="122" selection-start-line="60" selection-start-column="122" selection-end-line="60" selection-end-column="122" />
               <folding />
             </state>
           </provider>
@@ -836,7 +836,7 @@
     <entry file="file://$PROJECT_DIR$/core/templates/monitoring.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
-          <caret line="60" column="92" selection-start-line="60" selection-start-column="92" selection-end-line="60" selection-end-column="92" />
+          <caret line="60" column="122" selection-start-line="60" selection-start-column="122" selection-end-line="60" selection-end-column="122" />
           <folding />
         </state>
       </provider>
