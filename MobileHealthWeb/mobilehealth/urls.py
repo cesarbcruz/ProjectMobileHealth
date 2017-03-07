@@ -12,6 +12,7 @@ urlpatterns = [
     url(r'^sair/$', logout, {'next_page': 'index'}, name='logout'),
     url(r'^apresentacao/', views.apresentacao, name='presentation'),
     url(r'^solucao/', views.solucao, name='solution'),
+    url(r'^monitoramento/', views.monitoramento, name='monitoring'),
     url(r'^conta/', include('accounts.urls', namespace='accounts')),
     url(r'^admin/', admin.site.urls),
     url(r'^api/', include('api.urls', namespace='api')),
