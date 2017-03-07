@@ -23,5 +23,5 @@ class ContactForm(forms.Form):
 class MonitoringForm(forms.Form):
     date = forms.DateField(label='Data',widget=forms.widgets.DateInput(attrs={'type': 'date'}))
 
-    def buscar(self):
-        return Monitoring.objects.filter(date_time__date=self.cleaned_data['date'])
+    def buscar(self, user):
+        return Monitoring.objects.filter(date_time__date=self.cleaned_data['date'], user=user)

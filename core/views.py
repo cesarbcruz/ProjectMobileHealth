@@ -43,6 +43,10 @@ def solucao(request):
     return render(request, 'solution.html')
 
 def monitoramento(request):
+    user = None
+    if request.user.is_authenticated():
+        user = request.user
+
     monitorings = None
     min_monitoring = None
     max_monitoring = None
@@ -50,7 +54,7 @@ def monitoramento(request):
     last_monitoring = None
     form = MonitoringForm(request.POST or None)
     if form.is_valid():
-        monitorings = form.buscar()
+        monitorings = form.buscar(user)
         if monitorings:
             min_monitoring = (monitorings.annotate(Min('heart_rate')).order_by('heart_rate')[0])
             max_monitoring = (monitorings.annotate(Max('heart_rate')).latest('heart_rate'))
