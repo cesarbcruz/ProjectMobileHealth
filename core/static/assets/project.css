@@ -146,11 +146,7 @@
   margin-top: 5px;
 }
 
-.row.container-height {
-	overflow: hidden;
-}
-
-.row.container-height > [class*="col-"]{
-    margin-bottom: -99999px;
-    padding-bottom: 99999px;
+.equal, .equal > div[class*='col-'] {
+display: -webkit-flex;
+display: flex;
 }
