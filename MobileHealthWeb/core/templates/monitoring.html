@@ -8,7 +8,14 @@
 
 {% block container %}
 <div class="page-header">
-    <h1>Monitoramento {{ user}}</h1>
+    {% if user.is_authenticated %}
+        <h1>Monitoramento {{ user}}</h1>
+    {% else %}
+
+        <div class="well">Informe uma <strong>Data</strong> "exemplo 07/03/2017" e acione o comando para <strong>Buscar</strong> os dados demonstrativos!</div>
+
+    {% endif %}
+
     <form class="form-horizontal" action="" method="post">
         {% csrf_token %}
         <fieldset>
