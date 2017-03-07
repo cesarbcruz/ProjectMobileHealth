@@ -1,4 +1,6 @@
 # coding=utf-8
+import datetime
+
 from api.models import Monitoring
 from django import forms
 from django.core.mail import send_mail
@@ -23,5 +25,8 @@ class ContactForm(forms.Form):
 class MonitoringForm(forms.Form):
     date = forms.DateField(label='Data',widget=forms.widgets.DateInput(attrs={'type': 'date'}))
 
-    def buscar(self):
-        return Monitoring.objects.filter(date_time__date=self.cleaned_data['date'])
+    def buscar(self, user):
+        if user:
+            return Monitoring.objects.filter(date_time__date=self.cleaned_data['date'], user=user)
+        else:
+            return Monitoring.objects.filter(date_time__date=self.cleaned_data['date'], user_id=1)
