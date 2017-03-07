@@ -85,7 +85,9 @@
                             <h5 class="panel-title text-center">bpm <i class="fa fa-heart" aria-hidden="true"></i></h5>
                     </div>
                     <div class="panel-body text-center">
-                       <span><strong>Última: {{ last_monitoring.date_time |date:'H:i'  }} <i class="fa fa-clock-o" aria-hidden="true"></i></strong></span>
+                        <p style="display:inline">
+                            <strong>Última: {{ last_monitoring.date_time |date:'H:i'  }} <i class="fa fa-clock-o" aria-hidden="true"></i></strong>
+                        </p>
                     </div>
                 </div>
             </div>
