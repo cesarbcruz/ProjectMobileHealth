@@ -41,11 +41,11 @@
 
                 <div class="panel status panel-info">
                     <div class="panel-heading">
-                        <h1 class="panel-title text-center">{{ min_heart_rate }}</h1>
+                        <h1 class="panel-title text-center">{{ min_monitoring.heart_rate }}</h1>
                         <h5 class="panel-title text-center">bpm <i class="fa fa-heart" aria-hidden="true"></i></h5>
                     </div>
                     <div class="panel-body text-center">
-                        <strong>Mínimo</strong>
+                        <strong>Mínimo: {{ min_monitoring.date_time |date:'d/m/Y H:i'  }}</strong>
                     </div>
                 </div>
 
@@ -67,11 +67,11 @@
 
                 <div class="panel status panel-warning">
                     <div class="panel-heading">
-                        <h1 class="panel-title text-center">{{ max_heart_rate }}</h1>
+                        <h1 class="panel-title text-center">{{ max_monitoring.heart_rate }}</h1>
                         <h5 class="panel-title text-center">bpm <i class="fa fa-heart" aria-hidden="true"></i></h5>
                     </div>
                     <div class="panel-body text-center">
-                        <strong>Máximo</strong>
+                        <strong>Máximo: {{ max_monitoring.date_time |date:'d/m/Y H:i'  }}</strong>
                     </div>
                 </div>
 
