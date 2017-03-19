@@ -5,7 +5,7 @@ import re
 from django.db import models
 from django.core import validators
 from django.contrib.auth.models import AbstractBaseUser, UserManager, PermissionsMixin
-
+from django.core.validators import URLValidator
 
 class User(AbstractBaseUser, PermissionsMixin):
 
@@ -25,6 +25,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_staff = models.BooleanField('Equipe', default=False)
     is_active = models.BooleanField('Ativo', default=True)
     date_joined = models.DateTimeField('Data de Entrada', auto_now_add=True)
+    img_url = models.CharField('Foto (URL)', validators=[URLValidator()], blank=True, max_length=5000)
 
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = ['email']
