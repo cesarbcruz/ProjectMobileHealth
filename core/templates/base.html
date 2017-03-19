@@ -41,11 +41,12 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
 			{% if user.is_authenticated %}
-			<li><a href="{% url 'accounts:index' %}">{{ user }}</a></li>
-			<li><a href="{% url 'logout' %}">Sair</a></li>
-			{% else %}
-			<li><a href="{% url 'login' %}">Entrar</a></li>
-			<li><a href="{% url 'accounts:register' %}">Registro</a></li>
+                <li><img class="img-responsive CattoBorderRadius" src="http://placekitten.com/g/200/200" /></li>
+                <li><a href="{% url 'accounts:index' %}">{{ user }}</a></li>
+                <li><a href="{% url 'logout' %}">Sair</a></li>
+                {% else %}
+                <li><a href="{% url 'login' %}">Entrar</a></li>
+                <li><a href="{% url 'accounts:register' %}">Registro</a></li>
 			{% endif %}
           </ul>
         </div>

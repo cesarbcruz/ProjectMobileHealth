@@ -145,3 +145,8 @@
 .timeline-body > p + p {
   margin-top: 5px;
 }
+
+.CattoBorderRadius
+{
+    border-radius: 25px;
+}
