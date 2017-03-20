@@ -1,4 +1,6 @@
 # coding=utf-8
+from datetime import datetime
+
 from chartit import *
 from django.shortcuts import render
 from django.http import HttpResponse
@@ -9,6 +11,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.views.generic import View, TemplateView, CreateView
 from django.contrib.auth import get_user_model
 from django.db.models import Min,Max,Avg
+import time
 
 from .forms import ContactForm, MonitoringForm
 
@@ -80,7 +83,7 @@ def build_chart(monitorings):
             [{'options': {
                 'source': monitorings},
                 'terms': [
-                    'date_time',
+                    ('date_time', lambda d: time.mktime(d.timetuple())),
                     'heart_rate']}
             ])
 
@@ -98,5 +101,7 @@ def build_chart(monitorings):
                 'text': ' '},
                 'xAxis': {
                     'title': {
-                        'text': 'Horário'}}})
+                        'text': 'Horário'}}},
+        x_sortf_mapf_mts = (None, lambda i: datetime.fromtimestamp(i).strftime("%H:%M"), False))
+
     return cht
