@@ -15,7 +15,7 @@
 
     {% endif %}
 
-    <form class="form-horizontal" action="" method="post">
+    <form class="form-horizontal" name="formulario" action="" method="post">
         {% csrf_token %}
         <fieldset>
             {% for field in form %}
@@ -39,6 +39,14 @@
 
     <hr>
     {% if monitorings %}
+
+    <script>
+        window.onload=function(){
+            if(document.getElementById('id_autorefresh').checked){
+                window.setTimeout(function() { document.formulario.submit(); }, 60000);
+            }
+        };
+    </script>
 
     <div class="container-fluid">
 
