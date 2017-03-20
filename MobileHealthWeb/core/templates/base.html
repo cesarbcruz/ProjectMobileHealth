@@ -9,7 +9,6 @@
 	<link rel="stylesheet" href="{% static 'assets/bootstrap.min.css' %}" media="screen" />
 	<link rel="stylesheet" href="{% static 'assets/custom.min.css' %}" media="screen" />
 	<link rel="stylesheet" href="{% static 'assets/extra.css' %}" media="screen" />
-    <link rel="stylesheet" href="{% static 'assets/project.css' %}" media="screen" />
     <link rel="stylesheet" href="{% static 'assets/font-awesome/css/font-awesome.min.css' %}">
 </head>
 <body>
@@ -42,7 +41,7 @@
           <ul class="nav navbar-nav navbar-right">
 			{% if user.is_authenticated %}
                 {% if user.img_url %}
-                    <li><img class="img-responsive img-rounded" src="{{ user.img_url }}" width="60" height="60" /></li>
+                    <li><img class="img-responsive img-rounded" src="{{ user.img_url }}" width="50" height="50" style="float: center; padding: 10px 0px 10px 13px;" /></li>
                 {% endif %}
                 <li><a href="{% url 'accounts:index' %}">{{ user }}</a></li>
                 <li><a href="{% url 'logout' %}">Sair</a></li>
@@ -68,11 +67,6 @@
 	</div>
 	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="{% static 'assets/bootstrap.min.js' %}"></script>
-    <script>
-    $(document).ready(function(){
-        $('[data-toggle="popover"]').popover();
-    });
-
-    </script>
+    <script src="{% static 'assets/extra.js' %}"></script>
 </body>
 </html>
