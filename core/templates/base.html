@@ -42,7 +42,7 @@
           <ul class="nav navbar-nav navbar-right">
 			{% if user.is_authenticated %}
                 {% if user.img_url %}
-                    <li><img class="img-responsive img-rounded" src="{{ user.img_url }}" width="60" height="60" /></li>
+                    <li><img class="img-responsive img-rounded" src="{{ user.img_url }}" width="50" height="50" style="float: center; padding: 10px 0px 10px 13px;" /></li>
                 {% endif %}
                 <li><a href="{% url 'accounts:index' %}">{{ user }}</a></li>
                 <li><a href="{% url 'logout' %}">Sair</a></li>
