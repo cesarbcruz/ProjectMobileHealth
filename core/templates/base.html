@@ -9,7 +9,6 @@
 	<link rel="stylesheet" href="{% static 'assets/bootstrap.min.css' %}" media="screen" />
 	<link rel="stylesheet" href="{% static 'assets/custom.min.css' %}" media="screen" />
 	<link rel="stylesheet" href="{% static 'assets/extra.css' %}" media="screen" />
-    <link rel="stylesheet" href="{% static 'assets/project.css' %}" media="screen" />
     <link rel="stylesheet" href="{% static 'assets/font-awesome/css/font-awesome.min.css' %}">
 </head>
 <body>
@@ -68,11 +67,6 @@
 	</div>
 	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="{% static 'assets/bootstrap.min.js' %}"></script>
-    <script>
-    $(document).ready(function(){
-        $('[data-toggle="popover"]').popover();
-    });
-
-    </script>
+    <script src="{% static 'assets/extra.js' %}"></script>
 </body>
 </html>
