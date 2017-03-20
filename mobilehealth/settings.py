@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     # libs
     'widget_tweaks',
     'rest_framework',
+    'chartit',
     # apps
     'core',
     'accounts',

@@ -8,3 +8,4 @@ django-widget-tweaks==1.4.1
 djangorestframework==3.5.4
 geopy==1.11.0
 pytz==2016.10
+django-chartit==0.2.9

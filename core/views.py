@@ -1,5 +1,5 @@
 # coding=utf-8
-
+from chartit import *
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.core.mail import send_mail
@@ -68,5 +68,35 @@ def monitoramento(request):
         'max_monitoring' : max_monitoring,
         'avg_heart_rate' : avg_heart_rate,
         'last_monitoring' : last_monitoring,
+        'chart' : build_chart(monitorings),
     }
     return render(request, 'monitoring.html', context)
+
+def build_chart(monitorings):
+    cht = None
+    if monitorings:
+        ds = DataPool(
+            series=
+            [{'options': {
+                'source': monitorings},
+                'terms': [
+                    'date_time',
+                    'heart_rate']}
+            ])
+
+        cht = Chart(
+            datasource=ds,
+            series_options=
+            [{'options': {
+                'type': 'line',
+                'stacking': False},
+                'terms': {
+                    'date_time': ['heart_rate']
+                }}],
+            chart_options=
+            {'title': {
+                'text': ' '},
+                'xAxis': {
+                    'title': {
+                        'text': 'Horário'}}})
+    return cht

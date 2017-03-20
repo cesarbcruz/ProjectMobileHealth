@@ -1,7 +1,6 @@
 {% extends "base.html" %}
-
 {% load widget_tweaks %}
-
+{% load chartit %}
 {% block title %}
     Monitoramento | {{ block.super }}
 {% endblock %}
@@ -99,9 +98,17 @@
         </div>
     </div>
 
-
     <hr>
     <div class="panel-group">
+        {% if chart %}
+            <div class="panel panel-default">
+              <div class="panel-heading">Frequência cardíaca:</div>
+                <div class="panel-body">
+                    {{ chart|load_charts:"chart" }}
+                    <div id="chart"></div>
+                </div>
+            </div>
+        {% endif %}
       <div class="panel panel-default">
           <div class="panel-heading">Última localização: {{ last_monitoring.date_time |date:'H:i'  }} <i class="fa fa-clock-o" aria-hidden="true"></i></div>
         <div class="panel-body">{{ last_monitoring.map | safe  }}</div>
