@@ -98,6 +98,7 @@ def build_chart(monitorings):
                 'xAxis': {
                     'title': {
                         'text': 'Horário'}}},
-        x_sortf_mapf_mts = (None, lambda i: localtime(i).strftime("%H:%M"), False))
+            x_sortf_mapf_mts = (None, lambda i: localtime(i).strftime("%H:%M"), False),
+        )
 
     return cht
