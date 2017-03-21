@@ -9,6 +9,7 @@ class Monitoring(models.Model):
     user = models.ForeignKey(User, verbose_name = u'Paciente', blank=False)
     latitude = models.FloatField(blank=True, null=True)
     longitude = models.FloatField(blank=True, null=True)
+    steps = models.IntegerField('Passos', blank=True, null=True)
 
     class Meta:
         verbose_name = "Monitoramento"

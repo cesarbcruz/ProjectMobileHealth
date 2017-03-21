@@ -11,7 +11,7 @@ class MonitoringAdmin(admin.ModelAdmin):
     show_location.short_description = 'Localização'
     show_location.allow_tags = True
 
-    list_display = ('user', 'date_time', 'heart_rate', 'show_location')
+    list_display = ('user', 'date_time', 'heart_rate', 'show_location', 'steps')
 
 
 
