@@ -52,6 +52,7 @@ def monitoramento(request):
     avg_heart_rate = None
     last_monitoring = None
     form = MonitoringForm(request.POST or None)
+    message = None
     if form.is_valid():
         monitorings = form.buscar(user)
         if monitorings:
@@ -59,7 +60,8 @@ def monitoramento(request):
             max_monitoring = (monitorings.annotate(Max('heart_rate')).latest('heart_rate'))
             avg_heart_rate = int((monitorings.values_list('heart_rate').aggregate(Avg('heart_rate')))['heart_rate__avg'])
             last_monitoring = (monitorings.annotate(Max('date_time')).latest('date_time'))
-
+        else:
+            message = "Não foram encontrados dados para a data informada!"
     context = {
         'form': form,
         'monitorings': monitorings,
@@ -68,6 +70,7 @@ def monitoramento(request):
         'avg_heart_rate' : avg_heart_rate,
         'last_monitoring' : last_monitoring,
         'chart' : build_chart(monitorings),
+        'message' : message,
     }
     return render(request, 'monitoring.html', context)
 
