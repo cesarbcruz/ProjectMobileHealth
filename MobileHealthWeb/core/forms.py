@@ -24,7 +24,7 @@ class ContactForm(forms.Form):
         )
 class MonitoringForm(forms.Form):
     date = forms.DateField(label='Data',widget=forms.widgets.DateInput(attrs={'type': 'date'}))
-    autorefresh = forms.IntegerField(label='Atualizar resultado automaticamente (minuto)', min_value=1, max_value=60)
+    autorefresh = forms.IntegerField(label='Atualizar resultado automaticamente (minuto)', initial=1, min_value=1, max_value=60)
 
     def buscar(self, user):
         if user:
