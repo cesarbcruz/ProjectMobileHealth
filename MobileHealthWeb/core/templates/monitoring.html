@@ -40,93 +40,100 @@
     <hr>
     {% if monitorings %}
 
-    <script>
-        window.onload=function(){
-                window.setTimeout(function() { document.formulario.submit(); }, document.getElementById('id_autorefresh').value*60000);
-        };
-    </script>
+        <script>
+            window.onload=function(){
+                    window.setTimeout(function() { document.formulario.submit(); }, document.getElementById('id_autorefresh').value*60000);
+            };
+        </script>
 
-    <div class="container-fluid">
+        <div class="container-fluid">
 
-        <div class="row">
-            <div class="col-xs-6 col-md-3">
+            <div class="row">
+                <div class="col-xs-6 col-md-3">
 
-                <div class="panel status panel-info">
-                    <div class="panel-heading">
-                        <h1 class="panel-title text-center">{{ min_monitoring.heart_rate }}</h1>
-                        <h5 class="panel-title text-center">bpm <i class="fa fa-heart" aria-hidden="true"></i></h5>
-                    </div>
-                    <div class="panel-body text-center">
-                        <a style="cursor: pointer;" title="Horário" data-toggle="popover" data-placement="bottom" data-content="{{ min_monitoring.date_time |date:'H:i'  }}">Mínimo</a>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-xs-6 col-md-3">
-
-                <div class="panel status panel-success">
-                    <div class="panel-heading">
-                        <h1 class="panel-title text-center">{{ avg_heart_rate }}</h1>
-                        <h5 class="panel-title text-center">bpm <i class="fa fa-heart" aria-hidden="true"></i></h5>
-                    </div>
-                    <div class="panel-body text-center">
-                        <strong>Média</strong>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-xs-6 col-md-3">
-
-                <div class="panel status panel-warning">
-                    <div class="panel-heading">
-                        <h1 class="panel-title text-center">{{ max_monitoring.heart_rate }}</h1>
-                        <h5 class="panel-title text-center">bpm <i class="fa fa-heart" aria-hidden="true"></i></h5>
-                    </div>
-                    <div class="panel-body text-center">
-                        <a style="cursor: pointer;" title="Horário" data-toggle="popover" data-placement="bottom" data-content="{{ max_monitoring.date_time |date:'H:i'  }}">Máximo</a>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-xs-6 col-md-3">
-
-                <div class="panel status panel-danger">
-
-                    <div class="panel-heading">
-                            <h1 class="panel-title text-center">{{ last_monitoring.heart_rate }} </h1>
+                    <div class="panel status panel-info">
+                        <div class="panel-heading">
+                            <h1 class="panel-title text-center">{{ min_monitoring.heart_rate }}</h1>
                             <h5 class="panel-title text-center">bpm <i class="fa fa-heart" aria-hidden="true"></i></h5>
+                        </div>
+                        <div class="panel-body text-center">
+                            <a style="cursor: pointer;" title="Horário" data-toggle="popover" data-placement="bottom" data-content="{{ min_monitoring.date_time |date:'H:i'  }}">Mínimo</a>
+                        </div>
                     </div>
-                    <div class="panel-body text-center">
-                        <a style="cursor: pointer;" title="Horário" data-toggle="popover" data-placement="bottom" data-content="{{ last_monitoring.date_time |date:'H:i'  }}">Última</a>
+
+                </div>
+                <div class="col-xs-6 col-md-3">
+
+                    <div class="panel status panel-success">
+                        <div class="panel-heading">
+                            <h1 class="panel-title text-center">{{ avg_heart_rate }}</h1>
+                            <h5 class="panel-title text-center">bpm <i class="fa fa-heart" aria-hidden="true"></i></h5>
+                        </div>
+                        <div class="panel-body text-center">
+                            <strong>Média</strong>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-xs-6 col-md-3">
+
+                    <div class="panel status panel-warning">
+                        <div class="panel-heading">
+                            <h1 class="panel-title text-center">{{ max_monitoring.heart_rate }}</h1>
+                            <h5 class="panel-title text-center">bpm <i class="fa fa-heart" aria-hidden="true"></i></h5>
+                        </div>
+                        <div class="panel-body text-center">
+                            <a style="cursor: pointer;" title="Horário" data-toggle="popover" data-placement="bottom" data-content="{{ max_monitoring.date_time |date:'H:i'  }}">Máximo</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-xs-6 col-md-3">
+
+                    <div class="panel status panel-danger">
+
+                        <div class="panel-heading">
+                                <h1 class="panel-title text-center">{{ last_monitoring.heart_rate }} </h1>
+                                <h5 class="panel-title text-center">bpm <i class="fa fa-heart" aria-hidden="true"></i></h5>
+                        </div>
+                        <div class="panel-body text-center">
+                            <a style="cursor: pointer;" title="Horário" data-toggle="popover" data-placement="bottom" data-content="{{ last_monitoring.date_time |date:'H:i'  }}">Última</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <hr>
-    <div class="panel-group">
-        {% if chart %}
-            <div class="panel panel-default">
-              <div class="panel-heading">Frequência cardíaca:</div>
-                <div class="panel-body">
-                    {{ chart|load_charts:"chart" }}
-                    <div id="chart"></div>
+        <hr>
+        <div class="panel-group">
+            {% if chart %}
+                <div class="panel panel-default">
+                  <div class="panel-heading">Frequência cardíaca:</div>
+                    <div class="panel-body">
+                        {{ chart|load_charts:"chart" }}
+                        <div id="chart"></div>
+                    </div>
                 </div>
+            {% endif %}
+          <div class="panel panel-default">
+              <div class="panel-heading">Última localização: {{ last_monitoring.date_time |date:'H:i'  }} <i class="fa fa-clock-o" aria-hidden="true"></i></div>
+            <div class="panel-body">
+                {% if last_monitoring.map != None %}
+                    {{ last_monitoring.map | safe  }}
+                {% else %}
+                    <strong>Não identificada</strong>
+                {% endif %}
             </div>
-        {% endif %}
-      <div class="panel panel-default">
-          <div class="panel-heading">Última localização: {{ last_monitoring.date_time |date:'H:i'  }} <i class="fa fa-clock-o" aria-hidden="true"></i></div>
-        <div class="panel-body">{{ last_monitoring.map | safe  }}</div>
-      </div>
-      <div class="panel panel-default">
-          <div class="panel-heading">Endereços próximos:</div>
-        <div class="panel-body">{{ last_monitoring.address | safe }}</div>
-      </div>
-    </div>
-    {% else %}
+          </div>
+          <div class="panel panel-default">
+              <div class="panel-heading">Endereço aproximado:</div>
+            <div class="panel-body">{{ last_monitoring.address | safe }}</div>
+          </div>
+        </div>
+    {% endif %}
+    {% if message != None %}
         <div class="alert alert-warning">
-          <strong>Não foram encontrados dados para a data informada!</strong>
+          <strong>{{ message }}</strong>
         </div>
     {% endif %}
 
