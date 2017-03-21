@@ -1,5 +1,7 @@
 # coding=utf-8
+from datetime import datetime
 
+from chartit import *
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.core.mail import send_mail
@@ -9,6 +11,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.views.generic import View, TemplateView, CreateView
 from django.contrib.auth import get_user_model
 from django.db.models import Min,Max,Avg
+import time
 
 from .forms import ContactForm, MonitoringForm
 
@@ -68,5 +71,37 @@ def monitoramento(request):
         'max_monitoring' : max_monitoring,
         'avg_heart_rate' : avg_heart_rate,
         'last_monitoring' : last_monitoring,
+        'chart' : build_chart(monitorings),
     }
     return render(request, 'monitoring.html', context)
+
+def build_chart(monitorings):
+    cht = None
+    if monitorings:
+        ds = DataPool(
+            series=
+            [{'options': {
+                'source': monitorings},
+                'terms': [
+                    ('date_time', lambda d: time.mktime(d.timetuple())),
+                    'heart_rate']}
+            ])
+
+        cht = Chart(
+            datasource=ds,
+            series_options=
+            [{'options': {
+                'type': 'line',
+                'stacking': False},
+                'terms': {
+                    'date_time': ['heart_rate']
+                }}],
+            chart_options=
+            {'title': {
+                'text': ' '},
+                'xAxis': {
+                    'title': {
+                        'text': 'Horário'}}},
+        x_sortf_mapf_mts = (None, lambda i: datetime.fromtimestamp(i).strftime("%H:%M"), False))
+
+    return cht

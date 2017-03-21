@@ -1,7 +1,6 @@
 {% extends "base.html" %}
-
 {% load widget_tweaks %}
-
+{% load chartit %}
 {% block title %}
     Monitoramento | {{ block.super }}
 {% endblock %}
@@ -9,14 +8,14 @@
 {% block container %}
 <div class="page-header">
     {% if user.is_authenticated %}
-        <h1>Monitoramento {{ user}}</h1>
+        <h2>Monitoramento: {{ user }}</h2>
     {% else %}
 
         <div class="well">Informe uma <strong>Data</strong> "exemplo 07/03/2017" e acione o comando para <strong>Buscar</strong> os dados demonstrativos!</div>
 
     {% endif %}
 
-    <form class="form-horizontal" action="" method="post">
+    <form class="form-horizontal" name="formulario" action="" method="post">
         {% csrf_token %}
         <fieldset>
             {% for field in form %}
@@ -40,6 +39,12 @@
 
     <hr>
     {% if monitorings %}
+
+    <script>
+        window.onload=function(){
+                window.setTimeout(function() { document.formulario.submit(); }, document.getElementById('id_autorefresh').value*60000);
+        };
+    </script>
 
     <div class="container-fluid">
 
@@ -99,9 +104,17 @@
         </div>
     </div>
 
-
     <hr>
     <div class="panel-group">
+        {% if chart %}
+            <div class="panel panel-default">
+              <div class="panel-heading">Frequência cardíaca:</div>
+                <div class="panel-body">
+                    {{ chart|load_charts:"chart" }}
+                    <div id="chart"></div>
+                </div>
+            </div>
+        {% endif %}
       <div class="panel panel-default">
           <div class="panel-heading">Última localização: {{ last_monitoring.date_time |date:'H:i'  }} <i class="fa fa-clock-o" aria-hidden="true"></i></div>
         <div class="panel-body">{{ last_monitoring.map | safe  }}</div>
@@ -111,8 +124,10 @@
         <div class="panel-body">{{ last_monitoring.address | safe }}</div>
       </div>
     </div>
-
-
+    {% else %}
+        <div class="alert alert-warning">
+          <strong>Não foram encontrados dados para a data informada!</strong>
+        </div>
     {% endif %}
 
 
