@@ -42,9 +42,7 @@
 
     <script>
         window.onload=function(){
-            if(document.getElementById('id_autorefresh').checked){
-                window.setTimeout(function() { document.formulario.submit(); }, 60000);
-            }
+                window.setTimeout(function() { document.formulario.submit(); }, document.getElementById('id_autorefresh').value*60000);
         };
     </script>
 
@@ -126,8 +124,10 @@
         <div class="panel-body">{{ last_monitoring.address | safe }}</div>
       </div>
     </div>
-
-
+    {% else %}
+        <div class="alert alert-warning">
+          <strong>Não foram encontrados dados para a data informada!</strong>
+        </div>
     {% endif %}
 
 
