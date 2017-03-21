@@ -8,8 +8,7 @@
 {% block container %}
 <div class="page-header">
     {% if user.is_authenticated %}
-        <h1>Monitoramento:</h1>
-        <h1>{{ user }}</h1>
+        <h2>Monitoramento: {{ user }}</h2>
     {% else %}
 
         <div class="well">Informe uma <strong>Data</strong> "exemplo 07/03/2017" e acione o comando para <strong>Buscar</strong> os dados demonstrativos!</div>
