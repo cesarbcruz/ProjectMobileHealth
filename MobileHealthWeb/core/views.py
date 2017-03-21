@@ -51,6 +51,7 @@ def monitoramento(request):
     max_monitoring = None
     avg_heart_rate = None
     last_monitoring = None
+    max_steps = None
     form = MonitoringForm(request.POST or None)
     message = None
     if form.is_valid():
@@ -60,8 +61,12 @@ def monitoramento(request):
             max_monitoring = (monitorings.annotate(Max('heart_rate')).latest('heart_rate'))
             avg_heart_rate = int((monitorings.values_list('heart_rate').aggregate(Avg('heart_rate')))['heart_rate__avg'])
             last_monitoring = (monitorings.annotate(Max('date_time')).latest('date_time'))
+            max_steps = (monitorings.annotate(Max('steps')).latest('steps'))
         else:
             message = "Não foram encontrados dados para a data informada!"
+
+    chart_heart_rate = build_chart(monitorings)
+    chart_steps = build_chart_steps(monitorings)
     context = {
         'form': form,
         'monitorings': monitorings,
@@ -69,7 +74,8 @@ def monitoramento(request):
         'max_monitoring' : max_monitoring,
         'avg_heart_rate' : avg_heart_rate,
         'last_monitoring' : last_monitoring,
-        'chart' : build_chart(monitorings),
+        'max_steps' : max_steps,
+        'charts' :  [chart_heart_rate, chart_steps],
         'message' : message,
     }
     return render(request, 'monitoring.html', context)
@@ -94,6 +100,38 @@ def build_chart(monitorings):
                 'stacking': False},
                 'terms': {
                     'date_time': ['heart_rate']
+                }}],
+            chart_options=
+            {'title': {
+                'text': ' '},
+                'xAxis': {
+                    'title': {
+                        'text': 'Horário'}}},
+            x_sortf_mapf_mts = (None, lambda i: localtime(i).strftime("%H:%M"), False),
+        )
+
+    return cht
+
+def build_chart_steps(monitorings):
+    cht = None
+    if monitorings:
+        ds = DataPool(
+            series=
+            [{'options': {
+                'source': monitorings},
+                'terms': [
+                    ('date_time'),
+                    'steps']}
+            ])
+
+        cht = Chart(
+            datasource=ds,
+            series_options=
+            [{'options': {
+                'type': 'line',
+                'stacking': False},
+                'terms': {
+                    'date_time': ['steps']
                 }}],
             chart_options=
             {'title': {

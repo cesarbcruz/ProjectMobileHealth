@@ -106,12 +106,26 @@
 
         <hr>
         <div class="panel-group">
-            {% if chart %}
+            {% if charts %}
+                {{ charts|load_charts:"chart_heart_rate,chart_steps" }}
                 <div class="panel panel-default">
                   <div class="panel-heading">Frequência cardíaca:</div>
                     <div class="panel-body">
-                        {{ chart|load_charts:"chart" }}
-                        <div id="chart"></div>
+                        <div id="chart_heart_rate"></div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                        <div class="panel-title pull-left">Atividade física:</div>
+                        <div class="panel-title pull-right">
+                            {% if max_steps.steps %}
+                                {{ max_steps.steps }} passos total
+                            {% endif %}
+                        </div>
+                        <div class="clearfix"></div>
+                  </div>
+                    <div class="panel-body">
+                        <div id="chart_steps"></div>
                     </div>
                 </div>
             {% endif %}
