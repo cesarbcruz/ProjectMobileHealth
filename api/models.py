@@ -39,7 +39,7 @@ class Monitoring(models.Model):
             else:
                 return 'Não identificado'
         except Exception as e:
-            return "Erro: {0}".format(e)
+            return "Não identificado (Erro: {0})".format(e)
 
     def map(self):
         return "<iframe width='100%' height='450' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/place?q="+self.location()+"&amp;key=AIzaSyATsuuNRa7lkmJ2jgyNjLg7vvS8wb7nU-g'></iframe>"

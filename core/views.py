@@ -3,15 +3,11 @@ from datetime import datetime
 
 from chartit import *
 from django.shortcuts import render
-from django.http import HttpResponse
-from django.core.mail import send_mail
-from django.conf import settings
-from django.core.urlresolvers import reverse_lazy
-from django.contrib.auth.forms import UserCreationForm
-from django.views.generic import View, TemplateView, CreateView
+from django.views.generic import TemplateView
 from django.contrib.auth import get_user_model
 from django.db.models import Min,Max,Avg
 import time
+from django.utils.timezone import localtime
 
 from .forms import ContactForm, MonitoringForm
 
@@ -83,7 +79,7 @@ def build_chart(monitorings):
             [{'options': {
                 'source': monitorings},
                 'terms': [
-                    ('date_time', lambda d: time.mktime(d.timetuple())),
+                    ('date_time'),
                     'heart_rate']}
             ])
 
@@ -102,6 +98,6 @@ def build_chart(monitorings):
                 'xAxis': {
                     'title': {
                         'text': 'Horário'}}},
-        x_sortf_mapf_mts = (None, lambda i: datetime.fromtimestamp(i).strftime("%H:%M"), False))
+        x_sortf_mapf_mts = (None, lambda i: localtime(i).strftime("%H:%M"), False))
 
     return cht

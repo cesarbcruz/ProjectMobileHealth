@@ -117,10 +117,16 @@
         {% endif %}
       <div class="panel panel-default">
           <div class="panel-heading">Última localização: {{ last_monitoring.date_time |date:'H:i'  }} <i class="fa fa-clock-o" aria-hidden="true"></i></div>
-        <div class="panel-body">{{ last_monitoring.map | safe  }}</div>
+        <div class="panel-body">
+            {% if last_monitoring.map != None %}
+                {{ last_monitoring.map | safe  }}
+            {% else %}
+                <strong>Não identificada</strong>
+            {% endif %}
+        </div>
       </div>
       <div class="panel panel-default">
-          <div class="panel-heading">Endereços próximos:</div>
+          <div class="panel-heading">Endereço aproximado:</div>
         <div class="panel-body">{{ last_monitoring.address | safe }}</div>
       </div>
     </div>
