@@ -117,6 +117,7 @@ public class FetchActivityOperation extends AbstractMiBand2Operation {
         } else {
             return super.onCharacteristicChanged(gatt, characteristic);
         }
+
     }
 
     private void handleActivityFetchFinish() {

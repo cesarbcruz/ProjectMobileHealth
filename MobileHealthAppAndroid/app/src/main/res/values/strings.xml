@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MobileHealthAppAndroid</string>
+    <string name="action_settings">Configuração</string>
+    <string name="heart_rate">BPM</string>
+</resources>

@@ -268,9 +268,9 @@ public class MiBand2Support extends AbstractBTLEDeviceSupport {
     }
 
     public MiBand2Support enableFurtherNotifications(TransactionBuilder builder, boolean enable) {
-//        builder.notify(getCharacteristic(MiBandService.UUID_CHARACTERISTIC_REALTIME_STEPS), enable)
-//                .notify(getCharacteristic(MiBandService.UUID_CHARACTERISTIC_ACTIVITY_DATA), enable)
-//                .notify(getCharacteristic(MiBandService.UUID_CHARACTERISTIC_SENSOR_DATA), enable);
+        builder.notify(getCharacteristic(MiBandService.UUID_CHARACTERISTIC_REALTIME_STEPS), enable)
+                .notify(getCharacteristic(MiBandService.UUID_CHARACTERISTIC_ACTIVITY_DATA), enable)
+                .notify(getCharacteristic(MiBandService.UUID_CHARACTERISTIC_SENSOR_DATA), enable);
         builder.notify(getCharacteristic(MiBand2Service.UUID_CHARACTERISTIC_3_CONFIGURATION), enable);
         builder.notify(getCharacteristic(MiBand2Service.UUID_CHARACTERISTIC_6_BATTERY_INFO), enable);
         BluetoothGattCharacteristic heartrateCharacteristic = getCharacteristic(MiBandService.UUID_CHARACTERISTIC_HEART_RATE_MEASUREMENT);
@@ -741,19 +741,19 @@ public class MiBand2Support extends AbstractBTLEDeviceSupport {
 
     @Override
     public void onEnableRealtimeSteps(boolean enable) {
-//        try {
-//            BluetoothGattCharacteristic controlPoint = getCharacteristic(MiBandService.UUID_CHARACTERISTIC_CONTROL_POINT);
-//            if (enable) {
-//                TransactionBuilder builder = performInitialized("Read realtime steps");
-//                builder.read(getCharacteristic(MiBandService.UUID_CHARACTERISTIC_REALTIME_STEPS)).queue(getQueue());
-//            }
-//            performInitialized(enable ? "Enabling realtime steps notifications" : "Disabling realtime steps notifications")
-//                    .write(getCharacteristic(MiBandService.UUID_CHARACTERISTIC_LE_PARAMS), enable ? getLowLatency() : getHighLatency())
-//                    .write(controlPoint, enable ? startRealTimeStepsNotifications : stopRealTimeStepsNotifications).queue(getQueue());
-//        enableRealtimeSamplesTimer(enable);
-//        } catch (IOException e) {
-//            LOG.error("Unable to change realtime steps notification to: " + enable, e);
-//        }
+        try {
+            BluetoothGattCharacteristic controlPoint = getCharacteristic(MiBandService.UUID_CHARACTERISTIC_CONTROL_POINT);
+            if (enable) {
+                TransactionBuilder builder = performInitialized("Read realtime steps");
+                builder.read(getCharacteristic(MiBandService.UUID_CHARACTERISTIC_REALTIME_STEPS)).queue(getQueue());
+            }
+            performInitialized(enable ? "Enabling realtime steps notifications" : "Disabling realtime steps notifications")
+                    .write(getCharacteristic(MiBandService.UUID_CHARACTERISTIC_LE_PARAMS), enable ? getLowLatency() : getHighLatency())
+                    .write(controlPoint, enable ? startRealTimeStepsNotifications : stopRealTimeStepsNotifications).queue(getQueue());
+        enableRealtimeSamplesTimer(enable);
+        } catch (IOException e) {
+            LOG.error("Unable to change realtime steps notification to: " + enable, e);
+        }
     }
 
     private byte[] getHighLatency() {

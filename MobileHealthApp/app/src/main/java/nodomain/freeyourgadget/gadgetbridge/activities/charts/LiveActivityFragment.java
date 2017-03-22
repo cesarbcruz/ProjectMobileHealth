@@ -222,7 +222,7 @@ public class LiveActivityFragment extends AbstractChartFragment {
         int hr = getCurrentHeartRate();
         if(hr >= 0){
             ObtainGPS gps = new ObtainGPS(getContext());
-            new ClientRest().execute(new Monitoring(hr, gps.getLatitude(), gps.getLongitude()));
+            new ClientRest().execute(new Monitoring(hr, gps.getLatitude(), gps.getLongitude(), mSteps.getTotalSteps()));
         }else{
             hr = 0;
         }
