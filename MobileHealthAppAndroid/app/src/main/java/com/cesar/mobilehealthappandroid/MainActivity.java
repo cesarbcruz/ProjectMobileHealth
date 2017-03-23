@@ -13,6 +13,8 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+
+import com.cesar.mobilehealthappandroid.basicsyncadapter.EntryListActivity;
 import com.cesar.mobilehealthappandroid.sdk.ActionCallback;
 import com.cesar.mobilehealthappandroid.sdk.listeners.HeartRateNotifyListener;
 
@@ -47,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(getBaseContext(), EntryListActivity.class));
             }
         });
 
