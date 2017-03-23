@@ -406,7 +406,7 @@ public class BluetoothIO extends BluetoothGattCallback {
     public void onCharacteristicRead(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic, int status) {
         if (characteristic.getUuid().equals(mCharBatteryInfo.getUuid())) {
             int i = characteristic.getValue()[1];
-            final String str = "Bateria: " + (i & 0xFF) + "%";
+            final String str = "Bateria da pulseira: " + (i & 0xFF) + "%";
             new Handler(Looper.getMainLooper()).post(new Runnable() {
                 @Override
                 public void run() {

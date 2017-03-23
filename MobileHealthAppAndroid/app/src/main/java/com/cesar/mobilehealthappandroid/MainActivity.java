@@ -7,14 +7,12 @@ import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
-
 import com.cesar.mobilehealthappandroid.sdk.ActionCallback;
 import com.cesar.mobilehealthappandroid.sdk.listeners.HeartRateNotifyListener;
 
@@ -29,13 +27,14 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String PRFFS_ADDRESS = "prefs_address";
     public static final String PRFFS_ADDRESS_KEY = "prefs_address_key";
-
     private TextView tvHeartRate;
     private BluetoothLeService mBluetoothLeService;
     private static final String TAG = MainActivity.class.getSimpleName();
     private String mDeviceAddress = "E1:EE:C3:07:10:BA";
     private HeartRateNotifyListener listener;
     private ActionCallback action;
+    private FloatingActionButton fab;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,12 +43,11 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Nenhuma mensagem", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
             }
         });
 
@@ -59,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void scanHeartRate() {
+    private void scheduleTask() {
 
         ScheduledExecutorService scheduler =
                 Executors.newSingleThreadScheduledExecutor();
@@ -67,19 +65,22 @@ public class MainActivity extends AppCompatActivity {
         scheduler.scheduleAtFixedRate
                 (new Runnable() {
                     public void run() {
-                        if(listener==null){
-                            listener = new HeartRateNotifyListener() {
-                                @Override
-                                public void onNotify(int heartRate) {
-                                    updateUIState(tvHeartRate, R.string.heart_rate, " " + heartRate);
-                                }
-                            };
-                            mBluetoothLeService.setHeartRateScanListener(listener);
-                        }
-
-                        mBluetoothLeService.startHeartRateScan(actionCallBack());
+                        scanHeartRate();
                     }
                 }, 20, 30, TimeUnit.SECONDS);
+    }
+
+    private void scanHeartRate(){
+        if(listener==null){
+            listener = new HeartRateNotifyListener() {
+                @Override
+                public void onNotify(int heartRate) {
+                    updateUIState(tvHeartRate, String.valueOf(heartRate));
+                }
+            };
+            mBluetoothLeService.setHeartRateScanListener(listener);
+        }
+        mBluetoothLeService.startHeartRateScan(actionCallBack());
     }
 
     private ActionCallback actionCallBack() {
@@ -94,19 +95,18 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onFail(int errorCode, String msg) {
                     log('e', TAG, "errorCode : " + errorCode + ", msg : " + msg);
-                    updateUIState(tvHeartRate, R.string.heart_rate, "...");
+                    updateUIState(tvHeartRate, "...");
                 }
             };
         }
         return action;
     }
 
-    private void updateUIState(final TextView tv, final int rowResourceId, final String addStr) {
+    private void updateUIState(final TextView tv, final String addStr) {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                String str = addStr+"\n"+getResources().getString(rowResourceId);
-                tv.setText(str);
+                tv.setText(addStr);
             }
         });
     }
@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
             }
             // Automatically connects to the device upon successful start-up initialization.
             mBluetoothLeService.connect(mDeviceAddress, MainActivity.this);
-            scanHeartRate();
+            scheduleTask();
         }
 
         @Override
