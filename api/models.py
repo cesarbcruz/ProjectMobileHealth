@@ -44,3 +44,14 @@ class Monitoring(models.Model):
 
     def map(self):
         return "<iframe width='100%' height='450' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/place?q="+self.location()+"&amp;key=AIzaSyATsuuNRa7lkmJ2jgyNjLg7vvS8wb7nU-g'></iframe>"
+
+class Message(models.Model):
+    issuer  = models.ForeignKey(User, verbose_name = u'Emitente', related_name="message_issuer_user", blank=False)
+    recipient = models.ForeignKey(User, verbose_name=u'Destinatário', related_name="message_recipient_user", blank=False)
+    date_time = models.DateTimeField('Data/Hora', blank=False)
+    subject = models.CharField('Assunto', max_length=1000)
+    msg = models.TextField('Mensagem', blank=False)
+
+    def __str__(self):
+        return '%s | %s | %s' % (self.issuer, self.recipient, self.subject )
+
