@@ -9,6 +9,7 @@ import android.os.IBinder;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -165,5 +166,14 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(isTaskRoot()) {
+            new ExitDialogFragment().show(getFragmentManager(), null);
+        } else {
+            super.onBackPressed();
+        }
     }
 }

@@ -10,4 +10,7 @@
     <string name="loading">Aguarde, sincronizando...</string>
     <string name="description_refresh">Atualizar</string>
     <string name="description_previous">Voltar</string>
+    <string name="exit_question">Tem certeza que deseja sair do monitoramento?</string>
+    <string name="yes">Sim</string>
+    <string name="no">Não</string>
 </resources>
