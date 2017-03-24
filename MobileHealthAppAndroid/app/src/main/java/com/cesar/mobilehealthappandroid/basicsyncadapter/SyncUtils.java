@@ -25,7 +25,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 
-import com.cesar.mobilehealthappandroid.basicsyncadapter.provider.FeedContract;
+import com.cesar.mobilehealthappandroid.basicsyncadapter.provider.MessageContract;
 import com.cesar.mobilehealthappandroid.common.accounts.GenericAccountService;
 
 /**
@@ -33,7 +33,7 @@ import com.cesar.mobilehealthappandroid.common.accounts.GenericAccountService;
  */
 public class SyncUtils {
     private static final long SYNC_FREQUENCY = 5;  // 1 hour (in seconds)
-    private static final String CONTENT_AUTHORITY = FeedContract.CONTENT_AUTHORITY;
+    private static final String CONTENT_AUTHORITY = MessageContract.CONTENT_AUTHORITY;
     private static final String PREF_SETUP_COMPLETE = "setup_complete";
     // Value below must match the account type specified in res/xml/syncadapter.xml
     public static final String ACCOUNT_TYPE = "com.example.android.basicsyncadapter.account";
@@ -93,7 +93,7 @@ public class SyncUtils {
         b.putBoolean(ContentResolver.SYNC_EXTRAS_EXPEDITED, true);
         ContentResolver.requestSync(
                 GenericAccountService.GetAccount(ACCOUNT_TYPE), // Sync account
-                FeedContract.CONTENT_AUTHORITY,                 // Content authority
+                MessageContract.CONTENT_AUTHORITY,                 // Content authority
                 b);                                             // Extras
     }
 }

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Monitoring
+from .models import Monitoring, Message
 from django.utils.html import format_html
 
 class MonitoringAdmin(admin.ModelAdmin):
@@ -13,8 +13,9 @@ class MonitoringAdmin(admin.ModelAdmin):
 
     list_display = ('user', 'date_time', 'heart_rate', 'show_location', 'steps')
 
-
-
-
-
 admin.site.register(Monitoring,MonitoringAdmin)
+
+class MessageAdmin(admin.ModelAdmin):
+    list_display = ('issuer', 'recipient', 'date_time', 'subject', 'msg')
+
+admin.site.register(Message,MessageAdmin)

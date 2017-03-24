@@ -41,7 +41,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.cesar.mobilehealthappandroid.R;
-import com.cesar.mobilehealthappandroid.basicsyncadapter.provider.FeedContract;
+import com.cesar.mobilehealthappandroid.basicsyncadapter.provider.MessageContract;
 import com.cesar.mobilehealthappandroid.common.accounts.GenericAccountService;
 
 /**
@@ -91,10 +91,10 @@ public class EntryListFragment extends ListFragment
      * Projection for querying the content provider.
      */
     private static final String[] PROJECTION = new String[]{
-            FeedContract.Entry._ID,
-            FeedContract.Entry.COLUMN_NAME_TITLE,
-            FeedContract.Entry.COLUMN_NAME_LINK,
-            FeedContract.Entry.COLUMN_NAME_PUBLISHED
+            MessageContract.Entry._ID,
+            MessageContract.Entry.COLUMN_NAME_TITLE,
+            MessageContract.Entry.COLUMN_NAME_MSG,
+            MessageContract.Entry.COLUMN_NAME_DATE
     };
 
     // Column indexes. The index of a column in the Cursor is the same as its relative position in
@@ -104,16 +104,16 @@ public class EntryListFragment extends ListFragment
     /** Column index for title */
     private static final int COLUMN_TITLE = 1;
     /** Column index for link */
-    private static final int COLUMN_URL_STRING = 2;
+    private static final int COLUMN_MSG = 2;
     /** Column index for published */
-    private static final int COLUMN_PUBLISHED = 3;
+    private static final int COLUMN_DATE = 3;
 
     /**
      * List of Cursor columns to read from when preparing an adapter to populate the ListView.
      */
     private static final String[] FROM_COLUMNS = new String[]{
-            FeedContract.Entry.COLUMN_NAME_TITLE,
-            FeedContract.Entry.COLUMN_NAME_PUBLISHED
+            MessageContract.Entry.COLUMN_NAME_TITLE,
+            MessageContract.Entry.COLUMN_NAME_DATE
     };
 
     /**
@@ -164,7 +164,7 @@ public class EntryListFragment extends ListFragment
         mAdapter.setViewBinder(new SimpleCursorAdapter.ViewBinder() {
             @Override
             public boolean setViewValue(View view, Cursor cursor, int i) {
-                if (i == COLUMN_PUBLISHED) {
+                if (i == COLUMN_DATE) {
                     // Convert timestamp to human-readable date
                     Time t = new Time();
                     t.set(cursor.getLong(i));
@@ -214,11 +214,11 @@ public class EntryListFragment extends ListFragment
         // We only have one loader, so we can ignore the value of i.
         // (It'll be '0', as set in onCreate().)
         return new CursorLoader(getActivity(),  // Context
-                FeedContract.Entry.CONTENT_URI, // URI
+                MessageContract.Entry.CONTENT_URI, // URI
                 PROJECTION,                // Projection
                 null,                           // Selection
                 null,                           // Selection args
-                FeedContract.Entry.COLUMN_NAME_PUBLISHED + " desc"); // Sort
+                MessageContract.Entry.COLUMN_NAME_DATE + " desc"); // Sort
     }
 
     /**
@@ -282,7 +282,7 @@ public class EntryListFragment extends ListFragment
         // Get the item at the selected position, in the form of a Cursor.
         Cursor c = (Cursor) mAdapter.getItem(position);
         // Get the link to the article represented by the item.
-        String articleUrlString = c.getString(COLUMN_URL_STRING);
+        String articleUrlString = c.getString(COLUMN_MSG);
         if (articleUrlString == null) {
             Log.e(TAG, "Attempt to launch entry with null link");
             return;
@@ -348,9 +348,9 @@ public class EntryListFragment extends ListFragment
                     // Test the ContentResolver to see if the sync adapter is active or pending.
                     // Set the state of the refresh button accordingly.
                     boolean syncActive = ContentResolver.isSyncActive(
-                            account, FeedContract.CONTENT_AUTHORITY);
+                            account, MessageContract.CONTENT_AUTHORITY);
                     boolean syncPending = ContentResolver.isSyncPending(
-                            account, FeedContract.CONTENT_AUTHORITY);
+                            account, MessageContract.CONTENT_AUTHORITY);
                     setRefreshActionButtonState(syncActive || syncPending);
                 }
             });

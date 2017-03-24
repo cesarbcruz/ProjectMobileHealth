@@ -4,9 +4,6 @@
     <string name="label_heart_rate">BPM</string>
     <string name="label_desc_heart_rate">Frequência cardíaca</string>
     <string name="heart_rate">0</string>
-
-    <string name="account_name">FeedSync Service</string>
-    <string name="title_entry_detail">Entry Detail</string>
     <string name="loading">Aguarde, sincronizando...</string>
     <string name="description_refresh">Atualizar</string>
     <string name="description_previous">Voltar</string>

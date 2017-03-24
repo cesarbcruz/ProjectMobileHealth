@@ -47,8 +47,8 @@ import java.util.Map;
  *
  * <pre>
  *     SelectionBuilder builder = new SelectionBuilder();
- *     Cursor c = builder.table(FeedContract.Entry.TABLE_NAME)       // String TABLE_NAME = "entry"
- *                       .where(FeedContract.Entry._ID + "=?", id);  // String _ID = "_ID"
+ *     Cursor c = builder.table(MessageContract.Entry.TABLE_NAME)       // String TABLE_NAME = "entry"
+ *                       .where(MessageContract.Entry._ID + "=?", id);  // String _ID = "_ID"
  *                       .query(db, projection, sortOrder)
  *
  * </pre>

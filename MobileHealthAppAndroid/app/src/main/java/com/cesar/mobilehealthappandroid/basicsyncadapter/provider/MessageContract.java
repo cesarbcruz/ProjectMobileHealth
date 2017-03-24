@@ -24,8 +24,8 @@ import android.provider.BaseColumns;
  * Field and table name constants for
  * {@link com.cesar.mobilehealthappandroid.basicsyncadapter.provider.FeedProvider}.
  */
-public class FeedContract {
-    private FeedContract() {
+public class MessageContract {
+    private MessageContract() {
     }
 
     /**
@@ -80,10 +80,10 @@ public class FeedContract {
          * Article hyperlink. Corresponds to the rel="alternate" link in the
          * Atom spec.
          */
-        public static final String COLUMN_NAME_LINK = "link";
+        public static final String COLUMN_NAME_MSG = "link";
         /**
          * Date article was published.
          */
-        public static final String COLUMN_NAME_PUBLISHED = "published";
+        public static final String COLUMN_NAME_DATE = "published";
     }
 }

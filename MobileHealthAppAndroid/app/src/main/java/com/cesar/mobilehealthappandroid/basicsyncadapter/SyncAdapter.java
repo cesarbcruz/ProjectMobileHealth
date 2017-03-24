@@ -33,7 +33,7 @@ import android.os.RemoteException;
 import android.util.Log;
 
 import com.cesar.mobilehealthappandroid.basicsyncadapter.net.FeedParser;
-import com.cesar.mobilehealthappandroid.basicsyncadapter.provider.FeedContract;
+import com.cesar.mobilehealthappandroid.basicsyncadapter.provider.MessageContract;
 
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -86,11 +86,11 @@ class SyncAdapter extends AbstractThreadedSyncAdapter {
      * Project used when querying content provider. Returns all known fields.
      */
     private static final String[] PROJECTION = new String[] {
-            FeedContract.Entry._ID,
-            FeedContract.Entry.COLUMN_NAME_ENTRY_ID,
-            FeedContract.Entry.COLUMN_NAME_TITLE,
-            FeedContract.Entry.COLUMN_NAME_LINK,
-            FeedContract.Entry.COLUMN_NAME_PUBLISHED};
+            MessageContract.Entry._ID,
+            MessageContract.Entry.COLUMN_NAME_ENTRY_ID,
+            MessageContract.Entry.COLUMN_NAME_TITLE,
+            MessageContract.Entry.COLUMN_NAME_MSG,
+            MessageContract.Entry.COLUMN_NAME_DATE};
 
     // Constants representing column positions from PROJECTION.
     public static final int COLUMN_ID = 0;
@@ -219,7 +219,7 @@ class SyncAdapter extends AbstractThreadedSyncAdapter {
 
         // Get list of all items
         Log.i(TAG, "Fetching local entries for merge");
-        Uri uri = FeedContract.Entry.CONTENT_URI; // Get all entries
+        Uri uri = MessageContract.Entry.CONTENT_URI; // Get all entries
         Cursor c = contentResolver.query(uri, PROJECTION, null, null, null);
         assert c != null;
         Log.i(TAG, "Found " + c.getCount() + " local entries. Computing merge solution...");
@@ -242,7 +242,7 @@ class SyncAdapter extends AbstractThreadedSyncAdapter {
                 // Entry exists. Remove from entry map to prevent insert later.
                 entryMap.remove(entryId);
                 // Check to see if the entry needs to be updated
-                Uri existingUri = FeedContract.Entry.CONTENT_URI.buildUpon()
+                Uri existingUri = MessageContract.Entry.CONTENT_URI.buildUpon()
                         .appendPath(Integer.toString(id)).build();
                 if ((match.title != null && !match.title.equals(title)) ||
                         (match.link != null && !match.link.equals(link)) ||
@@ -250,9 +250,9 @@ class SyncAdapter extends AbstractThreadedSyncAdapter {
                     // Update existing record
                     Log.i(TAG, "Scheduling update: " + existingUri);
                     batch.add(ContentProviderOperation.newUpdate(existingUri)
-                            .withValue(FeedContract.Entry.COLUMN_NAME_TITLE, title)
-                            .withValue(FeedContract.Entry.COLUMN_NAME_LINK, link)
-                            .withValue(FeedContract.Entry.COLUMN_NAME_PUBLISHED, published)
+                            .withValue(MessageContract.Entry.COLUMN_NAME_TITLE, title)
+                            .withValue(MessageContract.Entry.COLUMN_NAME_MSG, link)
+                            .withValue(MessageContract.Entry.COLUMN_NAME_DATE, published)
                             .build());
                     syncResult.stats.numUpdates++;
                 } else {
@@ -260,7 +260,7 @@ class SyncAdapter extends AbstractThreadedSyncAdapter {
                 }
             } else {
                 // Entry doesn't exist. Remove it from the database.
-                Uri deleteUri = FeedContract.Entry.CONTENT_URI.buildUpon()
+                Uri deleteUri = MessageContract.Entry.CONTENT_URI.buildUpon()
                         .appendPath(Integer.toString(id)).build();
                 Log.i(TAG, "Scheduling delete: " + deleteUri);
                 batch.add(ContentProviderOperation.newDelete(deleteUri).build());
@@ -272,18 +272,18 @@ class SyncAdapter extends AbstractThreadedSyncAdapter {
         // Add new items
         for (FeedParser.Entry e : entryMap.values()) {
             Log.i(TAG, "Scheduling insert: entry_id=" + e.id);
-            batch.add(ContentProviderOperation.newInsert(FeedContract.Entry.CONTENT_URI)
-                    .withValue(FeedContract.Entry.COLUMN_NAME_ENTRY_ID, e.id)
-                    .withValue(FeedContract.Entry.COLUMN_NAME_TITLE, e.title)
-                    .withValue(FeedContract.Entry.COLUMN_NAME_LINK, e.link)
-                    .withValue(FeedContract.Entry.COLUMN_NAME_PUBLISHED, e.published)
+            batch.add(ContentProviderOperation.newInsert(MessageContract.Entry.CONTENT_URI)
+                    .withValue(MessageContract.Entry.COLUMN_NAME_ENTRY_ID, e.id)
+                    .withValue(MessageContract.Entry.COLUMN_NAME_TITLE, e.title)
+                    .withValue(MessageContract.Entry.COLUMN_NAME_MSG, e.link)
+                    .withValue(MessageContract.Entry.COLUMN_NAME_DATE, e.published)
                     .build());
             syncResult.stats.numInserts++;
         }
         Log.i(TAG, "Merge solution ready. Applying batch update");
-        mContentResolver.applyBatch(FeedContract.CONTENT_AUTHORITY, batch);
+        mContentResolver.applyBatch(MessageContract.CONTENT_AUTHORITY, batch);
         mContentResolver.notifyChange(
-                FeedContract.Entry.CONTENT_URI, // URI where data was modified
+                MessageContract.Entry.CONTENT_URI, // URI where data was modified
                 null,                           // No local observer
                 false);                         // IMPORTANT: Do not sync to network
         // This sample doesn't support uploads, but if *your* code does, make sure you set
