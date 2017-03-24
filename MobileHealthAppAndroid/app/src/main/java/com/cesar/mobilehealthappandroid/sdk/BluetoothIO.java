@@ -50,6 +50,8 @@ public class BluetoothIO extends BluetoothGattCallback {
     private String mBluetoothDeviceAddress;
     BluetoothGatt mBluetoothGatt;
 
+    private final String message_error_default="Verifique se o bluetooth está ativo e sua pulseira está conectada";
+
     ActionCallback mCurrentCallback;
     Context mContext;
 
@@ -174,7 +176,7 @@ public class BluetoothIO extends BluetoothGattCallback {
 
     public BluetoothDevice getDevice() {
         if (null == mBluetoothGatt) {
-            log('e', TAG, "connect to miband first");
+            log('e', TAG, message_error_default);
             return null;
         }
         return mBluetoothGatt.getDevice();
@@ -204,8 +206,8 @@ public class BluetoothIO extends BluetoothGattCallback {
 //        log('d', TAG, "writeCharacteristic() - serviceUUID : "+serviceUUID+", characteristicUUID="+characteristicUUID+" value : "+ Arrays.toString(value));
         try {
             if (null == mBluetoothGatt) {
-                log('e', TAG, "connect to miband first");
-                throw new Exception("connect to miband first");
+                log('e', TAG, message_error_default);
+                throw new Exception(message_error_default);
             }
             this.mCurrentCallback = callback;
 
@@ -243,8 +245,8 @@ public class BluetoothIO extends BluetoothGattCallback {
 //        log('d', TAG, "readCharacteristic() - serviceUUID : "+serviceUUID+", characteristicUUID="+characteristicUUID);
         try {
             if (null == mBluetoothGatt) {
-                log('e', TAG, "connect to miband first");
-                throw new Exception("connect to miband first");
+                log('e', TAG, message_error_default);
+                throw new Exception(message_error_default);
             }
             this.mCurrentCallback = callback;
             BluetoothGattCharacteristic chara = mBluetoothGatt.getService(serviceUUID).getCharacteristic(characteristicUUID);
@@ -279,8 +281,8 @@ public class BluetoothIO extends BluetoothGattCallback {
     public void readRssi(ActionCallback callback) {
         try {
             if (null == mBluetoothGatt) {
-                log('e', TAG, "connect to miband first");
-                throw new Exception("connect to miband first");
+                log('e', TAG, message_error_default);
+                throw new Exception(message_error_default);
             }
             this.mCurrentCallback = callback;
             this.mBluetoothGatt.readRemoteRssi();
@@ -294,7 +296,7 @@ public class BluetoothIO extends BluetoothGattCallback {
     public void setCharacteristicNotification(UUID serviceUUID, UUID characteristicId,
                                               boolean enabled) {
         if (null == mBluetoothGatt) {
-            log('e', TAG, "connect to miband first");
+            log('e', TAG, message_error_default);
             return;
         }
 
@@ -331,7 +333,7 @@ public class BluetoothIO extends BluetoothGattCallback {
     public void setNotifyListener(UUID serviceUUID, UUID characteristicId, NotifyListener listener) {
         log('d', TAG, "setNotifyListener() - serviceUUID : "+serviceUUID+" characteristicUUID : "+characteristicId.toString()+" enable : true");
         if (null == mBluetoothGatt) {
-            log('e', TAG, "connect to miband first");
+            log('e', TAG, message_error_default);
             return;
         }
 

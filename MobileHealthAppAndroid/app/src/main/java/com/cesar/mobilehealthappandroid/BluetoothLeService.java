@@ -24,8 +24,11 @@ import android.bluetooth.BluetoothGattService;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Binder;
+import android.os.Handler;
 import android.os.IBinder;
+import android.os.Looper;
 import android.view.KeyEvent;
+import android.widget.Toast;
 
 import com.cesar.mobilehealthappandroid.sdk.ActionCallback;
 import com.cesar.mobilehealthappandroid.sdk.MiBand;
@@ -108,6 +111,12 @@ public class BluetoothLeService extends Service {
             public void onSuccess(Object data) {
                 pd.dismiss();
                 log('d', TAG, "connected!!!");
+                new Handler(Looper.getMainLooper()).post(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(activity.getBaseContext(), "Pulseira conectada", Toast.LENGTH_LONG).show();
+                    }
+                });
 
                 miband.setDisconnectedListener(new NotifyListener() {
                     @Override
@@ -117,9 +126,15 @@ public class BluetoothLeService extends Service {
                 });
             }
             @Override
-            public void onFail(int errorCode, String msg) {
+            public void onFail(int errorCode, final String msg) {
                 pd.dismiss();
                 log('d', TAG, "connect fail, code:" + errorCode + ",mgs:" + msg);
+                new Handler(Looper.getMainLooper()).post(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(activity.getBaseContext(), msg, Toast.LENGTH_LONG).show();
+                    }
+                });
             }
         });
     }

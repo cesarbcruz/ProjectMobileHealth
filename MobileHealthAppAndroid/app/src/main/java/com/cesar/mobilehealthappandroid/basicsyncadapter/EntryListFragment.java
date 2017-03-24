@@ -261,6 +261,9 @@ public class EntryListFragment extends ListFragment
             case R.id.menu_refresh:
                 SyncUtils.TriggerRefresh();
                 return true;
+            case R.id.menu_previous:
+                getActivity().onBackPressed();
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }
