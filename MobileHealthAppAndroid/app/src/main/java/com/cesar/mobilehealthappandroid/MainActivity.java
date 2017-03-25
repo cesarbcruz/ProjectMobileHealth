@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
                     public void run() {
                         scanHeartRate();
                     }
-                }, 20, 30, TimeUnit.SECONDS);
+                }, 30, 60, TimeUnit.SECONDS);
     }
 
     private void scanHeartRate(){
