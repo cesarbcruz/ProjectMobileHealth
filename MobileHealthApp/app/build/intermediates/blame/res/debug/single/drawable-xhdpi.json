@@ -4,20 +4,20 @@
         "source": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/drawable-xhdpi/ic_notification_low_battery.png"
     },
     {
-        "merged": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/res/merged/debug/drawable-xhdpi/ic_play_dark.png",
-        "source": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-xhdpi/ic_play_dark.png"
-    },
-    {
         "merged": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/res/merged/debug/drawable-xhdpi/ic_device_lovetoy.png",
         "source": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/drawable-xhdpi/ic_device_lovetoy.png"
     },
     {
-        "merged": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/res/merged/debug/drawable-xhdpi/ic_watchface.png",
-        "source": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/drawable-xhdpi/ic_watchface.png"
+        "merged": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/res/merged/debug/drawable-xhdpi/ic_play_dark.png",
+        "source": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-xhdpi/ic_play_dark.png"
     },
     {
         "merged": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/res/merged/debug/drawable-xhdpi/ic_notification_disconnected.png",
         "source": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/drawable-xhdpi/ic_notification_disconnected.png"
+    },
+    {
+        "merged": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/res/merged/debug/drawable-xhdpi/ic_watchface.png",
+        "source": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/drawable-xhdpi/ic_watchface.png"
     },
     {
         "merged": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/res/merged/debug/drawable-xhdpi/ic_notification.png",

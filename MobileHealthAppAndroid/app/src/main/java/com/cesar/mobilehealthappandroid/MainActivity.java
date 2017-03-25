@@ -5,16 +5,24 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.IBinder;
+import android.os.Looper;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.cesar.mobilehealthappandroid.api.ClientRest;
+import com.cesar.mobilehealthappandroid.api.Monitoring;
+import com.cesar.mobilehealthappandroid.api.ObtainGPS;
+import com.cesar.mobilehealthappandroid.api.Utils;
 import com.cesar.mobilehealthappandroid.basicsyncadapter.EntryListActivity;
 import com.cesar.mobilehealthappandroid.sdk.ActionCallback;
 import com.cesar.mobilehealthappandroid.sdk.listeners.HeartRateNotifyListener;
@@ -55,9 +63,20 @@ public class MainActivity extends AppCompatActivity {
         });
 
         tvHeartRate = (TextView) findViewById(R.id.heart_rate);
-
+        verifyLocation();
         connectDevice();
 
+    }
+
+    private void verifyLocation() {
+        ObtainGPS gps = new ObtainGPS(this);
+
+        if (Utils.getLocalization(this)) {
+            // check if GPS enabled
+            if (gps.canGetLocation()) {
+                Log.d("LOG", "Lat:" + gps.getLatitude() + " Lng:" + gps.getLongitude());
+            }
+        }
     }
 
     private void scheduleTask() {
@@ -79,11 +98,30 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onNotify(int heartRate) {
                     updateUIState(tvHeartRate, String.valueOf(heartRate));
+                    syncServer(heartRate);
                 }
             };
             mBluetoothLeService.setHeartRateScanListener(listener);
         }
         mBluetoothLeService.startHeartRateScan(actionCallBack());
+    }
+
+    private void syncServer(int heartRate) {
+        if(heartRate > 0){
+            ObtainGPS gps = new ObtainGPS(getBaseContext());
+            new ClientRest().execute(new Monitoring(heartRate, gps.getLatitude(), gps.getLongitude(), getTotalSteps()));
+        }else{
+            new Handler(Looper.getMainLooper()).post(new Runnable() {
+                @Override
+                public void run() {
+                    Toast.makeText(getBaseContext(), "Aparentemente você não está utilizando a pulseira corretamente!", Toast.LENGTH_LONG).show();
+                }
+            });
+        }
+    }
+
+    private int getTotalSteps() {
+        return 6000;
     }
 
     private ActionCallback actionCallBack() {

@@ -32,12 +32,12 @@
         "source": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.0.0/res/drawable-tvdpi-v4/common_plus_signin_btn_text_dark_focused.9.png"
     },
     {
-        "merged": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_google_signin_btn_icon_light_disabled.9.png",
-        "source": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.0.0/res/drawable-tvdpi-v4/common_google_signin_btn_icon_light_disabled.9.png"
-    },
-    {
         "merged": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/ic_plusone_small_off_client.png",
         "source": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/9.0.0/res/drawable-tvdpi-v4/ic_plusone_small_off_client.png"
+    },
+    {
+        "merged": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_google_signin_btn_icon_light_disabled.9.png",
+        "source": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.0.0/res/drawable-tvdpi-v4/common_google_signin_btn_icon_light_disabled.9.png"
     },
     {
         "merged": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_plus_signin_btn_text_light_disabled.9.png",

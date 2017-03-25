@@ -16,12 +16,12 @@
         "source": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/layout/abc_action_menu_layout.xml"
     },
     {
-        "merged": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/res/merged/debug/layout/fragment_sleepchart.xml",
-        "source": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/layout/fragment_sleepchart.xml"
-    },
-    {
         "merged": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/res/merged/debug/layout/item_with_details_small.xml",
         "source": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/layout/item_with_details_small.xml"
+    },
+    {
+        "merged": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/res/merged/debug/layout/fragment_sleepchart.xml",
+        "source": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/src/main/res/layout/fragment_sleepchart.xml"
     },
     {
         "merged": "/home/cesar/Desenvolvimento/repositorio/github/ProjectMobileHealth/MobileHealthApp/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar_include.xml",
