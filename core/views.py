@@ -157,7 +157,7 @@ def build_chart_steps(dataSteps):
                 }}],
             chart_options=
             {'title': {
-                'text': 'Meta: 10.000 passos'},
+                'text': 'Meta: 10.000 passos por dia'},
                 'tooltip': {
                     'pointFormat': '{point.y:.0f} {series.name}: <b>{point.percentage:.1f}%</b>'
                 },
