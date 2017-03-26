@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
                     public void run() {
                         scanHeartRate();
                     }
-                }, 30, 60, TimeUnit.SECONDS);
+                }, 20, 60, TimeUnit.SECONDS);
     }
 
     private void scanHeartRate(){
@@ -137,6 +137,7 @@ public class MainActivity extends AppCompatActivity {
                 public void onFail(int errorCode, String msg) {
                     log('e', TAG, "errorCode : " + errorCode + ", msg : " + msg);
                     updateUIState(tvHeartRate, "...");
+                    scanHeartRate();
                 }
             };
         }
