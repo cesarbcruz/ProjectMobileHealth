@@ -1,6 +1,7 @@
 # coding=utf-8
 from datetime import datetime
 
+from api.models import Monitoring
 from chartit import *
 from django.shortcuts import render
 from django.views.generic import TemplateView
@@ -52,6 +53,8 @@ def monitoramento(request):
     avg_heart_rate = None
     last_monitoring = None
     max_steps = None
+    chart_heart_rate = None
+    chart_steps = None
     form = MonitoringForm(request.POST or None)
     message = None
     if form.is_valid():
@@ -64,9 +67,9 @@ def monitoramento(request):
             max_steps = (monitorings.annotate(Max('steps')).latest('steps'))
         else:
             message = "Não foram encontrados dados para a data informada!"
+        chart_heart_rate = build_chart(monitorings)
+        chart_steps = build_chart_steps(form.dataSteps(user, max_steps))
 
-    chart_heart_rate = build_chart(monitorings)
-    chart_steps = build_chart_steps(monitorings)
     context = {
         'form': form,
         'monitorings': monitorings,
@@ -112,34 +115,50 @@ def build_chart(monitorings):
 
     return cht
 
-def build_chart_steps(monitorings):
+
+def getColorSteps(dataSteps):
+    color = []
+    for line in dataSteps:
+        if line.label == 'Pendente':
+            color.append('#ff5050')
+        else:
+            color.append('#00cc00')
+    return color
+
+
+
+
+
+def build_chart_steps(dataSteps):
     cht = None
-    if monitorings:
+    if dataSteps:
         ds = DataPool(
             series=
             [{'options': {
-                'source': monitorings},
+                'source': dataSteps},
                 'terms': [
-                    ('date_time'),
-                    'steps']}
+                    'label',
+                    'passos']}
             ])
+
+        color = getColorSteps(dataSteps)
+
 
         cht = Chart(
             datasource=ds,
             series_options=
             [{'options': {
-                'type': 'line',
-                'stacking': False},
+                'type': 'pie',
+                'stacking': False, 'colors': color},
                 'terms': {
-                    'date_time': ['steps']
+                    'label': [
+                        'passos']
                 }}],
             chart_options=
             {'title': {
-                'text': ' '},
-                'xAxis': {
-                    'title': {
-                        'text': 'Horário'}}},
-            x_sortf_mapf_mts = (None, lambda i: localtime(i).strftime("%H:%M"), False),
-        )
-
+                'text': 'Meta: 10.000 passos'},
+                'tooltip': {
+                    'pointFormat': '{point.y:.0f} {series.name}: <b>{point.percentage:.1f}%</b>'
+                },
+            })
     return cht
