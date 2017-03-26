@@ -65,10 +65,11 @@ def monitoramento(request):
             avg_heart_rate = int((monitorings.values_list('heart_rate').aggregate(Avg('heart_rate')))['heart_rate__avg'])
             last_monitoring = (monitorings.annotate(Max('date_time')).latest('date_time'))
             max_steps = (monitorings.annotate(Max('steps')).latest('steps'))
+            chart_heart_rate = build_chart(monitorings)
+            chart_steps = build_chart_steps(form.dataSteps(user, max_steps))
         else:
             message = "Não foram encontrados dados para a data informada!"
-        chart_heart_rate = build_chart(monitorings)
-        chart_steps = build_chart_steps(form.dataSteps(user, max_steps))
+
 
     context = {
         'form': form,

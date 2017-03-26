@@ -33,7 +33,7 @@ class MonitoringForm(forms.Form):
 
     def dataSteps(self, user, max_steps):
         steps = 0
-        if max_steps.steps:
+        if max_steps and max_steps.steps:
             steps = max_steps.steps
 
         steps_pending = 10000 - steps
