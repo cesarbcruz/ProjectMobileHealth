@@ -23,7 +23,6 @@ import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.SyncStatusObserver;
 import android.database.Cursor;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
@@ -40,6 +39,8 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.cesar.mobilehealthappandroid.Globals;
+import com.cesar.mobilehealthappandroid.Message;
 import com.cesar.mobilehealthappandroid.R;
 import com.cesar.mobilehealthappandroid.basicsyncadapter.provider.MessageContract;
 import com.cesar.mobilehealthappandroid.common.accounts.GenericAccountService;
@@ -253,7 +254,7 @@ public class EntryListFragment extends ListFragment
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
         mOptionsMenu = menu;
-        inflater.inflate(R.menu.main, menu);
+        inflater.inflate(R.menu.menu_entry_list, menu);
     }
 
     /**
@@ -262,7 +263,6 @@ public class EntryListFragment extends ListFragment
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            // If the user clicks the "Refresh" button.
             case R.id.menu_refresh:
                 SyncUtils.TriggerRefresh();
                 return true;
@@ -287,17 +287,22 @@ public class EntryListFragment extends ListFragment
         // Get the item at the selected position, in the form of a Cursor.
         Cursor c = (Cursor) mAdapter.getItem(position);
         // Get the link to the article represented by the item.
-        String articleUrlString = c.getString(COLUMN_MSG);
-        if (articleUrlString == null) {
-            Log.e(TAG, "Attempt to launch entry with null link");
+        String msg = c.getString(COLUMN_MSG);
+        if (msg == null) {
+            Log.e(TAG, "Attempt to launch entry with null msg");
             return;
         }
 
-        Log.i(TAG, "Opening URL: " + articleUrlString);
-        // Get a Uri object for the URL string
-        Uri articleURL = Uri.parse(articleUrlString);
-        Intent i = new Intent(Intent.ACTION_VIEW, articleURL);
-        startActivity(i);
+        Log.i(TAG, "Opening msg: " + msg);
+        Message msg_selected = new Message();
+        msg_selected.setId(c.getInt(COLUMN_ID));
+        msg_selected.setIssuer(c.getInt(COLUMN_ISSUER));
+        msg_selected.setRecipient(c.getInt(COLUMN_RECIPIENT));
+        msg_selected.setMsg(msg);
+        Globals.getInstance().setMessageSelected(msg_selected);
+
+        startActivity(new Intent(getActivity().getBaseContext(), DetailMessageActivity.class));
+
     }
 
     /**

@@ -10,4 +10,7 @@
     <string name="exit_question">Tem certeza que deseja sair do monitoramento?</string>
     <string name="yes">Sim</string>
     <string name="no">Não</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="detail_msg">Mensagem</string>
 </resources>
