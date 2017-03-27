@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         tvHeartRate = (TextView) findViewById(R.id.heart_rate);
         verifyLocation();
         connectDevice();
-
+        updateUIState(tvHeartRate, String.valueOf(Globals.getInstance().getHeart_rate()));
     }
 
     private void verifyLocation() {
@@ -97,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
             listener = new HeartRateNotifyListener() {
                 @Override
                 public void onNotify(int heartRate) {
+                    Globals.getInstance().setHeart_rate(heartRate);
                     updateUIState(tvHeartRate, String.valueOf(heartRate));
                     syncServer(heartRate);
                 }

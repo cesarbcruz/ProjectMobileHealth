@@ -25,6 +25,7 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.OperationApplicationException;
 import android.content.SyncResult;
+import android.database.Cursor;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.RemoteException;
@@ -45,9 +46,11 @@ import java.lang.reflect.Type;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -138,9 +141,7 @@ class SyncAdapter extends AbstractThreadedSyncAdapter {
             InputStream stream = null;
 
             try {
-
-
-                stream = downloadUrl(new URL("http://mobilehealthweb.herokuapp.com/api/message/?date_time__gt=2017-03-24T17:31:00Z&recipient__id=1&format=json"));
+                stream = downloadUrl(getUrl());
                 Reader reader = new InputStreamReader(stream, "UTF-8");
                 Type listType = new TypeToken<ArrayList<Message>>(){}.getType();
                 List<Message> messages = new Gson().fromJson(reader,listType);
@@ -232,6 +233,9 @@ class SyncAdapter extends AbstractThreadedSyncAdapter {
      * Given a string representation of a URL, sets up a connection and gets an input stream.
      */
     private InputStream downloadUrl(final URL url) throws IOException {
+
+
+
         Log.i(TAG, "Streaming data from network: " + url);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setReadTimeout(NET_READ_TIMEOUT_MILLIS /* milliseconds */);
@@ -241,5 +245,31 @@ class SyncAdapter extends AbstractThreadedSyncAdapter {
         // Starts the query
         conn.connect();
         return conn.getInputStream();
+    }
+
+    public URL getUrl() throws MalformedURLException {
+
+        String [] requestedColumns = {
+                "MAX("+MessageContract.Entry.COLUMN_NAME_DATE_TIME+")"
+        };
+
+        Cursor c = mContentResolver.query(
+                MessageContract.Entry.CONTENT_URI,
+                requestedColumns,
+                MessageContract.Entry.COLUMN_NAME_RECIPIENT+ "=" + 1 + "",
+                null, null);
+
+
+        while (c.moveToNext()) {
+            Calendar cal = Calendar.getInstance();
+            cal.setTimeInMillis(c.getLong(0));
+            cal.add(Calendar.HOUR,3);
+            String date = new SimpleDateFormat("yyyy-MM-dd").format(cal.getTime());
+            String time = new SimpleDateFormat("HH:mm:ss").format(cal.getTime());
+            String date_time = date+"T"+time+"Z";
+            return new URL("http://mobilehealthweb.herokuapp.com/api/message/?date_time__gt="+date_time+"&recipient__id=1&format=json");
+        }
+
+        return new URL("http://mobilehealthweb.herokuapp.com/api/message/?recipient__id=1&format=json");
     }
 }

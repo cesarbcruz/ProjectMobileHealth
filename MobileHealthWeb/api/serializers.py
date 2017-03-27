@@ -1,7 +1,6 @@
 from rest_framework import serializers
 from .models import Monitoring, Message
 
-
 class MonitoringSerializer(serializers.ModelSerializer):
     class Meta:
         model = Monitoring

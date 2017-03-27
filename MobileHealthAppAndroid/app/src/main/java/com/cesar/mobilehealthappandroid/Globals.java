@@ -9,7 +9,6 @@ public class Globals {
 
     private static Globals instance = new Globals();
 
-    // Getter-Setters
     public static Globals getInstance() {
         return instance;
     }
@@ -19,6 +18,7 @@ public class Globals {
     }
 
     private Message messageSelected;
+    private int heart_rate;
 
 
     private Globals() {
@@ -32,5 +32,13 @@ public class Globals {
 
     public void setMessageSelected(Message messageSelected) {
         this.messageSelected = messageSelected;
+    }
+
+    public int getHeart_rate() {
+        return heart_rate;
+    }
+
+    public void setHeart_rate(int heart_rate) {
+        this.heart_rate = heart_rate;
     }
 }
