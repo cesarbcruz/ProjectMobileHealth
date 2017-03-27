@@ -12,5 +12,6 @@
     <string name="no">Não</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="detail_msg">Mensagem</string>
+    <string name="detail_msg">Mensagem vazia</string>
+    <string name="image">img</string>
 </resources>

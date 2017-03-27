@@ -23,6 +23,9 @@ import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.SyncStatusObserver;
 import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
@@ -36,6 +39,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -44,6 +48,10 @@ import com.cesar.mobilehealthappandroid.Message;
 import com.cesar.mobilehealthappandroid.R;
 import com.cesar.mobilehealthappandroid.basicsyncadapter.provider.MessageContract;
 import com.cesar.mobilehealthappandroid.common.accounts.GenericAccountService;
+
+import java.io.InputStream;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 
 /**
  * List fragment containing a list of Atom entry objects (articles) stored in the local database.
@@ -98,6 +106,8 @@ public class EntryListFragment extends ListFragment
             MessageContract.Entry.COLUMN_NAME_DATE_TIME,
             MessageContract.Entry.COLUMN_NAME_ISSUER,
             MessageContract.Entry.COLUMN_NAME_RECIPIENT,
+            MessageContract.Entry.COLUMN_NAME_ISSUER_NAME,
+            MessageContract.Entry.COLUMN_NAME_ISSUER_IMG,
 
     };
 
@@ -113,11 +123,15 @@ public class EntryListFragment extends ListFragment
     private static final int COLUMN_DATE = 3;
     private static final int COLUMN_ISSUER = 4;
     private static final int COLUMN_RECIPIENT = 5;
+    private static final int COLUMN_ISSUER_NAME = 6;
+    private static final int COLUMN_ISSUER_IMG = 7;
 
     /**
      * List of Cursor columns to read from when preparing an adapter to populate the ListView.
      */
     private static final String[] FROM_COLUMNS = new String[]{
+            MessageContract.Entry.COLUMN_NAME_ISSUER_IMG,
+            MessageContract.Entry.COLUMN_NAME_ISSUER_NAME,
             MessageContract.Entry.COLUMN_NAME_SUBJECT,
             MessageContract.Entry.COLUMN_NAME_DATE_TIME
     };
@@ -126,8 +140,10 @@ public class EntryListFragment extends ListFragment
      * List of Views which will be populated by Cursor data.
      */
     private static final int[] TO_FIELDS = new int[]{
-            android.R.id.text1,
-            android.R.id.text2};
+            R.id.icon,
+            R.id.issuer,
+            R.id.subtitle,
+            R.id.date_time};
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -161,7 +177,7 @@ public class EntryListFragment extends ListFragment
 
         mAdapter = new SimpleCursorAdapter(
                 getActivity(),       // Current context
-                android.R.layout.simple_list_item_activated_2,  // Layout for individual rows
+                R.layout.list_message,  // Layout for individual rows
                 null,                // Cursor
                 FROM_COLUMNS,        // Cursor columns to use
                 TO_FIELDS,           // Layout fields to use
@@ -171,10 +187,13 @@ public class EntryListFragment extends ListFragment
             @Override
             public boolean setViewValue(View view, Cursor cursor, int i) {
                 if (i == COLUMN_DATE) {
-                    // Convert timestamp to human-readable date
-                    Time t = new Time();
-                    t.set(cursor.getLong(i));
-                    ((TextView) view).setText(t.format("%Y-%m-%d %H:%M"));
+                    ((TextView) view).setText(new SimpleDateFormat("dd/MM/yyyy HH:mm").format(new Timestamp(cursor.getLong(i))));
+                    return true;
+                }else if (i == COLUMN_ISSUER_IMG) {
+                    Bitmap bmp = Globals.getInstance().convertBlobToBitmap(cursor.getBlob(i));
+                    if(bmp!=null){
+                        ((ImageView) view ).setImageBitmap(bmp);
+                    }
                     return true;
                 } else {
                     // Let SimpleCursorAdapter handle other fields automatically
@@ -297,7 +316,11 @@ public class EntryListFragment extends ListFragment
         Message msg_selected = new Message();
         msg_selected.setId(c.getInt(COLUMN_ID));
         msg_selected.setIssuer(c.getInt(COLUMN_ISSUER));
+        msg_selected.setSubject(c.getString(COLUMN_TITLE));
         msg_selected.setRecipient(c.getInt(COLUMN_RECIPIENT));
+        msg_selected.setIssuer_name(c.getString(COLUMN_ISSUER_NAME));
+        msg_selected.setDate_time(new Timestamp(c.getLong(COLUMN_DATE)));
+        msg_selected.setImg(Globals.getInstance().convertBlobToBitmap(c.getBlob(COLUMN_ISSUER_IMG)));
         msg_selected.setMsg(msg);
         Globals.getInstance().setMessageSelected(msg_selected);
 

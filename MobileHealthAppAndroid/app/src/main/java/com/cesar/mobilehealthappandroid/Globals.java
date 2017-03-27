@@ -1,5 +1,8 @@
 package com.cesar.mobilehealthappandroid;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+
 /**
  * Created by cesar on 27/03/17.
  */
@@ -40,5 +43,14 @@ public class Globals {
 
     public void setHeart_rate(int heart_rate) {
         this.heart_rate = heart_rate;
+    }
+
+
+    public Bitmap convertBlobToBitmap(byte[] blob) {
+        if(blob!=null){
+            return BitmapFactory.decodeByteArray(blob, 0, blob.length);
+        }else{
+            return null;
+        }
     }
 }

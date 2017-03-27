@@ -218,6 +218,7 @@ public class FeedProvider extends ContentProvider {
 
         private static final String TYPE_TEXT = " TEXT";
         private static final String TYPE_INTEGER = " INTEGER";
+        private static final String TYPE_BLOB = " BLOB";
         private static final String COMMA_SEP = ",";
         /** SQL statement to create "entry" table. */
         private static final String SQL_CREATE_ENTRIES =
@@ -228,7 +229,9 @@ public class FeedProvider extends ContentProvider {
                         MessageContract.Entry.COLUMN_NAME_MSG + TYPE_TEXT + COMMA_SEP +
                         MessageContract.Entry.COLUMN_NAME_DATE_TIME + TYPE_INTEGER + COMMA_SEP +
                         MessageContract.Entry.COLUMN_NAME_ISSUER + TYPE_INTEGER + COMMA_SEP +
-                        MessageContract.Entry.COLUMN_NAME_RECIPIENT + TYPE_INTEGER +")";
+                        MessageContract.Entry.COLUMN_NAME_RECIPIENT + TYPE_INTEGER + COMMA_SEP +
+                        MessageContract.Entry.COLUMN_NAME_ISSUER_NAME + TYPE_TEXT + COMMA_SEP +
+                        MessageContract.Entry.COLUMN_NAME_ISSUER_IMG + TYPE_BLOB + ")";
 
         /** SQL statement to drop "entry" table. */
         private static final String SQL_DELETE_ENTRIES =

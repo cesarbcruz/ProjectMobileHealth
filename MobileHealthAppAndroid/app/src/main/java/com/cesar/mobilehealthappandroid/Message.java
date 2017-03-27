@@ -1,5 +1,7 @@
 package com.cesar.mobilehealthappandroid;
 
+import android.graphics.Bitmap;
+
 import java.sql.Timestamp;
 
 /**
@@ -14,6 +16,9 @@ public class Message {
     private Timestamp date_time;
     private String subject;
     private String msg;
+    private String issuer_name;
+    private String issuer_img;
+    private Bitmap img;
 
     public int getId() {
         return id;
@@ -61,5 +66,29 @@ public class Message {
 
     public void setMsg(String msg) {
         this.msg = msg;
+    }
+
+    public String getIssuer_name() {
+        return issuer_name;
+    }
+
+    public void setIssuer_name(String issuer_name) {
+        this.issuer_name = issuer_name;
+    }
+
+    public String getIssuer_img() {
+        return issuer_img;
+    }
+
+    public void setIssuer_img(String issuer_img) {
+        this.issuer_img = issuer_img;
+    }
+
+    public Bitmap getImg() {
+        return img;
+    }
+
+    public void setImg(Bitmap img) {
+        this.img = img;
     }
 }

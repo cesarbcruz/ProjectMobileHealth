@@ -18,26 +18,35 @@ package com.cesar.mobilehealthappandroid.basicsyncadapter;
 
 import android.accounts.Account;
 import android.annotation.TargetApi;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.AbstractThreadedSyncAdapter;
 import android.content.ContentProviderClient;
 import android.content.ContentProviderOperation;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.Intent;
 import android.content.OperationApplicationException;
 import android.content.SyncResult;
 import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.RemoteException;
+import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
+import com.cesar.mobilehealthappandroid.Globals;
 import com.cesar.mobilehealthappandroid.Message;
+import com.cesar.mobilehealthappandroid.R;
 import com.cesar.mobilehealthappandroid.basicsyncadapter.provider.MessageContract;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import org.xmlpull.v1.XmlPullParserException;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -46,7 +55,6 @@ import java.lang.reflect.Type;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -90,7 +98,9 @@ class SyncAdapter extends AbstractThreadedSyncAdapter {
             MessageContract.Entry.COLUMN_NAME_MSG,
             MessageContract.Entry.COLUMN_NAME_DATE_TIME,
             MessageContract.Entry.COLUMN_NAME_ISSUER,
-            MessageContract.Entry.COLUMN_NAME_RECIPIENT};
+            MessageContract.Entry.COLUMN_NAME_RECIPIENT,
+            MessageContract.Entry.COLUMN_NAME_ISSUER_NAME,
+            MessageContract.Entry.COLUMN_NAME_ISSUER_IMG};
 
     // Constants representing column positions from PROJECTION.
     public static final int COLUMN_ID = 0;
@@ -100,6 +110,8 @@ class SyncAdapter extends AbstractThreadedSyncAdapter {
     public static final int COLUMN_PUBLISHED = 4;
     public static final int COLUMN_ISSUER = 5;
     public static final int COLUMN_RECIPIENT = 6;
+    public static final int COLUMN_ISSUER_NAME = 7;
+    public static final int COLUMN_ISSUER_IMG = 8;
 
     /**
      * Constructor. Obtains handle to content resolver for later use.
@@ -145,7 +157,9 @@ class SyncAdapter extends AbstractThreadedSyncAdapter {
                 Reader reader = new InputStreamReader(stream, "UTF-8");
                 Type listType = new TypeToken<ArrayList<Message>>(){}.getType();
                 List<Message> messages = new Gson().fromJson(reader,listType);
-                updateMessageData(messages, syncResult);
+                if(messages!=null && !messages.isEmpty()){
+                    updateMessageData(messages, syncResult);
+                }
             } finally {
                 if (stream != null) {
                     stream.close();
@@ -209,6 +223,9 @@ class SyncAdapter extends AbstractThreadedSyncAdapter {
         // Add new items
         for (Message msg : messages) {
             Log.i(TAG, "Scheduling insert: entry_id=" + msg.getId());
+
+            byte[] issue_img = getBlob(msg.getIssuer_img());
+
             batch.add(ContentProviderOperation.newInsert(MessageContract.Entry.CONTENT_URI)
                     .withValue(MessageContract.Entry.COLUMN_NAME_ENTRY_ID, msg.getId())
                     .withValue(MessageContract.Entry.COLUMN_NAME_SUBJECT, msg.getSubject())
@@ -216,8 +233,12 @@ class SyncAdapter extends AbstractThreadedSyncAdapter {
                     .withValue(MessageContract.Entry.COLUMN_NAME_DATE_TIME, msg.getDate_time().getTime())
                     .withValue(MessageContract.Entry.COLUMN_NAME_ISSUER, msg.getIssuer())
                     .withValue(MessageContract.Entry.COLUMN_NAME_RECIPIENT, msg.getRecipient())
+                    .withValue(MessageContract.Entry.COLUMN_NAME_ISSUER_NAME, msg.getIssuer_name())
+                    .withValue(MessageContract.Entry.COLUMN_NAME_ISSUER_IMG, issue_img)
                     .build());
             syncResult.stats.numInserts++;
+            msg.setImg(Globals.getInstance().convertBlobToBitmap(issue_img));
+            notifyMessage(msg);
         }
         Log.i(TAG, "Merge solution ready. Applying batch update");
         mContentResolver.applyBatch(MessageContract.CONTENT_AUTHORITY, batch);
@@ -229,13 +250,47 @@ class SyncAdapter extends AbstractThreadedSyncAdapter {
         // syncToNetwork=false in the line above to prevent duplicate syncs.
     }
 
+    private byte[] getBlob(String issuer_img) {
+        try {
+            if(issuer_img !=null && !issuer_img.isEmpty()){
+                InputStream in = new java.net.URL(issuer_img).openStream();
+                Bitmap icon = BitmapFactory.decodeStream(in);
+                ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+                icon.compress(Bitmap.CompressFormat.PNG, 0, outputStream);
+                return outputStream.toByteArray();
+            }
+        } catch (Exception e) {
+            Log.e("Error", e.getMessage());
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    private void notifyMessage(Message msg) {
+        Globals.getInstance().setMessageSelected(msg);
+        NotificationCompat.Builder mBuilder =
+                new NotificationCompat.Builder(getContext())
+                        .setSmallIcon(R.drawable.ic_launcher)
+                        .setContentTitle(msg.getSubject())
+                        .setContentText(msg.getMsg());
+
+        Intent resultIntent = new Intent(getContext(), DetailMessageActivity.class);
+        PendingIntent resultPendingIntent =
+                PendingIntent.getActivity(
+                        getContext(),
+                        0,
+                        resultIntent,
+                        PendingIntent.FLAG_UPDATE_CURRENT
+                );
+        mBuilder.setContentIntent(resultPendingIntent);
+        NotificationManager mNotificationManager = (NotificationManager) getContext().getSystemService(Context.NOTIFICATION_SERVICE);
+        mNotificationManager.notify(001, mBuilder.build());
+    }
+
     /**
      * Given a string representation of a URL, sets up a connection and gets an input stream.
      */
     private InputStream downloadUrl(final URL url) throws IOException {
-
-
-
         Log.i(TAG, "Streaming data from network: " + url);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setReadTimeout(NET_READ_TIMEOUT_MILLIS /* milliseconds */);

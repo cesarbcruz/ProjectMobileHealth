@@ -55,3 +55,12 @@ class Message(models.Model):
     def __str__(self):
         return '%s | %s | %s' % (self.issuer, self.recipient, self.subject )
 
+    @property
+    def issuer_name(self):
+        return self.issuer.name
+
+    @property
+    def issuer_img(self):
+        return self.issuer.img_url
+
+

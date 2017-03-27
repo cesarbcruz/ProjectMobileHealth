@@ -71,5 +71,7 @@ public class MessageContract {
         public static final String COLUMN_NAME_DATE_TIME = "date_time";
         public static final String COLUMN_NAME_ISSUER = "issuer";
         public static final String COLUMN_NAME_RECIPIENT = "recipient";
+        public static final String COLUMN_NAME_ISSUER_NAME = "issuer_name";
+        public static final String COLUMN_NAME_ISSUER_IMG = "issuer_img";
     }
 }
