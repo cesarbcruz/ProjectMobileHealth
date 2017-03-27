@@ -64,26 +64,12 @@ public class MessageContract {
         public static final Uri CONTENT_URI =
                 BASE_CONTENT_URI.buildUpon().appendPath(PATH_ENTRIES).build();
 
-        /**
-         * Table name where records are stored for "entry" resources.
-         */
         public static final String TABLE_NAME = "entry";
-        /**
-         * Atom ID. (Note: Not to be confused with the database primary key, which is _ID.
-         */
         public static final String COLUMN_NAME_ENTRY_ID = "entry_id";
-        /**
-         * Article title
-         */
-        public static final String COLUMN_NAME_TITLE = "title";
-        /**
-         * Article hyperlink. Corresponds to the rel="alternate" link in the
-         * Atom spec.
-         */
-        public static final String COLUMN_NAME_MSG = "link";
-        /**
-         * Date article was published.
-         */
-        public static final String COLUMN_NAME_DATE = "published";
+        public static final String COLUMN_NAME_SUBJECT = "subject";
+        public static final String COLUMN_NAME_MSG = "msg";
+        public static final String COLUMN_NAME_DATE_TIME = "date_time";
+        public static final String COLUMN_NAME_ISSUER = "issuer";
+        public static final String COLUMN_NAME_RECIPIENT = "recipient";
     }
 }

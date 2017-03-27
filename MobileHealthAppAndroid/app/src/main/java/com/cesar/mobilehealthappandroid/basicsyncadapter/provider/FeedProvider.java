@@ -214,7 +214,7 @@ public class FeedProvider extends ContentProvider {
         /** Schema version. */
         public static final int DATABASE_VERSION = 1;
         /** Filename for SQLite file. */
-        public static final String DATABASE_NAME = "feed.db";
+        public static final String DATABASE_NAME = "mobilehealth.db";
 
         private static final String TYPE_TEXT = " TEXT";
         private static final String TYPE_INTEGER = " INTEGER";
@@ -222,11 +222,13 @@ public class FeedProvider extends ContentProvider {
         /** SQL statement to create "entry" table. */
         private static final String SQL_CREATE_ENTRIES =
                 "CREATE TABLE " + MessageContract.Entry.TABLE_NAME + " (" +
-                        MessageContract.Entry._ID + " INTEGER PRIMARY KEY," +
+                        MessageContract.Entry._ID + TYPE_INTEGER +" PRIMARY KEY" + COMMA_SEP+
                         MessageContract.Entry.COLUMN_NAME_ENTRY_ID + TYPE_TEXT + COMMA_SEP +
-                        MessageContract.Entry.COLUMN_NAME_TITLE    + TYPE_TEXT + COMMA_SEP +
+                        MessageContract.Entry.COLUMN_NAME_SUBJECT + TYPE_TEXT + COMMA_SEP +
                         MessageContract.Entry.COLUMN_NAME_MSG + TYPE_TEXT + COMMA_SEP +
-                        MessageContract.Entry.COLUMN_NAME_DATE + TYPE_INTEGER + ")";
+                        MessageContract.Entry.COLUMN_NAME_DATE_TIME + TYPE_INTEGER + COMMA_SEP +
+                        MessageContract.Entry.COLUMN_NAME_ISSUER + TYPE_INTEGER + COMMA_SEP +
+                        MessageContract.Entry.COLUMN_NAME_RECIPIENT + TYPE_INTEGER +")";
 
         /** SQL statement to drop "entry" table. */
         private static final String SQL_DELETE_ENTRIES =

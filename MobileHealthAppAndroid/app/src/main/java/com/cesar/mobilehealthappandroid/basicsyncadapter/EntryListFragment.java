@@ -92,9 +92,12 @@ public class EntryListFragment extends ListFragment
      */
     private static final String[] PROJECTION = new String[]{
             MessageContract.Entry._ID,
-            MessageContract.Entry.COLUMN_NAME_TITLE,
+            MessageContract.Entry.COLUMN_NAME_SUBJECT,
             MessageContract.Entry.COLUMN_NAME_MSG,
-            MessageContract.Entry.COLUMN_NAME_DATE
+            MessageContract.Entry.COLUMN_NAME_DATE_TIME,
+            MessageContract.Entry.COLUMN_NAME_ISSUER,
+            MessageContract.Entry.COLUMN_NAME_RECIPIENT,
+
     };
 
     // Column indexes. The index of a column in the Cursor is the same as its relative position in
@@ -107,13 +110,15 @@ public class EntryListFragment extends ListFragment
     private static final int COLUMN_MSG = 2;
     /** Column index for published */
     private static final int COLUMN_DATE = 3;
+    private static final int COLUMN_ISSUER = 4;
+    private static final int COLUMN_RECIPIENT = 5;
 
     /**
      * List of Cursor columns to read from when preparing an adapter to populate the ListView.
      */
     private static final String[] FROM_COLUMNS = new String[]{
-            MessageContract.Entry.COLUMN_NAME_TITLE,
-            MessageContract.Entry.COLUMN_NAME_DATE
+            MessageContract.Entry.COLUMN_NAME_SUBJECT,
+            MessageContract.Entry.COLUMN_NAME_DATE_TIME
     };
 
     /**
@@ -218,7 +223,7 @@ public class EntryListFragment extends ListFragment
                 PROJECTION,                // Projection
                 null,                           // Selection
                 null,                           // Selection args
-                MessageContract.Entry.COLUMN_NAME_DATE + " desc"); // Sort
+                MessageContract.Entry.COLUMN_NAME_DATE_TIME + " desc"); // Sort
     }
 
     /**

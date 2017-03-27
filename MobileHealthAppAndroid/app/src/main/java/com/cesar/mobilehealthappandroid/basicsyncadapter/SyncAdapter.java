@@ -25,26 +25,29 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.OperationApplicationException;
 import android.content.SyncResult;
-import android.database.Cursor;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.RemoteException;
 import android.util.Log;
 
-import com.cesar.mobilehealthappandroid.basicsyncadapter.net.FeedParser;
+import com.cesar.mobilehealthappandroid.Message;
 import com.cesar.mobilehealthappandroid.basicsyncadapter.provider.MessageContract;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.lang.reflect.Type;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -58,14 +61,6 @@ import java.util.List;
  */
 class SyncAdapter extends AbstractThreadedSyncAdapter {
     public static final String TAG = "SyncAdapter";
-
-    /**
-     * URL to fetch content from during a sync.
-     *
-     * <p>This points to the Android Developers Blog. (Side note: We highly recommend reading the
-     * Android Developer Blog to stay up to date on the latest Android platform developments!)
-     */
-    private static final String FEED_URL = "http://android-developers.blogspot.com/atom.xml";
 
     /**
      * Network connection timeout, in milliseconds.
@@ -88,9 +83,11 @@ class SyncAdapter extends AbstractThreadedSyncAdapter {
     private static final String[] PROJECTION = new String[] {
             MessageContract.Entry._ID,
             MessageContract.Entry.COLUMN_NAME_ENTRY_ID,
-            MessageContract.Entry.COLUMN_NAME_TITLE,
+            MessageContract.Entry.COLUMN_NAME_SUBJECT,
             MessageContract.Entry.COLUMN_NAME_MSG,
-            MessageContract.Entry.COLUMN_NAME_DATE};
+            MessageContract.Entry.COLUMN_NAME_DATE_TIME,
+            MessageContract.Entry.COLUMN_NAME_ISSUER,
+            MessageContract.Entry.COLUMN_NAME_RECIPIENT};
 
     // Constants representing column positions from PROJECTION.
     public static final int COLUMN_ID = 0;
@@ -98,6 +95,8 @@ class SyncAdapter extends AbstractThreadedSyncAdapter {
     public static final int COLUMN_TITLE = 2;
     public static final int COLUMN_LINK = 3;
     public static final int COLUMN_PUBLISHED = 4;
+    public static final int COLUMN_ISSUER = 5;
+    public static final int COLUMN_RECIPIENT = 6;
 
     /**
      * Constructor. Obtains handle to content resolver for later use.
@@ -136,15 +135,16 @@ class SyncAdapter extends AbstractThreadedSyncAdapter {
                               ContentProviderClient provider, SyncResult syncResult) {
         Log.i(TAG, "Beginning network synchronization");
         try {
-            final URL location = new URL(FEED_URL);
             InputStream stream = null;
 
             try {
-                Log.i(TAG, "Streaming data from network: " + location);
-                stream = downloadUrl(location);
-                updateLocalFeedData(stream, syncResult);
-                // Makes sure that the InputStream is closed after the app is
-                // finished using it.
+
+
+                stream = downloadUrl(new URL("http://mobilehealthweb.herokuapp.com/api/message/?date_time__gt=2017-03-24T17:31:00Z&recipient__id=1&format=json"));
+                Reader reader = new InputStreamReader(stream, "UTF-8");
+                Type listType = new TypeToken<ArrayList<Message>>(){}.getType();
+                List<Message> messages = new Gson().fromJson(reader,listType);
+                updateMessageData(messages, syncResult);
             } finally {
                 if (stream != null) {
                     stream.close();
@@ -198,85 +198,23 @@ class SyncAdapter extends AbstractThreadedSyncAdapter {
      * (At this point, incoming database only contains missing items.)<br/>
      * 3. For any items remaining in incoming list, ADD to database.
      */
-    public void updateLocalFeedData(final InputStream stream, final SyncResult syncResult)
+    public void updateMessageData(final List<Message> messages, final SyncResult syncResult)
             throws IOException, XmlPullParserException, RemoteException,
             OperationApplicationException, ParseException {
-        final FeedParser feedParser = new FeedParser();
         final ContentResolver contentResolver = getContext().getContentResolver();
-
-        Log.i(TAG, "Parsing stream as Atom feed");
-        final List<FeedParser.Entry> entries = feedParser.parse(stream);
-        Log.i(TAG, "Parsing complete. Found " + entries.size() + " entries");
-
 
         ArrayList<ContentProviderOperation> batch = new ArrayList<ContentProviderOperation>();
 
-        // Build hash table of incoming entries
-        HashMap<String, FeedParser.Entry> entryMap = new HashMap<String, FeedParser.Entry>();
-        for (FeedParser.Entry e : entries) {
-            entryMap.put(e.id, e);
-        }
-
-        // Get list of all items
-        Log.i(TAG, "Fetching local entries for merge");
-        Uri uri = MessageContract.Entry.CONTENT_URI; // Get all entries
-        Cursor c = contentResolver.query(uri, PROJECTION, null, null, null);
-        assert c != null;
-        Log.i(TAG, "Found " + c.getCount() + " local entries. Computing merge solution...");
-
-        // Find stale data
-        int id;
-        String entryId;
-        String title;
-        String link;
-        long published;
-        while (c.moveToNext()) {
-            syncResult.stats.numEntries++;
-            id = c.getInt(COLUMN_ID);
-            entryId = c.getString(COLUMN_ENTRY_ID);
-            title = c.getString(COLUMN_TITLE);
-            link = c.getString(COLUMN_LINK);
-            published = c.getLong(COLUMN_PUBLISHED);
-            FeedParser.Entry match = entryMap.get(entryId);
-            if (match != null) {
-                // Entry exists. Remove from entry map to prevent insert later.
-                entryMap.remove(entryId);
-                // Check to see if the entry needs to be updated
-                Uri existingUri = MessageContract.Entry.CONTENT_URI.buildUpon()
-                        .appendPath(Integer.toString(id)).build();
-                if ((match.title != null && !match.title.equals(title)) ||
-                        (match.link != null && !match.link.equals(link)) ||
-                        (match.published != published)) {
-                    // Update existing record
-                    Log.i(TAG, "Scheduling update: " + existingUri);
-                    batch.add(ContentProviderOperation.newUpdate(existingUri)
-                            .withValue(MessageContract.Entry.COLUMN_NAME_TITLE, title)
-                            .withValue(MessageContract.Entry.COLUMN_NAME_MSG, link)
-                            .withValue(MessageContract.Entry.COLUMN_NAME_DATE, published)
-                            .build());
-                    syncResult.stats.numUpdates++;
-                } else {
-                    Log.i(TAG, "No action: " + existingUri);
-                }
-            } else {
-                // Entry doesn't exist. Remove it from the database.
-                Uri deleteUri = MessageContract.Entry.CONTENT_URI.buildUpon()
-                        .appendPath(Integer.toString(id)).build();
-                Log.i(TAG, "Scheduling delete: " + deleteUri);
-                batch.add(ContentProviderOperation.newDelete(deleteUri).build());
-                syncResult.stats.numDeletes++;
-            }
-        }
-        c.close();
-
         // Add new items
-        for (FeedParser.Entry e : entryMap.values()) {
-            Log.i(TAG, "Scheduling insert: entry_id=" + e.id);
+        for (Message msg : messages) {
+            Log.i(TAG, "Scheduling insert: entry_id=" + msg.getId());
             batch.add(ContentProviderOperation.newInsert(MessageContract.Entry.CONTENT_URI)
-                    .withValue(MessageContract.Entry.COLUMN_NAME_ENTRY_ID, e.id)
-                    .withValue(MessageContract.Entry.COLUMN_NAME_TITLE, e.title)
-                    .withValue(MessageContract.Entry.COLUMN_NAME_MSG, e.link)
-                    .withValue(MessageContract.Entry.COLUMN_NAME_DATE, e.published)
+                    .withValue(MessageContract.Entry.COLUMN_NAME_ENTRY_ID, msg.getId())
+                    .withValue(MessageContract.Entry.COLUMN_NAME_SUBJECT, msg.getSubject())
+                    .withValue(MessageContract.Entry.COLUMN_NAME_MSG, msg.getMsg())
+                    .withValue(MessageContract.Entry.COLUMN_NAME_DATE_TIME, msg.getDate_time().getTime())
+                    .withValue(MessageContract.Entry.COLUMN_NAME_ISSUER, msg.getIssuer())
+                    .withValue(MessageContract.Entry.COLUMN_NAME_RECIPIENT, msg.getRecipient())
                     .build());
             syncResult.stats.numInserts++;
         }
@@ -294,6 +232,7 @@ class SyncAdapter extends AbstractThreadedSyncAdapter {
      * Given a string representation of a URL, sets up a connection and gets an input stream.
      */
     private InputStream downloadUrl(final URL url) throws IOException {
+        Log.i(TAG, "Streaming data from network: " + url);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setReadTimeout(NET_READ_TIMEOUT_MILLIS /* milliseconds */);
         conn.setConnectTimeout(NET_CONNECT_TIMEOUT_MILLIS /* milliseconds */);
