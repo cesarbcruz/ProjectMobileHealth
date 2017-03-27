@@ -19,12 +19,6 @@ class MessageFilter(filters.FilterSet):
             'issuer__id' : ['exact']
         }
 
-    filter_overrides = {
-        django_models.DateTimeField: {
-            'filter_class': django_filters.IsoDateTimeFilter
-        },
-    }
-
 class MessageViewSet(viewsets.ModelViewSet):
     queryset = Message.objects.all()
     serializer_class = MessageSerializer
