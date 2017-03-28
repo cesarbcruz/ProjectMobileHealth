@@ -2,6 +2,7 @@
     <string name="app_name">Mobile Health App</string>
     <string name="action_settings">Configurar</string>
     <string name="action_restart">Reiniciar</string>
+    <string name="action_sync">Sincronizar Conta Web</string>
     <string name="label_heart_rate">BPM</string>
     <string name="label_desc_heart_rate">Frequência cardíaca</string>
     <string name="heart_rate">0</string>

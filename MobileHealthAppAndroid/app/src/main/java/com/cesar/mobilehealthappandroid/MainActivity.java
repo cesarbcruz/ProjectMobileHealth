@@ -207,6 +207,8 @@ public class MainActivity extends AppCompatActivity {
         }else if (id == R.id.action_settings){
             Intent i = new Intent(this, PrefsActivity.class);
             startActivity(i);
+        }else if(id == R.id.action_sync){
+
         }
 
         return super.onOptionsItemSelected(item);
@@ -224,11 +226,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void getValuePreferences(){
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        String email = prefs.getString("email", "");
-        String password = prefs.getString("password", "");
         int minuteSync = Integer.parseInt(prefs.getString("minuteSync", "1"));
-        Globals.getInstance().setEmail(email);
-        Globals.getInstance().setPassword(password);
         Globals.getInstance().setMinuteSync(minuteSync);
     }
 }

@@ -322,9 +322,9 @@ class SyncAdapter extends AbstractThreadedSyncAdapter {
             String date = new SimpleDateFormat("yyyy-MM-dd").format(cal.getTime());
             String time = new SimpleDateFormat("HH:mm:ss").format(cal.getTime());
             String date_time = date+"T"+time+"Z";
-            return new URL("http://mobilehealthweb.herokuapp.com/api/message/?date_time__gt="+date_time+"&recipient__id=1&format=json");
+            return new URL("http://mobilehealthweb.herokuapp.com/api/message/?date_time__gt="+date_time+"&recipient__id="+Globals.getInstance().getIdUser()+"&format=json");
         }
 
-        return new URL("http://mobilehealthweb.herokuapp.com/api/message/?recipient__id=1&format=json");
+        return new URL("http://mobilehealthweb.herokuapp.com/api/message/?recipient__id="+Globals.getInstance().getIdUser()+"&format=json");
     }
 }

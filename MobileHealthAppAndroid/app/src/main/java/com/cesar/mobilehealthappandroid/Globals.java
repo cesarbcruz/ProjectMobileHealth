@@ -24,8 +24,7 @@ public class Globals {
 
     private Message messageSelected;
     private int heart_rate;
-    private String email;
-    private String password;
+    private int idUser = 1;
     private int minuteSync;
 
 
@@ -59,21 +58,12 @@ public class Globals {
         }
     }
 
-
-    public String getEmail() {
-        return email;
+    public int getIdUser() {
+        return idUser;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+    public void setIdUser(int idUser) {
+        this.idUser = idUser;
     }
 
     public int getMinuteSync() {
