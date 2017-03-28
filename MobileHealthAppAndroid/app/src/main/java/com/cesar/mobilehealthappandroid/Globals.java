@@ -1,9 +1,12 @@
 package com.cesar.mobilehealthappandroid;
 
-import android.content.SharedPreferences;
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.preference.PreferenceManager;
+import android.os.Handler;
+import android.os.Looper;
+import android.support.annotation.NonNull;
+import android.widget.Toast;
 
 /**
  * Created by cesar on 27/03/17.
@@ -13,6 +16,18 @@ public class Globals {
 
 
     private static Globals instance = new Globals();
+    public static final String MessageUnconfiguredUserSync="Nenhuma conta web vinculada!\nAcesse o menu: 'Sincronizar Conta Web'";
+    public static final String MessageDoNotWearMiBand = "Aparentemente você não está utilizando a pulseira corretamente!";
+    private Message messageSelected;
+    private int heart_rate;
+    private int idUser = 0;
+    private String nameUser = "";
+    private int minuteSync;
+    public static final String ParamIdUser = "ParamIdUser";
+    public static final String ParamNameUser = "ParamNameUser";
+    public static final String ParamMinuteSync = "minuteSync";
+    public static final String UrlUploadDataServer = "http://mobilehealthweb.herokuapp.com/api/monitoramento/?format=api";
+
 
     public static Globals getInstance() {
         return instance;
@@ -22,16 +37,13 @@ public class Globals {
         Globals.instance = instance;
     }
 
-    private Message messageSelected;
-    private int heart_rate;
-    private int idUser = 1;
-    private int minuteSync;
-
+    public boolean isConfiguredSsyncUser(){
+        return idUser>0;
+    }
 
     private Globals() {
 
     }
-
 
     public Message getMessageSelected() {
         return messageSelected;
@@ -72,5 +84,35 @@ public class Globals {
 
     public void setMinuteSync(int minuteSync) {
         this.minuteSync = minuteSync;
+    }
+
+    public String getNameUser() {
+        if(nameUser==null){
+            return "";
+        }
+        return nameUser;
+    }
+
+    public void setNameUser(String nameUser) {
+        this.nameUser = nameUser;
+    }
+
+    @NonNull
+    public String getUrlDownloadServer() {
+        return "http://mobilehealthweb.herokuapp.com/api/message/?recipient__id="+ idUser+"&format=json";
+    }
+
+    @NonNull
+    public String getUrlDownloadServer(String date_time) {
+        return "http://mobilehealthweb.herokuapp.com/api/message/?date_time__gt="+date_time+"&recipient__id="+ idUser+"&format=json";
+    }
+
+    public void makeToast(final Context ctx, final String message, final int length){
+        new Handler(Looper.getMainLooper()).post(new Runnable() {
+            @Override
+            public void run() {
+                Toast.makeText(ctx, message, length).show();
+            }
+        });
     }
 }

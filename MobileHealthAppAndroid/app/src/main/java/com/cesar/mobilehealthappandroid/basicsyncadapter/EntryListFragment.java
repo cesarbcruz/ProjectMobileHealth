@@ -202,7 +202,11 @@ public class EntryListFragment extends ListFragment
             }
         });
         setListAdapter(mAdapter);
-        setEmptyText(getText(R.string.loading));
+        if(Globals.getInstance().isConfiguredSsyncUser()){
+            setEmptyText(getText(R.string.loading));
+        }else{
+            setEmptyText(Globals.getInstance().MessageUnconfiguredUserSync);
+        }
         getLoaderManager().initLoader(0, null, this);
     }
 

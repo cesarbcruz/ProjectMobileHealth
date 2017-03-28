@@ -10,6 +10,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -33,4 +34,6 @@ dependencies {
     compile 'com.google.android.gms:play-services:7.5.0'
     compile 'com.android.support:support-v4:24.2.1'
     testCompile 'junit:junit:4.12'
+    compile 'com.github.nisrulz:qreader:2.0.1'
+
 }

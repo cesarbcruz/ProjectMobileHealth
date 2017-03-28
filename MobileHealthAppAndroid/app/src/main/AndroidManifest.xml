@@ -56,7 +56,13 @@
 
         <activity
             android:name=".pref.PrefsActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name=".sync.SyncQrcodeActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat">
         </activity>
 
         <!-- ContentProvider to store feed data.

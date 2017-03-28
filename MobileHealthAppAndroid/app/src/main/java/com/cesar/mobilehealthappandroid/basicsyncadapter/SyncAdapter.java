@@ -148,6 +148,11 @@ class SyncAdapter extends AbstractThreadedSyncAdapter {
     @Override
     public void onPerformSync(Account account, Bundle extras, String authority,
                               ContentProviderClient provider, SyncResult syncResult) {
+
+        if(!Globals.getInstance().isConfiguredSsyncUser()){
+            return;
+        }
+
         Log.i(TAG, "Beginning network synchronization");
         try {
             InputStream stream = null;
@@ -322,9 +327,10 @@ class SyncAdapter extends AbstractThreadedSyncAdapter {
             String date = new SimpleDateFormat("yyyy-MM-dd").format(cal.getTime());
             String time = new SimpleDateFormat("HH:mm:ss").format(cal.getTime());
             String date_time = date+"T"+time+"Z";
-            return new URL("http://mobilehealthweb.herokuapp.com/api/message/?date_time__gt="+date_time+"&recipient__id="+Globals.getInstance().getIdUser()+"&format=json");
+            return new URL(Globals.getInstance().getUrlDownloadServer(date_time));
         }
 
-        return new URL("http://mobilehealthweb.herokuapp.com/api/message/?recipient__id="+Globals.getInstance().getIdUser()+"&format=json");
+        return new URL(Globals.getInstance().getUrlDownloadServer());
     }
+
 }

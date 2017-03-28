@@ -15,10 +15,10 @@ public class Monitoring {
     private double longitude;
     private int steps;
 
-    public Monitoring(int heart_rate, double latitude, double longitude, int steps) {
+    public Monitoring(int user, int heart_rate, double latitude, double longitude, int steps) {
         this.date_time = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(GregorianCalendar.getInstance().getTime());
         this.heart_rate = heart_rate;
-        this.user = 1;
+        this.user = user;
         this.latitude = latitude;
         this.longitude = longitude;
         this.steps = steps;

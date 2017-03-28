@@ -12,8 +12,9 @@
     <string name="exit_question">Tem certeza que deseja sair do monitoramento?</string>
     <string name="yes">Sim</string>
     <string name="no">Não</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="intro_text">Aponte a câmera para o Qrcode</string>
+    <string name="restart_activity">Reiniciar Leitura</string>
+    <string name="stop_start_qreader">Voltar</string>
     <string name="detail_msg">Mensagem vazia</string>
     <string name="image">img</string>
 </resources>

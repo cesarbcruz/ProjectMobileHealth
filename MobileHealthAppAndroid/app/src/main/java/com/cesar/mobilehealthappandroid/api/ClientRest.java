@@ -2,6 +2,7 @@ package com.cesar.mobilehealthappandroid.api;
 
 import android.os.AsyncTask;
 
+import com.cesar.mobilehealthappandroid.Globals;
 import com.google.gson.GsonBuilder;
 
 import org.slf4j.Logger;
@@ -26,7 +27,7 @@ public class ClientRest  extends AsyncTask<Monitoring, Void, String> {
         String json = new GsonBuilder().create().toJson(params[0], Monitoring.class);
         System.out.println(json);
         try{
-            LOG.debug(makeRequest("http://mobilehealthweb.herokuapp.com/api/monitoramento/?format=api", json));
+            LOG.debug(makeRequest(Globals.getInstance().UrlUploadDataServer, json));
         }catch(Exception ex){
             LOG.error(ex.getMessage(), ex);
         }

@@ -28,6 +28,7 @@ import com.cesar.mobilehealthappandroid.basicsyncadapter.EntryListActivity;
 import com.cesar.mobilehealthappandroid.pref.PrefsActivity;
 import com.cesar.mobilehealthappandroid.sdk.ActionCallback;
 import com.cesar.mobilehealthappandroid.sdk.listeners.HeartRateNotifyListener;
+import com.cesar.mobilehealthappandroid.sync.SyncQrcodeActivity;
 
 import java.util.Arrays;
 import java.util.concurrent.Executors;
@@ -110,16 +111,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void syncServer(int heartRate) {
+        if(!Globals.getInstance().isConfiguredSsyncUser()){
+            return;
+        }
         if(heartRate > 0){
             ObtainGPS gps = new ObtainGPS(getBaseContext());
-            new ClientRest().execute(new Monitoring(heartRate, gps.getLatitude(), gps.getLongitude(), getTotalSteps()));
+            new ClientRest().execute(new Monitoring(Globals.getInstance().getIdUser(), heartRate, gps.getLatitude(), gps.getLongitude(), getTotalSteps()));
         }else{
-            new Handler(Looper.getMainLooper()).post(new Runnable() {
-                @Override
-                public void run() {
-                    Toast.makeText(getBaseContext(), "Aparentemente você não está utilizando a pulseira corretamente!", Toast.LENGTH_LONG).show();
-                }
-            });
+            Globals.getInstance().makeToast(getBaseContext(), Globals.getInstance().MessageDoNotWearMiBand , Toast.LENGTH_LONG);
         }
     }
 
@@ -208,7 +207,8 @@ public class MainActivity extends AppCompatActivity {
             Intent i = new Intent(this, PrefsActivity.class);
             startActivity(i);
         }else if(id == R.id.action_sync){
-
+            Intent i = new Intent(this, SyncQrcodeActivity.class);
+            startActivity(i);
         }
 
         return super.onOptionsItemSelected(item);
@@ -226,7 +226,18 @@ public class MainActivity extends AppCompatActivity {
 
     private void getValuePreferences(){
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        int minuteSync = Integer.parseInt(prefs.getString("minuteSync", "1"));
-        Globals.getInstance().setMinuteSync(minuteSync);
+        Globals.getInstance().setMinuteSync(Integer.parseInt(prefs.getString(Globals.getInstance().ParamMinuteSync, "1")));
+        Globals.getInstance().setIdUser(prefs.getInt(Globals.getInstance().ParamIdUser, 0));
+        Globals.getInstance().setNameUser(prefs.getString(Globals.getInstance().ParamNameUser, ""));
+
+        if(Globals.getInstance().isConfiguredSsyncUser()){
+            if(Globals.getInstance().getNameUser()!=null && !Globals.getInstance().getNameUser().isEmpty()){
+                Globals.getInstance().makeToast(getBaseContext(), "Monitorando: "+Globals.getInstance().getNameUser(), Toast.LENGTH_SHORT);
+            }
+        }else{
+            Globals.getInstance().makeToast(getBaseContext(), Globals.getInstance().MessageUnconfiguredUserSync, Toast.LENGTH_LONG);
+        }
     }
+
+
 }
