@@ -4,15 +4,16 @@ import android.bluetooth.BluetoothGattCharacteristic;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Looper;
+import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,6 +25,7 @@ import com.cesar.mobilehealthappandroid.api.Monitoring;
 import com.cesar.mobilehealthappandroid.api.ObtainGPS;
 import com.cesar.mobilehealthappandroid.api.Utils;
 import com.cesar.mobilehealthappandroid.basicsyncadapter.EntryListActivity;
+import com.cesar.mobilehealthappandroid.pref.PrefsActivity;
 import com.cesar.mobilehealthappandroid.sdk.ActionCallback;
 import com.cesar.mobilehealthappandroid.sdk.listeners.HeartRateNotifyListener;
 
@@ -61,8 +63,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getBaseContext(), EntryListActivity.class));
             }
         });
-
         tvHeartRate = (TextView) findViewById(R.id.heart_rate);
+        getValuePreferences();
         verifyLocation();
         connectDevice();
         updateUIState(tvHeartRate, String.valueOf(Globals.getInstance().getHeart_rate()));
@@ -89,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
                     public void run() {
                         scanHeartRate();
                     }
-                }, 20, 60, TimeUnit.SECONDS);
+                }, 20, Globals.getInstance().getMinuteSync(), TimeUnit.MINUTES);
     }
 
     private void scanHeartRate(){
@@ -197,11 +199,14 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_restart) {
             Intent intent = getIntent();
             finish();
             startActivity(intent);
             return true;
+        }else if (id == R.id.action_settings){
+            Intent i = new Intent(this, PrefsActivity.class);
+            startActivity(i);
         }
 
         return super.onOptionsItemSelected(item);
@@ -214,5 +219,16 @@ public class MainActivity extends AppCompatActivity {
         } else {
             super.onBackPressed();
         }
+    }
+
+
+    private void getValuePreferences(){
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        String email = prefs.getString("email", "");
+        String password = prefs.getString("password", "");
+        int minuteSync = Integer.parseInt(prefs.getString("minuteSync", "1"));
+        Globals.getInstance().setEmail(email);
+        Globals.getInstance().setPassword(password);
+        Globals.getInstance().setMinuteSync(minuteSync);
     }
 }

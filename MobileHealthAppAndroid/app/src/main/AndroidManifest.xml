@@ -54,6 +54,11 @@
             android:label="@string/app_name" >
         </activity>
 
+        <activity
+            android:name=".pref.PrefsActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
         <!-- ContentProvider to store feed data.
 
         The "authorities" here are defined as part of a ContentProvider interface. It's used here

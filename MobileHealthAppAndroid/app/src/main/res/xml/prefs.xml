@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory
+        android:summary="Username and password information"
+        android:title="Informações para Autenticação" >
+        <EditTextPreference
+            android:key="email"
+            android:summary="Informe seu email cadastrado no site"
+            android:title="Email" />
+        <EditTextPreference
+            android:key="password"
+            android:summary="Informe sua senha cadastrada no site"
+            android:inputType="textPassword"
+            android:title="Senha" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:summary="Usuário e senha informado"
+        android:title="Sincronizar com servidor" >
+        <EditTextPreference
+            android:key="minuteSync"
+            android:summary="Informe a qtde de minutos (de 1 até 60)"
+            android:title="Tempo para sincronizar"
+            android:defaultValue="1"
+            android:inputType="number" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,7 +1,9 @@
 package com.cesar.mobilehealthappandroid;
 
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.preference.PreferenceManager;
 
 /**
  * Created by cesar on 27/03/17.
@@ -22,6 +24,9 @@ public class Globals {
 
     private Message messageSelected;
     private int heart_rate;
+    private String email;
+    private String password;
+    private int minuteSync;
 
 
     private Globals() {
@@ -52,5 +57,30 @@ public class Globals {
         }else{
             return null;
         }
+    }
+
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public int getMinuteSync() {
+        return minuteSync;
+    }
+
+    public void setMinuteSync(int minuteSync) {
+        this.minuteSync = minuteSync;
     }
 }
