@@ -52,7 +52,11 @@ class UpdatePasswordView(LoginRequiredMixin, FormView):
         return super(UpdatePasswordView, self).form_valid(form)
 
 
+class QrcodeSyncView(LoginRequiredMixin, TemplateView):
+    template_name = 'accounts/qrcode_sync.html'
+
 index = IndexView.as_view()
 register = RegisterView.as_view()
 update_user = UpdateUserView.as_view()
 update_password = UpdatePasswordView.as_view()
+qrcode_sync = QrcodeSyncView.as_view()
