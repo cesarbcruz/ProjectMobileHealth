@@ -27,6 +27,7 @@ public class Globals {
     public static final String ParamNameUser = "ParamNameUser";
     public static final String ParamMinuteSync = "minuteSync";
     public static final String UrlUploadDataServer = "http://mobilehealthweb.herokuapp.com/api/monitoramento/?format=api";
+    private BluetoothLeService bluetoothLeService;
 
 
     public static Globals getInstance() {
@@ -114,5 +115,13 @@ public class Globals {
                 Toast.makeText(ctx, message, length).show();
             }
         });
+    }
+
+    public BluetoothLeService getBluetoothLeService() {
+        return bluetoothLeService;
+    }
+
+    public void setBluetoothLeService(BluetoothLeService bluetoothLeService) {
+        this.bluetoothLeService = bluetoothLeService;
     }
 }

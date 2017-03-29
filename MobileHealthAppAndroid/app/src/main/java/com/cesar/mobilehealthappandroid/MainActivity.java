@@ -6,9 +6,7 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.IBinder;
-import android.os.Looper;
 import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -39,8 +37,6 @@ import static com.cesar.mobilehealthappandroid.DeviceScanActivity.log;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String PRFFS_ADDRESS = "prefs_address";
-    public static final String PRFFS_ADDRESS_KEY = "prefs_address_key";
     private TextView tvHeartRate;
     private BluetoothLeService mBluetoothLeService;
     private static final String TAG = MainActivity.class.getSimpleName();
@@ -84,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void scheduleTask() {
 
+
         ScheduledExecutorService scheduler =
                 Executors.newSingleThreadScheduledExecutor();
 
@@ -92,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
                     public void run() {
                         scanHeartRate();
                     }
-                }, 20, Globals.getInstance().getMinuteSync(), TimeUnit.MINUTES);
+                }, 20, Globals.getInstance().getMinuteSync()*60, TimeUnit.SECONDS);
     }
 
     private void scanHeartRate(){
@@ -168,6 +165,7 @@ public class MainActivity extends AppCompatActivity {
             }
             // Automatically connects to the device upon successful start-up initialization.
             mBluetoothLeService.connect(mDeviceAddress, MainActivity.this);
+            Globals.getInstance().setBluetoothLeService(mBluetoothLeService);
             scheduleTask();
         }
 

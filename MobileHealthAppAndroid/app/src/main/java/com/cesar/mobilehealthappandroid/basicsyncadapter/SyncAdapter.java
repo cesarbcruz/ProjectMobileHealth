@@ -41,6 +41,7 @@ import com.cesar.mobilehealthappandroid.Globals;
 import com.cesar.mobilehealthappandroid.Message;
 import com.cesar.mobilehealthappandroid.R;
 import com.cesar.mobilehealthappandroid.basicsyncadapter.provider.MessageContract;
+import com.cesar.mobilehealthappandroid.sdk.listeners.model.AlertMode;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -290,6 +291,7 @@ class SyncAdapter extends AbstractThreadedSyncAdapter {
         mBuilder.setContentIntent(resultPendingIntent);
         NotificationManager mNotificationManager = (NotificationManager) getContext().getSystemService(Context.NOTIFICATION_SERVICE);
         mNotificationManager.notify(001, mBuilder.build());
+        Globals.getInstance().getBluetoothLeService().startAlert(AlertMode.ALERT_MESSAGE);
     }
 
     /**
