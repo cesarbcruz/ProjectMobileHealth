@@ -1,6 +1,6 @@
 import django_filters
 from django.core.urlresolvers import reverse_lazy
-from django.utils.datetime_safe import datetime
+from django.utils import timezone
 from rest_framework import viewsets
 from .models import Monitoring, Message
 from .serializers import MonitoringSerializer, MessageSerializer
@@ -44,7 +44,7 @@ class MessageView(CreateView):
     fields = ['recipient', 'subject','msg']
 
     def form_valid(self, form):
-        form.instance.date_time = datetime.now()
+        form.instance.date_time = timezone.now()
         form.instance.issuer = self.request.user
         form.save()
         return super(MessageView, self).form_valid(form)
