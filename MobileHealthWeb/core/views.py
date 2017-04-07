@@ -1,16 +1,11 @@
 # coding=utf-8
-from datetime import datetime
-
-from api.models import Monitoring
 from chartit import *
 from django.shortcuts import render
-from django.views.generic import TemplateView
 from django.contrib.auth import get_user_model
 from django.db.models import Min,Max,Avg
-import time
 from django.utils.timezone import localtime
-
 from .forms import ContactForm, MonitoringForm
+from django.views.generic import TemplateView
 
 User = get_user_model()
 

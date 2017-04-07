@@ -1,9 +1,12 @@
 import django_filters
+from django.core.urlresolvers import reverse_lazy
+from django.utils.datetime_safe import datetime
 from rest_framework import viewsets
 from .models import Monitoring, Message
 from .serializers import MonitoringSerializer, MessageSerializer
 from rest_framework import filters
 from django.db import models as django_models
+from django.views.generic import CreateView, TemplateView
 
 
 class MonitoringViewSet(viewsets.ModelViewSet):
@@ -34,3 +37,22 @@ class MessageViewSet(viewsets.ModelViewSet):
     filter_fields = ('issuer__id', 'recipient__id', 'date_time')
     filter_class = MessageFilter
 
+class MessageView(CreateView):
+    model = Message
+    template_name = 'api/sendmessage.html'
+    success_url = reverse_lazy('api:sucessmessage')
+    fields = ['recipient', 'subject','msg']
+
+    def form_valid(self, form):
+        form.instance.date_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        form.instance.issuer = self.request.user
+        form.save()
+        return super(MessageView, self).form_valid(form)
+
+sendmessage = MessageView.as_view()
+
+
+class SucessMessage(TemplateView):
+    template_name = 'api/sucessmessage.html'
+
+sucessmessage = SucessMessage.as_view()
