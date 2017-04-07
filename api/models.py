@@ -48,7 +48,7 @@ class Monitoring(models.Model):
 class Message(models.Model):
     issuer  = models.ForeignKey(User, verbose_name = u'Emitente', related_name="message_issuer_user", blank=False)
     recipient = models.ForeignKey(User, verbose_name=u'Destinatário', related_name="message_recipient_user", blank=False)
-    date_time = models.DateTimeField('Data/Hora', blank=False)
+    date_time = models.DateTimeField('Data/Hora', auto_now_add=True, blank=True)
     subject = models.CharField('Assunto', max_length=1000)
     msg = models.TextField('Mensagem', blank=False)
 

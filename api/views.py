@@ -44,7 +44,6 @@ class MessageView(CreateView):
     fields = ['recipient', 'subject','msg']
 
     def form_valid(self, form):
-        form.instance.date_time = timezone.now()
         form.instance.issuer = self.request.user
         form.save()
         return super(MessageView, self).form_valid(form)
