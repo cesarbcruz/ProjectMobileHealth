@@ -17,4 +17,7 @@
     <string name="stop_start_qreader">Voltar</string>
     <string name="detail_msg">Mensagem vazia</string>
     <string name="image">img</string>
+    <string name="emergency">Emergência</string>
+    <string name="message">Mensagem</string>
+    <string name="label_emergency">Em caso de emergência mantenha o botão pressionado por 3 segundos:</string>
 </resources>

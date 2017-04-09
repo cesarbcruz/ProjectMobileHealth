@@ -1,62 +1,106 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/content_main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.cesar.mobilehealthappandroid.MainActivity"
-    tools:showIn="@layout/activity_main">
+    android:layout_height="fill_parent">
 
-    <TextView
-        android:id="@+id/heart_rate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/texview_design"
-        android:fontFamily="sans-serif"
-        android:gravity="center"
-        android:text="@string/heart_rate"
-        android:textColor="@android:color/background_light"
-        android:textSize="60sp"
-        android:textStyle="normal|bold"
-        android:typeface="normal" />
-
-    <TextView
-        android:id="@+id/heart_desc_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="28dp"
-        android:fontFamily="sans-serif"
-        android:gravity="center_horizontal"
-        android:text="@string/label_desc_heart_rate"
-        android:textColor="@android:color/background_light"
-        android:textSize="12sp"
-        android:textStyle="normal|bold"
-        android:typeface="normal" />
-    <TextView
-        android:id="@+id/heart_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="160dp"
-        android:fontFamily="sans-serif"
-        android:gravity="center_horizontal"
-        android:text="@string/label_heart_rate"
-        android:textColor="@android:color/background_light"
-        android:textSize="16sp"
-        android:textStyle="normal|bold"
-        android:typeface="normal" />
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/content_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.cesar.mobilehealthappandroid.MainActivity"
+        tools:showIn="@layout/activity_main">
 
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/heart_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/texview_design"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="@string/heart_rate"
+            android:textColor="@android:color/black"
+            android:textSize="60sp"
+            android:textStyle="normal|bold"
+            android:typeface="normal" />
+
+        <TextView
+            android:id="@+id/heart_desc_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="68dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center_horizontal"
+            android:text="@string/label_desc_heart_rate"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:textStyle="normal|bold"
+            android:typeface="normal" />
+        <TextView
+            android:id="@+id/heart_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="190dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center_horizontal"
+            android:text="@string/label_heart_rate"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="normal|bold"
+            android:typeface="normal" />
+
+        <Button
+            android:id="@+id/messages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/messages"
+            android:padding="16dp"
+            android:text="@string/message"
+            android:textSize="18sp"
+            android:layout_below="@+id/heart_rate"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="47dp" />
+
+        <TextView
+            android:id="@+id/labelemergency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="@string/label_emergency"
+            android:layout_below="@+id/messages"/>
+
+        <Button
+            android:id="@+id/emergency"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/labelemergency"
+            android:drawableLeft="@drawable/emergency"
+            android:padding="16dp"
+            android:text="@string/emergency"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+
+
+
+
+
+
+    </RelativeLayout>
+</ScrollView>

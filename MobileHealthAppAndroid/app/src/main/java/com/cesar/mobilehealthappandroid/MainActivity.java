@@ -8,13 +8,13 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.preference.PreferenceManager;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -43,7 +43,8 @@ public class MainActivity extends AppCompatActivity {
     private String mDeviceAddress = "E1:EE:C3:07:10:BA";
     private HeartRateNotifyListener listener;
     private ActionCallback action;
-    private FloatingActionButton fab;
+    private Button emergency;
+    private Button messages;
 
 
     @Override
@@ -53,13 +54,25 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        emergency = (Button) findViewById(R.id.emergency);
+
+        emergency.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Globals.getInstance().makeToast(getBaseContext(),"Mensagem de emergência enviada", Toast.LENGTH_LONG);
+                return true;
+            }
+        });
+
+        messages = (Button) findViewById(R.id.messages);
+        messages.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getBaseContext(), EntryListActivity.class));
             }
         });
+
+
         tvHeartRate = (TextView) findViewById(R.id.heart_rate);
         getValuePreferences();
         verifyLocation();
