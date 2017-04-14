@@ -41,7 +41,7 @@
 }
 .table tbody > tr > td {
 	font-size: 0.875em;
-	background: #f5f5f5;
+	background: #ECF0F1;
 	border-top: 10px solid #fff;
 	vertical-align: middle;
 	padding: 12px 8px;
@@ -211,7 +211,7 @@ setTimeout(function() {
 						<tr>
 							<td>
 								<p>{{ monitoring.date_time }}</p>
-                                <p><a href="#">{{ monitoring.user.name }}</a></p>
+                                <p><h4>{{ monitoring.user.name }}</h4></p>
                                 <p><span class="user-subhead">{{monitoring.user.birth_date|timesince}}</span></p>
                                 <p><div id="ImageContainer">
                                     <img src="{{ monitoring.user.img_url }}" alt="">
@@ -224,8 +224,8 @@ setTimeout(function() {
                                 </div></p>
 
                                 <p>Telefone:</p>
-                                <p><a href="#">{{ monitoring.user.cellphone }}</a></p>
-                                <p><a href="#">{{ monitoring.user.phone }}</a></p>
+                                <p><strong>{{ monitoring.user.cellphone }}</strong></p>
+                                <p><strong>{{ monitoring.user.phone }}</strong></p>
 							</td>
 							<td class="text-center">
 				    			 {% if monitoring.map != None %}
