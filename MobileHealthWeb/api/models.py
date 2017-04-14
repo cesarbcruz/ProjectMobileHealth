@@ -7,9 +7,10 @@ class Monitoring(models.Model):
     date_time = models.DateTimeField('Data/Hora', blank=False)
     heart_rate = models.IntegerField('Frequência Cardíaca', blank=False)
     user = models.ForeignKey(User, verbose_name = u'Paciente', blank=False)
-    latitude = models.FloatField(blank=True, null=True)
-    longitude = models.FloatField(blank=True, null=True)
+    latitude = models.FloatField('Latitude', blank=True, null=True)
+    longitude = models.FloatField('Longitude',blank=True, null=True)
     steps = models.IntegerField('Passos', blank=True, null=True)
+    emergency = models.IntegerField('Emergência', default=0)
 
     class Meta:
         verbose_name = "Monitoramento"

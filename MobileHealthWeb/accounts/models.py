@@ -6,6 +6,7 @@ from django.db import models
 from django.core import validators
 from django.contrib.auth.models import AbstractBaseUser, UserManager, PermissionsMixin
 from django.core.validators import URLValidator
+from datetime import date
 
 class User(AbstractBaseUser, PermissionsMixin):
 
@@ -26,6 +27,9 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField('Ativo', default=True)
     date_joined = models.DateTimeField('Data de Entrada', auto_now_add=True)
     img_url = models.CharField('Foto (URL)', validators=[URLValidator()], blank=True, max_length=5000)
+    phone = models.CharField('Telefone', max_length=11, blank=True)
+    cellphone = models.CharField('Celular', max_length=11, blank=True)
+    birth_date = models.DateField('Data de Nascimento', null=True)
 
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = ['email']
@@ -44,3 +48,4 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     def get_short_name(self):
         return str(self).split(" ")[0]
+

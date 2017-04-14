@@ -29,6 +29,7 @@ import com.cesar.mobilehealthappandroid.sdk.listeners.HeartRateNotifyListener;
 import com.cesar.mobilehealthappandroid.sync.SyncQrcodeActivity;
 
 import java.util.Arrays;
+import java.util.Random;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
     private ActionCallback action;
     private Button emergency;
     private Button messages;
+    private TextView labelMonitorando;
 
 
     @Override
@@ -59,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         emergency.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
+                sendMonitoring(Globals.getInstance().getHeart_rate(), 100);
                 Globals.getInstance().makeToast(getBaseContext(),"Mensagem de emergência enviada", Toast.LENGTH_LONG);
                 return true;
             }
@@ -74,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         tvHeartRate = (TextView) findViewById(R.id.heart_rate);
+        labelMonitorando = (TextView) findViewById(R.id.labelMonitorando);
         getValuePreferences();
         verifyLocation();
         connectDevice();
@@ -125,15 +129,19 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         if(heartRate > 0){
-            ObtainGPS gps = new ObtainGPS(getBaseContext());
-            new ClientRest().execute(new Monitoring(Globals.getInstance().getIdUser(), heartRate, gps.getLatitude(), gps.getLongitude(), getTotalSteps()));
+            sendMonitoring(heartRate, getEmergency());
         }else{
             Globals.getInstance().makeToast(getBaseContext(), Globals.getInstance().MessageDoNotWearMiBand , Toast.LENGTH_LONG);
         }
     }
 
+    private void sendMonitoring(int heartRate, int emergency) {
+        ObtainGPS gps = new ObtainGPS(getBaseContext());
+        new ClientRest().execute(new Monitoring(Globals.getInstance().getIdUser(), heartRate, gps.getLatitude(), gps.getLongitude(), getTotalSteps(), emergency));
+    }
+
     private int getTotalSteps() {
-        return 6000;
+        return new Random().nextInt(11800 - 60 + 1);
     }
 
     private ActionCallback actionCallBack() {
@@ -243,7 +251,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(Globals.getInstance().isConfiguredSsyncUser()){
             if(Globals.getInstance().getNameUser()!=null && !Globals.getInstance().getNameUser().isEmpty()){
-                Globals.getInstance().makeToast(getBaseContext(), "Monitorando: "+Globals.getInstance().getNameUser(), Toast.LENGTH_SHORT);
+                labelMonitorando.setText("Monitorando: "+Globals.getInstance().getNameUser());
             }
         }else{
             Globals.getInstance().makeToast(getBaseContext(), Globals.getInstance().MessageUnconfiguredUserSync, Toast.LENGTH_LONG);
@@ -251,4 +259,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public int getEmergency() {
+        return 0;
+    }
 }
