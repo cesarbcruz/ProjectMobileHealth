@@ -82,8 +82,8 @@ def monitoramento(request):
 
 
 def emergencia(request):
-    monitorings = Monitoring.objects.filter(emergency__gt=0)
-
+    ids = Monitoring.objects.filter(emergency__gt=0).values('user').annotate(max_id=Max('id')).order_by()
+    monitorings = Monitoring.objects.filter(id__in=ids.values_list('max_id', flat=True))
     context = {
         'monitorings' : monitorings
     }
