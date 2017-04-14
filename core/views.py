@@ -1,9 +1,11 @@
 # coding=utf-8
+from api.models import Monitoring
 from chartit import *
 from django.shortcuts import render
 from django.contrib.auth import get_user_model
-from django.db.models import Min,Max,Avg
+from django.db.models import Min,Max,Avg, CharField
 from django.utils.timezone import localtime
+from packaging.markers import Value
 from .forms import ContactForm, MonitoringForm
 from django.views.generic import TemplateView
 
@@ -79,6 +81,16 @@ def monitoramento(request):
     }
     return render(request, 'monitoring.html', context)
 
+
+def emergencia(request):
+    monitorings = Monitoring.objects.filter(emergency__gt=0)
+
+    context = {
+        'monitorings' : monitorings
+    }
+    return render(request, 'emergency.html', context)
+
+
 def build_chart(monitorings):
     cht = None
     if monitorings:
@@ -120,8 +132,6 @@ def getColorSteps(dataSteps):
         else:
             color.append('#00cc00')
     return color
-
-
 
 
 

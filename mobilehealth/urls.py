@@ -13,6 +13,7 @@ urlpatterns = [
     url(r'^apresentacao/', views.apresentacao, name='presentation'),
     url(r'^solucao/', views.solucao, name='solution'),
     url(r'^monitoramento/', views.monitoramento, name='monitoring'),
+    url(r'^emergencia/', views.emergencia, name='emergency'),
     url(r'^conta/', include('accounts.urls', namespace='accounts')),
     url(r'^admin/', admin.site.urls),
     url(r'^api/', include('api.urls', namespace='api')),
