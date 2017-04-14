@@ -1,4 +1,5 @@
 import django_filters
+from accounts.models import User
 from django.core.urlresolvers import reverse_lazy
 from django.utils.datetime_safe import datetime
 from rest_framework import viewsets
@@ -48,6 +49,11 @@ class MessageView(CreateView):
         form.instance.issuer = self.request.user
         form.save()
         return super(MessageView, self).form_valid(form)
+
+    def get_form(self, form_class=None):
+        form = super(CreateView, self).get_form(form_class)
+        form.fields['recipient'].queryset = User.objects.exclude(pk=self.request.user.pk).order_by('name')
+        return form
 
 sendmessage = MessageView.as_view()
 
