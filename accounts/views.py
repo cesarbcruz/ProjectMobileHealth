@@ -1,5 +1,5 @@
 # coding=utf-8
-
+from django import forms
 from django.views.generic import (
     CreateView, TemplateView, UpdateView, FormView
 )
@@ -25,7 +25,6 @@ class RegisterView(CreateView):
 
 
 class UpdateUserView(LoginRequiredMixin, UpdateView):
-
     model = User
     template_name = 'accounts/update_user.html'
     fields = ['name', 'birth_date', 'email', 'phone', 'cellphone', 'img_url']
@@ -33,6 +32,11 @@ class UpdateUserView(LoginRequiredMixin, UpdateView):
 
     def get_object(self):
         return self.request.user
+
+    def get_form(self, form_class=None):
+        form = super(UpdateUserView, self).get_form(form_class)
+        form.fields['birth_date'].widget = forms.widgets.DateInput(format=('%Y-%m-%d'), attrs={'type': 'date'})
+        return form
 
 
 class UpdatePasswordView(LoginRequiredMixin, FormView):
