@@ -50,7 +50,7 @@ class MessageView(CreateView):
         form.save()
         return super(MessageView, self).form_valid(form)
 
-    def get_form(self, form_class):
+    def get_form(self, form_class=None):
         form = super(CreateView, self).get_form(form_class)
         form.fields['recipient'].queryset = User.objects.exclude(pk=self.request.user.pk).order_by('name')
         return form
