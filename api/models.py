@@ -10,7 +10,7 @@ class Monitoring(models.Model):
     latitude = models.FloatField('Latitude', blank=True, null=True)
     longitude = models.FloatField('Longitude',blank=True, null=True)
     steps = models.IntegerField('Passos', blank=True, null=True)
-    emergency = models.BooleanField('Emergência', default=False)
+    emergency = models.IntegerField('Emergência', default=0)
 
     class Meta:
         verbose_name = "Monitoramento"
