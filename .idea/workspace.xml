@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd52a478-d50c-4871-960e-d921ea658290" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/emergency.html" afterPath="$PROJECT_DIR$/core/templates/emergency.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/templates/accounts/index.html" afterPath="$PROJECT_DIR$/accounts/templates/accounts/index.html" />
     </list>
     <ignored path="MobileHealthWeb.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,7 +23,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="emergency.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/accounts/templates/accounts/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="82" selection-start-line="18" selection-start-column="82" selection-end-line="18" selection-end-column="82" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="emergency.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/templates/emergency.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="447">
@@ -166,11 +176,11 @@
         <option value="$PROJECT_DIR$/api/views.py" />
         <option value="$PROJECT_DIR$/api/models.py" />
         <option value="$PROJECT_DIR$/mobilehealth/urls.py" />
-        <option value="$PROJECT_DIR$/accounts/templates/accounts/index.html" />
         <option value="$PROJECT_DIR$/accounts/models.py" />
         <option value="$PROJECT_DIR$/core/views.py" />
         <option value="$PROJECT_DIR$/accounts/views.py" />
         <option value="$PROJECT_DIR$/core/templates/emergency.html" />
+        <option value="$PROJECT_DIR$/accounts/templates/accounts/index.html" />
       </list>
     </option>
   </component>
@@ -849,14 +859,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/templates/accounts/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="82" selection-start-line="18" selection-start-column="82" selection-end-line="18" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/accounts/backends.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -975,6 +977,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="447">
           <caret line="227" column="42" selection-start-line="227" selection-start-column="42" selection-end-line="227" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/templates/accounts/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="82" selection-start-line="18" selection-start-column="82" selection-end-line="18" selection-end-column="82" />
           <folding />
         </state>
       </provider>
