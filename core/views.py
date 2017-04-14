@@ -5,7 +5,6 @@ from django.shortcuts import render
 from django.contrib.auth import get_user_model
 from django.db.models import Min,Max,Avg, CharField
 from django.utils.timezone import localtime
-from packaging.markers import Value
 from .forms import ContactForm, MonitoringForm
 from django.views.generic import TemplateView
 
