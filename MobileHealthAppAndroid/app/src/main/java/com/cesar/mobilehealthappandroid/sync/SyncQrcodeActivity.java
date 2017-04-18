@@ -23,6 +23,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.cesar.mobilehealthappandroid.Globals;
+import com.cesar.mobilehealthappandroid.MainActivity;
 import com.cesar.mobilehealthappandroid.R;
 
 import java.util.regex.Pattern;
@@ -96,7 +97,9 @@ public class SyncQrcodeActivity  extends AppCompatActivity {
                                         .setCancelable(false)
                                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                             public void onClick(DialogInterface dialog, int id) {
-                                                onBackPressed();
+                                                Intent mainIntent = new Intent(SyncQrcodeActivity.this, MainActivity.class);
+                                                startActivity(mainIntent);
+                                                finish();
                                             }
                                         });
                                 AlertDialog alert = builder.create();
