@@ -29,7 +29,7 @@ class MonitoringForm(forms.Form):
         return user.pk if user else 1;
 
     def buscar(self, user):
-        return Monitoring.objects.filter(date_time__date=self.cleaned_data['date'], user_id=self.getPkUser(user))
+        return Monitoring.objects.filter(date_time__date=self.cleaned_data['date'], user_id=self.getPkUser(user), heart_rate__gt=0)
 
     def dataSteps(self, user, max_steps):
         steps = 0

@@ -3,7 +3,7 @@ from api.models import Monitoring
 from chartit import *
 from django.shortcuts import render
 from django.contrib.auth import get_user_model
-from django.db.models import Min,Max,Avg, CharField
+from django.db.models import Min,Max,Avg
 from django.utils.timezone import localtime
 from .forms import ContactForm, MonitoringForm
 from django.views.generic import TemplateView
