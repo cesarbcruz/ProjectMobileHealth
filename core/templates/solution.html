@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+{% load staticfiles%}
+
+{% load widget_tweaks %}
+
+{% block title %}
+Saúde Móvel | {{ block.super }}
+{% endblock %}
+
+{% block container %}
+<div class="page-header">
+    <div class="row">
+        <div class="col-md-6">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/7PwEETuGoP0" frameborder="0"
+                    allowfullscreen></iframe>
+        </div>
+
+        <div class="col-md-6">
+            Entenda o funcionamento da nossa solução m-Health de uma forma simples e descomplicada, assista o vídeo!
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading"><h3><i class="fa fa-globe" aria-hidden="true"></i> Sistema web para gestão da saúde</i>
+        </h3></div>
+        <div class="panel-body">
+            <p>A qualquer hora e lugar, médicos poderão consultar o prontuário médico ou monitorar em tempo real a saúde dos pacientes.</p>
+            <p><a class="btn btn-primary" href="{% url 'monitoring' %}">Veja uma demonstração</a></p>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading"><h3><i class="fa fa-mobile" aria-hidden="true"> Aplicativo para o seu celular</i>
+        </h3></div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="{% static 'assets/images/icone_app.png' %}" class="img-thumbnail"
+                         alt="Download MobileHealthApp"
+                         width="304" height="236">
+                </div>
+                <div class="col-md-6">
+                    <p>Realize o download e instalação do aplicativo MobileHealthApp em seu celular android.</p>
+                    <p><a href="{% static 'assets/download/MobileHealthAPP.apk' %}">Faça o download clicando aqui!</a>
+                    </p>
+                </div>
+            </div>
+            <hr/>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <a href="{% static 'assets/images/dispositivos_suportados.png' %}">
+                            <div class="caption">
+                                <p>Atualmente o aplicativo MobileHealthApp suporta três modelos de dispositivos
+                                    inteligentes, sendo necessário configurar o seu modelo escolhido:</p>
+                            </div>
+                            <img src="{% static 'assets/images/dispositivos_suportados.png' %}" style="width:100%">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <a href="{% static 'assets/images/localizar_dispositivos.jpg' %}">
+                            <div class="caption">
+                                <p>Ative o bluetooth do seu celular e localize seu dispositivo inteligente através do
+                                    aplicativo:</p>
+                            </div>
+                            <img src="{% static 'assets/images/localizar_dispositivos.jpg' %}" style="width:100%">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <a href="{% static 'assets/images/emparelhar_dispositivos.jpg' %}">
+                            <div class="caption">
+                                <p>Selecione o dispositivo inteligente para emparelhar, no caso da pulseira mi band 2 é
+                                    necessário pressionar o botão da pulseira para aceitar a solicitação de
+                                    emparelhamento:</p>
+                            </div>
+                            <img src="{% static 'assets/images/emparelhar_dispositivos.jpg' %}" style="width:100%">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <a href="{% static 'assets/images/selecionar_dispositivo.jpg' %}">
+                            <div class="caption">
+                                <p>Após finalizar o emparelhamento basta selecionar seu dispositivo conectado:</p>
+                            </div>
+                            <img src="{% static 'assets/images/selecionar_dispositivo.jpg' %}" style="width:100%">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <a href="{% static 'assets/images/sincronizar_dispositivo.jpg' %}">
+                            <div class="caption">
+                                <p>Selecione o atalho <i class="fa fa-refresh" aria-hidden="true"></i> para sincronizar
+                                    os dados da pulseira e atualizar o aplicativo:</p>
+                            </div>
+                            <img src="{% static 'assets/images/sincronizar_dispositivo.jpg' %}" style="width:100%">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <a href="{% static 'assets/images/suas_atividades.jpg' %}">
+                            <div class="caption">
+                                <p>Agora você poderá acompanhar seus dados de atividade e sono:</p>
+                            </div>
+                            <img src="{% static 'assets/images/suas_atividades.jpg' %}" style="width:100%">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <a href="{% static 'assets/images/seu_sono.jpg' %}">
+                            <div class="caption">
+                                <p>Poderá acompanhar seus dados de sono leve e profundo:</p>
+                            </div>
+                            <img src="{% static 'assets/images/seu_sono.jpg' %}" style="width:100%">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <a href="{% static 'assets/images/seus_passos.jpg' %}">
+                            <div class="caption">
+                                <p>Poderá acompanhar a quantidade de passos diários e semanais:</p>
+                            </div>
+                            <img src="{% static 'assets/images/seus_passos.jpg' %}" style="width:100%">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <a href="{% static 'assets/images/monitoramento_em_tempo_real.jpg' %}">
+                            <div class="caption">
+                                <p>Poderá monitorar sua frequência cardíaca em tempo real:</p>
+                            </div>
+                            <img src="{% static 'assets/images/monitoramento_em_tempo_real.jpg' %}" style="width:100%">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

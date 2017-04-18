@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% load widget_tweaks %}
+
+{% block title %}
+    Saúde Móvel | {{ block.super }}
+{% endblock %}
+
+{% block container %}
+<div class="container">
+  <div class="page-header">
+    <h1 id="timeline">Saúde Móvel</h1>
+  </div>
+  <ul class="timeline">
+    <li>
+      <div class="timeline-badge">1</div>
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4 class="timeline-title">O que significa?</h4>
+        </div>
+        <div class="timeline-body">
+          <p>O termo Mobile-Health (ou m-Health) representa o uso de tecnologias da informação e comunicação para cuidados com a saúde por meio de dispositivos móveis.</p>
+        </div>
+      </div>
+    </li>
+    <li class="timeline-inverted">
+      <div class="timeline-badge warning">2</div>
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4 class="timeline-title">Quais são as vantagens?</h4>
+        </div>
+        <div class="timeline-body">
+            <p>Existe uma variedade de projetos que operam com o objetivo de melhorar os sistemas de saúde, mas as principais vantagens proporcionadas pelo m-Health são:</p>
+            <ul>
+                <li>Aproximação entre médico e paciente, uma vez que melhora o fluxo de comunicação entre eles e possibilita um tratamento mais ágil;</li>
+                <li>Maior facilidade no processo de consulta remota do médico ao prontuário, garantindo acesso global de todas as informações relevantes de seu estado de saúde;</li>
+                <li>Ganhos econômicos e de eficiência às instituições, uma vez que o médico pode utilizar soluções para tomada rápida de decisões clínicas ou troca de informações entre outros médicos de forma muito mais ágil;</li>
+                <li>Monitoramento e transmissão dos sinais vitais dos pacientes remotamente;</li>
+            </ul>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="timeline-badge danger">3</div>
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4 class="timeline-title">Como monitorar os pacientes remotamente?</h4>
+        </div>
+        <div class="timeline-body">
+            <p>Com a evolução da tecnologia móvel surgiram os dispositivos "wearable" (termo que significa tecnologias para vestir).</p>
+            <p>A tecnologia dos dispositivos móveis inteligentes quando aplicada em acessório comum (ex: relógio, pulseira, óculos) possibilita medir os sinais vitais de quem o utiliza e transmitir esses dados em tempo real para outros dispositivos.</p>
+        </div>
+      </div>
+    </li>
+    <li class="timeline-inverted">
+        <div class="timeline-badge info">4</div>
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4 class="timeline-title">Qualidade de vida!</h4>
+        </div>
+        <div class="timeline-body">
+            <p>m-Health oferece a oportunidade de monitoramento remoto em tempo real a pacientes com doenças crônicas, que podem receber alertas de medicação, lembretes de consulta, orientação ou até mesmo uma intervenção médica mais rápida e eficaz.</p>
+            <p>Em aplicações mais críticas, o paciente pode até mesmo utilizar a pulseira inteligente para monitoramento contínuo dos sinais vitais, com localização por GPS e comunicação de emergência.</p>
+          </p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="timeline-badge success">5</div>
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4 class="timeline-title">m-Health na prática!</h4>
+        </div>
+        <div class="timeline-body">
+            As soluções de m-Health vêm movimentando o mercado de TI, especialmente para as operadoras de saúde suplementar que vêm buscando substituir os modelos de saúde paliativa e curativa para modelos de saúde preventiva. Nesse cenário, o Governo também pode seguir os mesmos passos e encontrar na tecnologia o caminho para o equilíbrio tão necessário em um país que tende a envelhecer e precisa superar os problemas crônicos na saúde pública.
+          <p></p>
+          <hr>
+          <p><a class="btn btn-primary" href="{% url 'solution' %}">Saiba mais</a></p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+{% endblock %}
