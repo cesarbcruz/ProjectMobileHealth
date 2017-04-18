@@ -12,8 +12,8 @@ git commit -am "Commit inicial"
 git push heroku master
 
 -Configure email-
-
 heroku config:set EMAIL_HOST_PASSWORD=<password email>
+#Solution ERROR 500 send email: https://accounts.google.com/DisplayUnlockCaptcha
 
 -Configure database-
 heroku run python manage.py migrate

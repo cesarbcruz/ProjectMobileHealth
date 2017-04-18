@@ -7,6 +7,8 @@ from django.db.models import Min,Max,Avg
 from django.utils.timezone import localtime
 from .forms import ContactForm, MonitoringForm
 from django.views.generic import TemplateView
+import traceback
+import logging
 
 User = get_user_model()
 
@@ -23,8 +25,12 @@ def contact(request):
     success = False
     form = ContactForm(request.POST or None)
     if form.is_valid():
-        form.send_mail()
-        success = True
+        try:
+            form.send_mail()
+            success = True
+        except Exception as e:
+            logging.error(traceback.format_exc())
+            success = False
     context = {
         'form': form,
         'success': success
