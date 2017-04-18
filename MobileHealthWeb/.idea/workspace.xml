@@ -55,8 +55,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mobilehealth/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="141" column="9" lean-forward="false" selection-start-line="141" selection-start-column="9" selection-end-line="141" selection-end-column="9" />
+            <state relative-caret-position="124">
+              <caret line="146" column="52" lean-forward="false" selection-start-line="146" selection-start-column="33" selection-end-line="146" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -794,8 +794,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mobilehealth/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="141" column="9" lean-forward="false" selection-start-line="141" selection-start-column="9" selection-end-line="141" selection-end-column="9" />
+        <state relative-caret-position="124">
+          <caret line="146" column="52" lean-forward="false" selection-start-line="146" selection-start-column="33" selection-end-line="146" selection-end-column="52" />
           <folding />
         </state>
       </provider>
