@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd52a478-d50c-4871-960e-d921ea658290" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/MobileHealthWeb.iml" afterPath="$PROJECT_DIR$/.idea/MobileHealthWeb.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobilehealth/local_settings.py.example" afterPath="$PROJECT_DIR$/mobilehealth/local_settings.py.example" />
     </list>
     <ignored path="MobileHealthWeb.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,11 +33,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="local_settings.py.example" pinned="false" current-in-tab="true">
+      <file leaf-file-name="local_settings.py.example" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mobilehealth/local_settings.py.example">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="9" lean-forward="true" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+            <state relative-caret-position="72">
+              <caret line="4" column="10" lean-forward="false" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="local_settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mobilehealth/local_settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="4" column="10" lean-forward="true" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -103,6 +111,7 @@
         <option value="$PROJECT_DIR$/core/static/assets/extra.css" />
         <option value="$PROJECT_DIR$/core/templates/base.html" />
         <option value="$PROJECT_DIR$/core/templates/presentation.html" />
+        <option value="$PROJECT_DIR$/mobilehealth/local_settings.py.example" />
       </list>
     </option>
   </component>
@@ -291,11 +300,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/mobilehealth" />
       <recent name="$PROJECT_DIR$/core/static/assets" />
       <recent name="$PROJECT_DIR$/core/templates" />
       <recent name="$PROJECT_DIR$/api/templates/api" />
       <recent name="$PROJECT_DIR$/accounts/templates/accounts" />
-      <recent name="$PROJECT_DIR$/core/static/assets/download" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -527,13 +536,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/static/assets/extra.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="29" lean-forward="false" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/lib/python3.5/datetime.py" />
     <entry file="file://$PROJECT_DIR$/api/tests.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -785,8 +787,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mobilehealth/local_settings.py.example">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="9" lean-forward="true" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+        <state relative-caret-position="72">
+          <caret line="4" column="10" lean-forward="false" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobilehealth/local_settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="10" lean-forward="true" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
           <folding />
         </state>
       </provider>
