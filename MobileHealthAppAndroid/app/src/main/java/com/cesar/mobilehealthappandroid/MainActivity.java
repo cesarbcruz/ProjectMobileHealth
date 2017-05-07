@@ -5,15 +5,19 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -44,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
     private String mDeviceAddress = "E1:EE:C3:07:10:BA";
     private HeartRateNotifyListener listener;
     private ActionCallback action;
-    private Button emergency;
+    private Button buttonEmergency;
     private Button messages;
     private TextView labelMonitorando;
 
@@ -56,14 +60,49 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        emergency = (Button) findViewById(R.id.emergency);
+        buttonEmergency = (Button) findViewById(R.id.emergency);
 
-        emergency.setOnLongClickListener(new View.OnLongClickListener() {
+        buttonEmergency.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendMonitoring(Globals.getInstance().getHeart_rate(), 100);
+                if(Globals.getInstance().isEmergency()){
+                    Globals.getInstance().makeToast(getBaseContext(),"Para cancelar a solicitação de emergência, mantenha o botão pressionado até visualizar a mensagem de confirmação!", Toast.LENGTH_LONG);
+                }else{
+                    Globals.getInstance().makeToast(getBaseContext(),"Em caso de emergência mantenha o botão pressionado até visualizar a mensagem de confirmação!", Toast.LENGTH_LONG);
+                }
+            }
+        });
+
+        buttonEmergency.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
                 sendMonitoring(Globals.getInstance().getHeart_rate(), 100);
-                Globals.getInstance().makeToast(getBaseContext(),"Mensagem de emergência enviada", Toast.LENGTH_LONG);
+                changeEmegency();
+                updateButtonEmergency();
+                if(Globals.getInstance().isEmergency()){
+                    Globals.getInstance().makeToast(getBaseContext(),"Solicitação de emergência confirmada!", Toast.LENGTH_LONG);
+                }else{
+                    Globals.getInstance().makeToast(getBaseContext(),"Cancelamento da solicitação de emergência confirmado!", Toast.LENGTH_LONG);
+                }
                 return true;
+            }
+        });
+
+        buttonEmergency.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.zoom);
+                        buttonEmergency.startAnimation(animation);
+                        break;
+
+                    case MotionEvent.ACTION_UP:
+                        buttonEmergency.clearAnimation();
+                        break;
+                }
+                return false;
             }
         });
 
@@ -82,6 +121,7 @@ public class MainActivity extends AppCompatActivity {
         verifyLocation();
         connectDevice();
         updateUIState(tvHeartRate, String.valueOf(Globals.getInstance().getHeart_rate()));
+        updateButtonEmergency();
     }
 
     private void verifyLocation() {
@@ -129,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         if(heartRate > 0){
-            sendMonitoring(heartRate, getEmergency());
+            sendMonitoring(heartRate, getButtonEmergency());
         }else{
             Globals.getInstance().makeToast(getBaseContext(), Globals.getInstance().MessageDoNotWearMiBand , Toast.LENGTH_LONG);
         }
@@ -248,6 +288,7 @@ public class MainActivity extends AppCompatActivity {
         Globals.getInstance().setMinuteSync(Integer.parseInt(prefs.getString(Globals.getInstance().ParamMinuteSync, "1")));
         Globals.getInstance().setIdUser(prefs.getInt(Globals.getInstance().ParamIdUser, 0));
         Globals.getInstance().setNameUser(prefs.getString(Globals.getInstance().ParamNameUser, ""));
+        Globals.getInstance().setEmergency(prefs.getBoolean(Globals.getInstance().ParamEmergency, false));
 
         if(Globals.getInstance().isConfiguredSsyncUser()){
             if(Globals.getInstance().getNameUser()!=null && !Globals.getInstance().getNameUser().isEmpty()){
@@ -258,8 +299,27 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void changeEmegency(){
+        boolean emergency = !Globals.getInstance().isEmergency();
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = sp.edit();
+        editor.putBoolean(Globals.getInstance().ParamEmergency, emergency);
+        editor.commit();
+        Globals.getInstance().setEmergency(emergency);
+    }
 
-    public int getEmergency() {
+    private void updateButtonEmergency(){
+        if(Globals.getInstance().isEmergency()){
+            buttonEmergency.setText("Emergência\nSolicitada");
+            buttonEmergency.setTextColor(Color.RED);
+        }else{
+            buttonEmergency.setText("Emergência");
+            buttonEmergency.setTextColor(Color.BLACK);
+        }
+    }
+
+
+    public int getButtonEmergency() {
         return 0;
     }
 }

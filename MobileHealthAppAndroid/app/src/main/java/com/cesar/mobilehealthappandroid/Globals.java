@@ -26,8 +26,10 @@ public class Globals {
     public static final String ParamIdUser = "ParamIdUser";
     public static final String ParamNameUser = "ParamNameUser";
     public static final String ParamMinuteSync = "minuteSync";
+    public static final String ParamEmergency = "ParamEmergency";
     public static final String UrlUploadDataServer = "http://mobilehealthweb.herokuapp.com/api/monitoramento/?format=api";
     private BluetoothLeService bluetoothLeService;
+    private boolean emergency;
 
 
     public static Globals getInstance() {
@@ -123,5 +125,13 @@ public class Globals {
 
     public void setBluetoothLeService(BluetoothLeService bluetoothLeService) {
         this.bluetoothLeService = bluetoothLeService;
+    }
+
+    public boolean isEmergency() {
+        return emergency;
+    }
+
+    public void setEmergency(boolean emergency) {
+        this.emergency = emergency;
     }
 }

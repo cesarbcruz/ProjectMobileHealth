@@ -101,7 +101,6 @@
             android:drawableTop="@drawable/emergency"
             android:paddingTop="20dp"
             android:text="@string/emergency"
-            android:textColor="@android:color/holo_red_dark"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true" />
 
