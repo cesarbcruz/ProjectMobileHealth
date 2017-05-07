@@ -318,7 +318,7 @@ class SyncAdapter extends AbstractThreadedSyncAdapter {
         Cursor c = mContentResolver.query(
                 MessageContract.Entry.CONTENT_URI,
                 requestedColumns,
-                MessageContract.Entry.COLUMN_NAME_RECIPIENT+ "=" + 1 + "",
+                MessageContract.Entry.COLUMN_NAME_RECIPIENT+ "=" + Globals.getInstance().getIdUser() + "",
                 null, null);
 
 
