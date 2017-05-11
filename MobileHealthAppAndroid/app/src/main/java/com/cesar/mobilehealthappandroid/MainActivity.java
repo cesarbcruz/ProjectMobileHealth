@@ -6,8 +6,10 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.os.Vibrator;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -80,6 +82,8 @@ public class MainActivity extends AppCompatActivity {
                 sendMonitoring(Globals.getInstance().getHeart_rate(), 100);
                 changeEmegency();
                 updateButtonEmergency();
+                vibrate();
+                playSound();
                 if(Globals.getInstance().isEmergency()){
                     Globals.getInstance().makeToast(getBaseContext(),"Solicitação de emergência confirmada!", Toast.LENGTH_LONG);
                 }else{
@@ -318,6 +322,16 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void vibrate(){
+        Vibrator vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+        long milliseconds = 100;
+        vibrator.vibrate(milliseconds);
+    }
+
+    private void playSound() {
+        MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.beep);
+        mediaPlayer.start();
+    }
 
     public int getButtonEmergency() {
         return 0;

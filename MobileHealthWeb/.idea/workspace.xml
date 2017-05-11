@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd52a478-d50c-4871-960e-d921ea658290" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/images/dispositivos_suportados.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/images/emparelhar_dispositivos.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/images/icone_app.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/images/localizar_dispositivos.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/images/monitoramento_em_tempo_real.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/images/selecionar_dispositivo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/images/seu_sono.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/images/seus_passos.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/images/sincronizar_dispositivo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/images/suas_atividades.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/assets/download/MobileHealthAPP.apk" afterPath="$PROJECT_DIR$/core/static/assets/download/MobileHealthAPP.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/solution.html" afterPath="$PROJECT_DIR$/core/templates/solution.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MobileHealthWeb.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,7 +25,7 @@
       <file leaf-file-name="local_settings.py.example" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mobilehealth/local_settings.py.example">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="72">
               <caret line="4" column="10" lean-forward="false" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
               <folding />
             </state>
@@ -78,7 +67,7 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mobilehealth/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
+            <state relative-caret-position="2142">
               <caret line="120" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
               <folding />
             </state>
@@ -89,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/core/templates/solution.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="348">
-              <caret line="39" column="50" lean-forward="true" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
+              <caret line="39" column="50" lean-forward="false" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -391,8 +380,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -585,8 +574,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1366" y="0" width="1920" height="1080" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17864583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18055555" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21413721" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -817,7 +807,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -825,9 +814,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#32#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -835,7 +821,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4014">
           <caret line="223" column="41" lean-forward="false" selection-start-line="223" selection-start-column="41" selection-end-line="223" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -843,13 +828,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mobilehealth/local_settings.py.example">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="72">
           <caret line="4" column="10" lean-forward="false" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
           <folding />
         </state>
@@ -898,37 +882,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mobilehealth/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
+        <state relative-caret-position="2142">
           <caret line="120" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/static/assets/images/dispositivos_suportados.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/static/assets/images/emparelhar_dispositivos.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/static/assets/images/icone_app.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/static/assets/images/selecionar_dispositivo.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/static/assets/images/sincronizar_dispositivo.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/core/static/assets/images/dispositivos_suportados.png" />
+    <entry file="file://$PROJECT_DIR$/core/static/assets/images/emparelhar_dispositivos.jpg" />
+    <entry file="file://$PROJECT_DIR$/core/static/assets/images/icone_app.png" />
+    <entry file="file://$PROJECT_DIR$/core/static/assets/images/selecionar_dispositivo.jpg" />
+    <entry file="file://$PROJECT_DIR$/core/static/assets/images/sincronizar_dispositivo.jpg" />
     <entry file="file://$PROJECT_DIR$/core/static/assets/images/screenshot_tela_principal.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -937,7 +901,7 @@
     <entry file="file://$PROJECT_DIR$/core/templates/solution.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
-          <caret line="39" column="50" lean-forward="true" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
+          <caret line="39" column="50" lean-forward="false" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
           <folding />
         </state>
       </provider>
