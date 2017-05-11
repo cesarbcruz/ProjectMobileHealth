@@ -34,8 +34,10 @@ import com.cesar.mobilehealthappandroid.sdk.ActionCallback;
 import com.cesar.mobilehealthappandroid.sdk.MiBand;
 import com.cesar.mobilehealthappandroid.sdk.listeners.HeartRateNotifyListener;
 import com.cesar.mobilehealthappandroid.sdk.listeners.NotifyListener;
+import com.cesar.mobilehealthappandroid.sdk.listeners.RealtimeListener;
 import com.cesar.mobilehealthappandroid.sdk.listeners.model.AlertMode;
 import com.cesar.mobilehealthappandroid.sdk.listeners.model.BandLocation;
+import com.cesar.mobilehealthappandroid.sdk.listeners.model.Profile;
 import com.cesar.mobilehealthappandroid.sdk.listeners.model.TimeFormat;
 
 import java.util.List;
@@ -169,6 +171,23 @@ public class BluetoothLeService extends Service {
         miband.setHeartRateScanListener(listener);
     }
 
+
+    public void setRealtimeStepListener(final RealtimeListener listener) {
+        this.miband.setNotifyListener(Profile.UUID_SERVICE_MIBAND, Profile.UUID_CHARACTERISTIC_7_REALTIME_STEPS, new NotifyListener() {
+            @Override
+            public void onNotify(byte[] data) {
+                //
+                if (data.length == 13) {
+                    int battery = data[0];
+                    int steps = data[4] << 24 | (data[3] & 0xFF) << 16 | (data[2] & 0xFF) << 8 | (data[1] & 0xFF);
+                    int distance = data[8] << 24 | (data[7] & 0xFF) << 16 | (data[6] & 0xFF) << 8 | (data[5] & 0xFF);
+                    int calories = data[12] << 24 | (data[11] & 0xFF) << 16 | (data[10] & 0xFF) << 8 | (data[9] & 0xFF);
+                    listener.onNotify(battery, steps, distance, calories);
+                }
+            }
+        });
+    }
+
     public void startHeartRateScan(ActionCallback callback) {
         miband.startHeartRateScan(callback);
     }
@@ -180,6 +199,7 @@ public class BluetoothLeService extends Service {
     public void getBatteryInfo(UUID characteristicUUID, ActionCallback callback) {
         miband.getBatteryInfo(characteristicUUID, callback);
     }
+
     public void readRssi(ActionCallback callback) {
         miband.readRssi(callback);
     }
@@ -253,5 +273,10 @@ public class BluetoothLeService extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
+    }
+
+
+    public void getCurrentSteps(final ActionCallback callback){
+        miband.getCurrentSteps(callback);
     }
 }

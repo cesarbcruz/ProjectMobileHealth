@@ -182,7 +182,7 @@ public class BluetoothIO extends BluetoothGattCallback {
         return mBluetoothGatt.getDevice();
     }
 
-    public void writeAndRead(final UUID uuid, byte[] valueToWrite, final ActionCallback callback) {
+    /*public void writeAndRead(final UUID uuid, byte[] valueToWrite, final ActionCallback callback) {
         ActionCallback readCallback = new ActionCallback() {
 
             @Override
@@ -196,14 +196,14 @@ public class BluetoothIO extends BluetoothGattCallback {
             }
         };
         this.writeCharacteristic(uuid, valueToWrite, readCallback);
-    }
+    }*/
 
     public void writeCharacteristic(UUID characteristicUUID, byte[] value, ActionCallback callback) {
         writeCharacteristic(Profile.UUID_SERVICE_MIBAND, characteristicUUID, value, callback);
     }
 
     public void writeCharacteristic(UUID serviceUUID, UUID characteristicUUID, byte[] value, ActionCallback callback) {
-//        log('d', TAG, "writeCharacteristic() - serviceUUID : "+serviceUUID+", characteristicUUID="+characteristicUUID+" value : "+ Arrays.toString(value));
+        log('d', TAG, "writeCharacteristic() - serviceUUID : "+serviceUUID+", characteristicUUID="+characteristicUUID+" value : "+ Arrays.toString(value));
         try {
             if (null == mBluetoothGatt) {
                 log('e', TAG, message_error_default);
@@ -242,7 +242,7 @@ public class BluetoothIO extends BluetoothGattCallback {
     }
 
     public void readCharacteristic(UUID serviceUUID, UUID characteristicUUID, ActionCallback callback) {
-//        log('d', TAG, "readCharacteristic() - serviceUUID : "+serviceUUID+", characteristicUUID="+characteristicUUID);
+        log('d', TAG, "readCharacteristic() - serviceUUID : "+serviceUUID+", characteristicUUID="+characteristicUUID);
         try {
             if (null == mBluetoothGatt) {
                 log('e', TAG, message_error_default);
@@ -254,7 +254,7 @@ public class BluetoothIO extends BluetoothGattCallback {
                 this.onFail(-1, "BluetoothGattCharacteristic " + characteristicUUID + " is not exist");
                 return;
             }
-            if (false == this.mBluetoothGatt.readCharacteristic(chara)) {
+            if (!this.mBluetoothGatt.readCharacteristic(chara)) {
                 this.onFail(-1, "mBluetoothGatt.readCharacteristic() return false");
             }
 
@@ -272,10 +272,6 @@ public class BluetoothIO extends BluetoothGattCallback {
                 System.out.println("   --- "+caracteristic.getUuid()+ " === "+Arrays.toString(caracteristic.getValue()));
             }
         }
-    }
-
-    public void readCharacteristic(UUID characteristicUUID, ActionCallback callback) {
-        this.readCharacteristic(Profile.UUID_SERVICE_MIBAND, characteristicUUID, callback);
     }
 
     public void readRssi(ActionCallback callback) {
@@ -335,6 +331,13 @@ public class BluetoothIO extends BluetoothGattCallback {
         if (null == mBluetoothGatt) {
             log('e', TAG, message_error_default);
             return;
+        }
+
+        for (BluetoothGattService s: mBluetoothGatt.getServices()){
+            System.out.println("Service: "+s.getUuid());
+            for (BluetoothGattCharacteristic ch: s.getCharacteristics()) {
+                System.out.println("characteristic: "+ ch.getUuid());
+            }
         }
 
         BluetoothGattCharacteristic chara = mBluetoothGatt.getService(serviceUUID).getCharacteristic(characteristicId);

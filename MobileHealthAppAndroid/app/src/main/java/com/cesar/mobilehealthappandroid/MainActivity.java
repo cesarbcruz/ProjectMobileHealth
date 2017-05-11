@@ -32,6 +32,7 @@ import com.cesar.mobilehealthappandroid.basicsyncadapter.EntryListActivity;
 import com.cesar.mobilehealthappandroid.pref.PrefsActivity;
 import com.cesar.mobilehealthappandroid.sdk.ActionCallback;
 import com.cesar.mobilehealthappandroid.sdk.listeners.HeartRateNotifyListener;
+import com.cesar.mobilehealthappandroid.sdk.listeners.RealtimeListener;
 import com.cesar.mobilehealthappandroid.sync.SyncQrcodeActivity;
 
 import java.util.Arrays;
@@ -164,6 +165,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             };
             mBluetoothLeService.setHeartRateScanListener(listener);
+            mBluetoothLeService.setRealtimeStepListener(realtimeListener);
         }
         mBluetoothLeService.startHeartRateScan(actionCallBack());
     }
@@ -206,6 +208,8 @@ public class MainActivity extends AppCompatActivity {
         }
         return action;
     }
+
+
 
     private void updateUIState(final TextView tv, final String addStr) {
         runOnUiThread(new Runnable() {
@@ -336,4 +340,14 @@ public class MainActivity extends AppCompatActivity {
     public int getButtonEmergency() {
         return 0;
     }
+
+    private RealtimeListener realtimeListener = new RealtimeListener() {
+        @Override
+        public void onNotify(int battery, int steps, int distance, int calories) {
+                    System.out.println(battery + " battery ");
+                    System.out.println(steps + " steps ");
+                    System.out.println(distance + " distance ");
+                    System.out.println(calories + " calories ");
+        }
+    };
 }

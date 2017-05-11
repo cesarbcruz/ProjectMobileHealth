@@ -16,6 +16,7 @@ import com.cesar.mobilehealthappandroid.sdk.listeners.model.AlertMode;
 import com.cesar.mobilehealthappandroid.sdk.listeners.model.BandLocation;
 import com.cesar.mobilehealthappandroid.sdk.listeners.model.BatteryInfo;
 import com.cesar.mobilehealthappandroid.sdk.listeners.model.LedColor;
+
 import com.cesar.mobilehealthappandroid.sdk.listeners.model.Profile;
 import com.cesar.mobilehealthappandroid.sdk.listeners.model.Protocol;
 import com.cesar.mobilehealthappandroid.sdk.listeners.model.TimeFormat;
@@ -146,7 +147,8 @@ public class MiBand {
                 callback.onFail(errorCode, msg);
             }
         };
-        this.io.readCharacteristic(characteristicUUID, ioCallback);
+
+        this.io.readCharacteristic(Profile.UUID_SERVICE_MIBAND, characteristicUUID, ioCallback);
     }
 
     /**
@@ -179,6 +181,10 @@ public class MiBand {
 
     public void setNotifyListener(UUID characteristicId, NotifyListener listener) {
         this.io.setNotifyListener(Profile.UUID_SERVICE_MIBAND, characteristicId, listener);
+    }
+
+    public void setNotifyListener(UUID serviceUUID, UUID characteristicUUID, NotifyListener listener) {
+        this.io.setNotifyListener(serviceUUID, characteristicUUID, listener);
     }
 
     public void setNormalNotifyListener(NotifyListener listener) {
@@ -233,6 +239,27 @@ public class MiBand {
 //                }
 //            }
 //        });
+    }
+
+
+    public void getCurrentSteps(final ActionCallback callback) {
+
+        ActionCallback cb = new ActionCallback() {
+            @Override
+            public void onSuccess(Object data) {
+                byte[] ab = ((BluetoothGattCharacteristic)data).getValue();
+                if (ab.length == 4) {
+                    int steps = ab[3] << 24 | (ab[2] & 0xFF) << 16 | (ab[1] & 0xFF) << 8 | (ab[0] & 0xFF);
+                    callback.onSuccess((int) steps);
+                }
+            }
+
+            @Override
+            public void onFail(int errorCode, String msg) {
+                callback.onFail(errorCode, msg);
+            }
+        };
+        this.io.readCharacteristic(Profile.UUID_SERVICE_MIBAND, Profile.UUID_CHARACTERISTIC_7_REALTIME_STEPS, cb);
     }
 
     /**
