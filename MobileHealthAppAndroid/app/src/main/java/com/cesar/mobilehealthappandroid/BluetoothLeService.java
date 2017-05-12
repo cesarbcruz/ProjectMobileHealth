@@ -92,7 +92,7 @@ public class BluetoothLeService extends Service {
      *         {@code BluetoothGattCallback#onConnectionStateChange(android.bluetooth.BluetoothGatt, int, int)}
      *         callback.
      */
-    public boolean connect(final String address, final Activity activity) {
+    public boolean connect(final String address, final Activity activity, final ActionCallback actionCallbackConnect) {
         pd = new ProgressDialog(activity);
         pd.setMessage("connecting...");
         pd.setCancelable(false);
@@ -126,6 +126,8 @@ public class BluetoothLeService extends Service {
                         log('d', TAG, "disconnected!!!");
                     }
                 });
+
+                actionCallbackConnect.onSuccess(data);
             }
             @Override
             public void onFail(int errorCode, final String msg) {

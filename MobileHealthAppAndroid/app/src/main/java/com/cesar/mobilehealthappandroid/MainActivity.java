@@ -8,7 +8,9 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.IBinder;
+import android.os.Looper;
 import android.os.Vibrator;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
@@ -36,7 +38,6 @@ import com.cesar.mobilehealthappandroid.sdk.listeners.RealtimeListener;
 import com.cesar.mobilehealthappandroid.sync.SyncQrcodeActivity;
 
 import java.util.Arrays;
-import java.util.Random;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -49,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
     private BluetoothLeService mBluetoothLeService;
     private static final String TAG = MainActivity.class.getSimpleName();
     private String mDeviceAddress = "E1:EE:C3:07:10:BA";
-    private HeartRateNotifyListener listener;
     private ActionCallback action;
     private Button buttonEmergency;
     private Button messages;
@@ -69,10 +69,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 sendMonitoring(Globals.getInstance().getHeart_rate(), 100);
-                if(Globals.getInstance().isEmergency()){
-                    Globals.getInstance().makeToast(getBaseContext(),"Para cancelar a solicitação de emergência, mantenha o botão pressionado até visualizar a mensagem de confirmação!", Toast.LENGTH_LONG);
-                }else{
-                    Globals.getInstance().makeToast(getBaseContext(),"Em caso de emergência mantenha o botão pressionado até visualizar a mensagem de confirmação!", Toast.LENGTH_LONG);
+                if (Globals.getInstance().isEmergency()) {
+                    Globals.getInstance().makeToast(getBaseContext(), "Para cancelar a solicitação de emergência, mantenha o botão pressionado até visualizar a mensagem de confirmação!", Toast.LENGTH_LONG);
+                } else {
+                    Globals.getInstance().makeToast(getBaseContext(), "Em caso de emergência mantenha o botão pressionado até visualizar a mensagem de confirmação!", Toast.LENGTH_LONG);
                 }
             }
         });
@@ -85,10 +85,10 @@ public class MainActivity extends AppCompatActivity {
                 updateButtonEmergency();
                 vibrate();
                 playSound();
-                if(Globals.getInstance().isEmergency()){
-                    Globals.getInstance().makeToast(getBaseContext(),"Solicitação de emergência confirmada!", Toast.LENGTH_LONG);
-                }else{
-                    Globals.getInstance().makeToast(getBaseContext(),"Cancelamento da solicitação de emergência confirmado!", Toast.LENGTH_LONG);
+                if (Globals.getInstance().isEmergency()) {
+                    Globals.getInstance().makeToast(getBaseContext(), "Solicitação de emergência confirmada!", Toast.LENGTH_LONG);
+                } else {
+                    Globals.getInstance().makeToast(getBaseContext(), "Cancelamento da solicitação de emergência confirmado!", Toast.LENGTH_LONG);
                 }
                 return true;
             }
@@ -141,43 +141,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void scheduleTask() {
-
-
         ScheduledExecutorService scheduler =
                 Executors.newSingleThreadScheduledExecutor();
 
         scheduler.scheduleAtFixedRate
                 (new Runnable() {
                     public void run() {
-                        scanHeartRate();
+                        mBluetoothLeService.startHeartRateScan(actionCallBack());
                     }
-                }, 20, Globals.getInstance().getMinuteSync()*60, TimeUnit.SECONDS);
-    }
-
-    private void scanHeartRate(){
-        if(listener==null){
-            listener = new HeartRateNotifyListener() {
-                @Override
-                public void onNotify(int heartRate) {
-                    Globals.getInstance().setHeart_rate(heartRate);
-                    updateUIState(tvHeartRate, String.valueOf(heartRate));
-                    syncServer(heartRate);
-                }
-            };
-            mBluetoothLeService.setHeartRateScanListener(listener);
-            mBluetoothLeService.setRealtimeStepListener(realtimeListener);
-        }
-        mBluetoothLeService.startHeartRateScan(actionCallBack());
+                }, 1, Globals.getInstance().getMinuteSync() * 60, TimeUnit.SECONDS);
     }
 
     private void syncServer(int heartRate) {
-        if(!Globals.getInstance().isConfiguredSsyncUser()){
+        if (!Globals.getInstance().isConfiguredSsyncUser()) {
             return;
         }
-        if(heartRate > 0){
+        if (heartRate > 0) {
             sendMonitoring(heartRate, getButtonEmergency());
-        }else{
-            Globals.getInstance().makeToast(getBaseContext(), Globals.getInstance().MessageDoNotWearMiBand , Toast.LENGTH_LONG);
+        } else {
+            Globals.getInstance().makeToast(getBaseContext(), Globals.getInstance().MessageDoNotWearMiBand, Toast.LENGTH_LONG);
         }
     }
 
@@ -187,11 +169,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private int getTotalSteps() {
-        return new Random().nextInt(11800 - 60 + 1);
+        return Globals.getInstance().getSteps();
     }
 
     private ActionCallback actionCallBack() {
-        if(action == null) {
+        if (action == null) {
             action = new ActionCallback() {
                 @Override
                 public void onSuccess(Object data) {
@@ -208,7 +190,6 @@ public class MainActivity extends AppCompatActivity {
         }
         return action;
     }
-
 
 
     private void updateUIState(final TextView tv, final String addStr) {
@@ -233,9 +214,8 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
             // Automatically connects to the device upon successful start-up initialization.
-            mBluetoothLeService.connect(mDeviceAddress, MainActivity.this);
+            mBluetoothLeService.connect(mDeviceAddress, MainActivity.this, actionCallbackConnect);
             Globals.getInstance().setBluetoothLeService(mBluetoothLeService);
-            scheduleTask();
         }
 
         @Override
@@ -270,10 +250,10 @@ public class MainActivity extends AppCompatActivity {
             finish();
             startActivity(intent);
             return true;
-        }else if (id == R.id.action_settings){
+        } else if (id == R.id.action_settings) {
             Intent i = new Intent(this, PrefsActivity.class);
             startActivity(i);
-        }else if(id == R.id.action_sync){
+        } else if (id == R.id.action_sync) {
             Intent i = new Intent(this, SyncQrcodeActivity.class);
             startActivity(i);
         }
@@ -283,7 +263,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if(isTaskRoot()) {
+        if (isTaskRoot()) {
             new ExitDialogFragment().show(getFragmentManager(), null);
         } else {
             super.onBackPressed();
@@ -291,23 +271,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void getValuePreferences(){
+    private void getValuePreferences() {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         Globals.getInstance().setMinuteSync(Integer.parseInt(prefs.getString(Globals.getInstance().ParamMinuteSync, "1")));
         Globals.getInstance().setIdUser(prefs.getInt(Globals.getInstance().ParamIdUser, 0));
         Globals.getInstance().setNameUser(prefs.getString(Globals.getInstance().ParamNameUser, ""));
         Globals.getInstance().setEmergency(prefs.getBoolean(Globals.getInstance().ParamEmergency, false));
 
-        if(Globals.getInstance().isConfiguredSsyncUser()){
-            if(Globals.getInstance().getNameUser()!=null && !Globals.getInstance().getNameUser().isEmpty()){
-                labelMonitorando.setText("Monitorando: "+Globals.getInstance().getNameUser());
+        if (Globals.getInstance().isConfiguredSsyncUser()) {
+            if (Globals.getInstance().getNameUser() != null && !Globals.getInstance().getNameUser().isEmpty()) {
+                labelMonitorando.setText("Monitorando: " + Globals.getInstance().getNameUser());
             }
-        }else{
+        } else {
             Globals.getInstance().makeToast(getBaseContext(), Globals.getInstance().MessageUnconfiguredUserSync, Toast.LENGTH_LONG);
         }
     }
 
-    private void changeEmegency(){
+    private void changeEmegency() {
         boolean emergency = !Globals.getInstance().isEmergency();
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = sp.edit();
@@ -316,17 +296,17 @@ public class MainActivity extends AppCompatActivity {
         Globals.getInstance().setEmergency(emergency);
     }
 
-    private void updateButtonEmergency(){
-        if(Globals.getInstance().isEmergency()){
+    private void updateButtonEmergency() {
+        if (Globals.getInstance().isEmergency()) {
             buttonEmergency.setText("Emergência\nSolicitada");
             buttonEmergency.setTextColor(Color.RED);
-        }else{
+        } else {
             buttonEmergency.setText("Emergência");
             buttonEmergency.setTextColor(Color.BLACK);
         }
     }
 
-    private void vibrate(){
+    private void vibrate() {
         Vibrator vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
         long milliseconds = 100;
         vibrator.vibrate(milliseconds);
@@ -344,10 +324,33 @@ public class MainActivity extends AppCompatActivity {
     private RealtimeListener realtimeListener = new RealtimeListener() {
         @Override
         public void onNotify(int battery, int steps, int distance, int calories) {
-                    System.out.println(battery + " battery ");
-                    System.out.println(steps + " steps ");
-                    System.out.println(distance + " distance ");
-                    System.out.println(calories + " calories ");
+            Globals.getInstance().setBattery(battery);
+            Globals.getInstance().setSteps(steps);
+            Globals.getInstance().setDistance(distance);
+            Globals.getInstance().setCalories(calories);
+        }
+    };
+
+    private HeartRateNotifyListener heartRateListener = new HeartRateNotifyListener() {
+        @Override
+        public void onNotify(int heartRate) {
+            Globals.getInstance().setHeart_rate(heartRate);
+            updateUIState(tvHeartRate, String.valueOf(heartRate));
+            syncServer(heartRate);
+        }
+    };
+
+
+    ActionCallback actionCallbackConnect = new ActionCallback() {
+        @Override
+        public void onSuccess(Object data) {
+            mBluetoothLeService.setHeartRateScanListener(heartRateListener);
+            mBluetoothLeService.setRealtimeStepListener(realtimeListener);
+            scheduleTask();
+        }
+
+        @Override
+        public void onFail(int errorCode, String msg) {
         }
     };
 }

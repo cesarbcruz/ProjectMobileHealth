@@ -30,6 +30,10 @@ public class Globals {
     public static final String UrlUploadDataServer = "http://mobilehealthweb.herokuapp.com/api/monitoramento/?format=api";
     private BluetoothLeService bluetoothLeService;
     private boolean emergency;
+    private int battery;
+    private int steps;
+    private int distance;
+    private int calories;
 
 
     public static Globals getInstance() {
@@ -133,5 +137,37 @@ public class Globals {
 
     public void setEmergency(boolean emergency) {
         this.emergency = emergency;
+    }
+
+    public int getBattery() {
+        return battery;
+    }
+
+    public void setBattery(int battery) {
+        this.battery = battery;
+    }
+
+    public int getSteps() {
+        return steps;
+    }
+
+    public void setSteps(int steps) {
+        this.steps = steps;
+    }
+
+    public int getDistance() {
+        return distance;
+    }
+
+    public void setDistance(int distance) {
+        this.distance = distance;
+    }
+
+    public int getCalories() {
+        return calories;
+    }
+
+    public void setCalories(int calories) {
+        this.calories = calories;
     }
 }
