@@ -39,7 +39,10 @@ import com.hookedonplay.decoviewlib.DecoView;
 import com.hookedonplay.decoviewlib.charts.DecoDrawEffect;
 import com.hookedonplay.decoviewlib.charts.SeriesItem;
 import com.hookedonplay.decoviewlib.events.DecoEvent;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -66,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         mDecoView = (DecoView) findViewById(R.id.dynamicArcView);
         buttonEmergency = (FloatingActionButton) findViewById(R.id.emergency);
         buttonEmergency.setOnClickListener(new View.OnClickListener() {
@@ -124,6 +126,14 @@ public class MainActivity extends AppCompatActivity {
         });
 
         tvHeartRate = (TextView) findViewById(R.id.txtHeartRate);
+        tvHeartRate.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if(Globals.getInstance().getHeartRateDateTime()!=null){
+                    Globals.getInstance().makeToast(getBaseContext(), "Ultima leitura: "+ new SimpleDateFormat("dd/MM HH:mm").format(Globals.getInstance().getHeartRateDateTime()), Toast.LENGTH_LONG);
+                }
+            }
+        });
+
         createGraph();
         getValuePreferences();
         verifyLocation();
@@ -137,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
         ImageView imgSteps = (ImageView) findViewById(R.id.imageSteps);
         imgSteps.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Globals.getInstance().makeToast(getBaseContext(), "Passos", Toast.LENGTH_SHORT);
+                Globals.getInstance().makeToast(getBaseContext(), "Passos\nMeta: 10.000", Toast.LENGTH_SHORT);
             }
         });
         ImageView imgDistance = (ImageView) findViewById(R.id.imageDistance);
@@ -388,6 +398,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onNotify(int heartRate) {
             Globals.getInstance().setHeart_rate(heartRate);
+            Globals.getInstance().setHeartRateDateTime(new Timestamp(new Date().getTime()));
             updateUIState(tvHeartRate, String.valueOf(heartRate));
             syncServer(heartRate);
         }

@@ -9,6 +9,8 @@ import android.support.annotation.NonNull;
 import android.view.Gravity;
 import android.widget.Toast;
 
+import java.sql.Timestamp;
+
 /**
  * Created by cesar on 27/03/17.
  */
@@ -21,6 +23,7 @@ public class Globals {
     public static final String MessageDoNotWearMiBand = "Aparentemente você não está utilizando a pulseira corretamente!";
     private Message messageSelected;
     private int heart_rate;
+    private Timestamp heartRateDateTime;
     private int idUser = 0;
     private String nameUser = "";
     private int minuteSync;
@@ -176,5 +179,13 @@ public class Globals {
 
     public void setCalories(int calories) {
         this.calories = calories;
+    }
+
+    public Timestamp getHeartRateDateTime() {
+        return heartRateDateTime;
+    }
+
+    public void setHeartRateDateTime(Timestamp heartRateDateTime) {
+        this.heartRateDateTime = heartRateDateTime;
     }
 }
