@@ -433,7 +433,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 final SeriesItem seriesItemSteps = new SeriesItem.Builder(Color.parseColor("#9ACD32"))
-                        .setRange(0, 1000, 0)
+                        .setRange(0, 10000, 0)
                         .setInitialVisibility(false)
                         .build();
 
