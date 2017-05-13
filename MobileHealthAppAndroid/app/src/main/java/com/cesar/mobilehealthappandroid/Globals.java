@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory;
 import android.os.Handler;
 import android.os.Looper;
 import android.support.annotation.NonNull;
+import android.view.Gravity;
 import android.widget.Toast;
 
 /**
@@ -27,6 +28,10 @@ public class Globals {
     public static final String ParamNameUser = "ParamNameUser";
     public static final String ParamMinuteSync = "minuteSync";
     public static final String ParamEmergency = "ParamEmergency";
+    public static final String ParamBattery = "ParamBattery";
+    public static final String ParamSteps = "ParamSteps";
+    public static final String ParamDistance = "ParamDistance";
+    public static final String ParamCalories = "ParamCalories";
     public static final String UrlUploadDataServer = "http://mobilehealthweb.herokuapp.com/api/monitoramento/?format=api";
     private BluetoothLeService bluetoothLeService;
     private boolean emergency;
@@ -118,7 +123,9 @@ public class Globals {
         new Handler(Looper.getMainLooper()).post(new Runnable() {
             @Override
             public void run() {
-                Toast.makeText(ctx, message, length).show();
+                Toast toast = Toast.makeText(ctx, message, length);
+                toast.setGravity(Gravity.CENTER_VERTICAL|Gravity.CENTER_HORIZONTAL, 0, 0);
+                toast.show();
             }
         });
     }

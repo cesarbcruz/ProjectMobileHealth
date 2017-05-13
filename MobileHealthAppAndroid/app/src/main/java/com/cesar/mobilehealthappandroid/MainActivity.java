@@ -5,27 +5,25 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.content.SharedPreferences;
+import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.IBinder;
-import android.os.Looper;
 import android.os.Vibrator;
 import android.preference.PreferenceManager;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.MotionEvent;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.cesar.mobilehealthappandroid.api.ClientRest;
 import com.cesar.mobilehealthappandroid.api.Monitoring;
 import com.cesar.mobilehealthappandroid.api.ObtainGPS;
@@ -36,7 +34,10 @@ import com.cesar.mobilehealthappandroid.sdk.ActionCallback;
 import com.cesar.mobilehealthappandroid.sdk.listeners.HeartRateNotifyListener;
 import com.cesar.mobilehealthappandroid.sdk.listeners.RealtimeListener;
 import com.cesar.mobilehealthappandroid.sync.SyncQrcodeActivity;
-
+import com.hookedonplay.decoviewlib.DecoView;
+import com.hookedonplay.decoviewlib.charts.DecoDrawEffect;
+import com.hookedonplay.decoviewlib.charts.SeriesItem;
+import com.hookedonplay.decoviewlib.events.DecoEvent;
 import java.util.Arrays;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -51,9 +52,15 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
     private String mDeviceAddress = "E1:EE:C3:07:10:BA";
     private ActionCallback action;
-    private Button buttonEmergency;
-    private Button messages;
-    private TextView labelMonitorando;
+    private FloatingActionButton buttonEmergency;
+    private FloatingActionButton messages;
+    private DecoView mDecoView;
+    private int mBackIndex;
+    private int mSeriesIndexSteps;
+    private int mSeries2Index;
+    private int mSeries3Index;
+    private final float mSeriesMax = 50f;
+    private ScheduledExecutorService scheduler;
 
 
     @Override
@@ -63,8 +70,8 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        buttonEmergency = (Button) findViewById(R.id.emergency);
-
+        mDecoView = (DecoView) findViewById(R.id.dynamicArcView);
+        buttonEmergency = (FloatingActionButton) findViewById(R.id.emergency);
         buttonEmergency.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -111,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        messages = (Button) findViewById(R.id.messages);
+        messages = (FloatingActionButton) findViewById(R.id.messages);
         messages.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -119,9 +126,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-        tvHeartRate = (TextView) findViewById(R.id.heart_rate);
-        labelMonitorando = (TextView) findViewById(R.id.labelMonitorando);
+        tvHeartRate = (TextView) findViewById(R.id.txtHeartRate);
+        createGraph();
         getValuePreferences();
         verifyLocation();
         connectDevice();
@@ -141,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void scheduleTask() {
-        ScheduledExecutorService scheduler =
+        scheduler =
                 Executors.newSingleThreadScheduledExecutor();
 
         scheduler.scheduleAtFixedRate
@@ -149,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
                     public void run() {
                         mBluetoothLeService.startHeartRateScan(actionCallBack());
                     }
-                }, 1, Globals.getInstance().getMinuteSync() * 60, TimeUnit.SECONDS);
+                }, 10, Globals.getInstance().getMinuteSync() * 60, TimeUnit.SECONDS);
     }
 
     private void syncServer(int heartRate) {
@@ -239,12 +245,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_restart) {
             Intent intent = getIntent();
             finish();
@@ -270,6 +272,22 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void updateViewData(){
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                ((TextView) findViewById(R.id.txtSteps)).setText(Globals.getInstance().getSteps()+" P");
+                ((TextView) findViewById(R.id.txtDistance)).setText(Globals.getInstance().getDistance()+ " M");
+                ((TextView) findViewById(R.id.txtCalories)).setText(Globals.getInstance().getCalories()+ " Kcal");
+
+                mDecoView.addEvent(new DecoEvent.Builder(Globals.getInstance().getSteps())
+                        .setIndex(mSeriesIndexSteps)
+                        .setDelay(6250)
+                        .build());
+            }
+        });
+
+    }
 
     private void getValuePreferences() {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
@@ -277,14 +295,20 @@ public class MainActivity extends AppCompatActivity {
         Globals.getInstance().setIdUser(prefs.getInt(Globals.getInstance().ParamIdUser, 0));
         Globals.getInstance().setNameUser(prefs.getString(Globals.getInstance().ParamNameUser, ""));
         Globals.getInstance().setEmergency(prefs.getBoolean(Globals.getInstance().ParamEmergency, false));
+        Globals.getInstance().setBattery(prefs.getInt(Globals.getInstance().ParamBattery, 0));
+        Globals.getInstance().setSteps(prefs.getInt(Globals.getInstance().ParamSteps, 0));
+        Globals.getInstance().setDistance(prefs.getInt(Globals.getInstance().ParamDistance, 0));
+        Globals.getInstance().setCalories(prefs.getInt(Globals.getInstance().ParamCalories, 0));
 
         if (Globals.getInstance().isConfiguredSsyncUser()) {
             if (Globals.getInstance().getNameUser() != null && !Globals.getInstance().getNameUser().isEmpty()) {
-                labelMonitorando.setText("Monitorando: " + Globals.getInstance().getNameUser());
+                Globals.getInstance().makeToast(getBaseContext(), "Monitorando: " + Globals.getInstance().getNameUser(), Toast.LENGTH_LONG);
             }
         } else {
             Globals.getInstance().makeToast(getBaseContext(), Globals.getInstance().MessageUnconfiguredUserSync, Toast.LENGTH_LONG);
         }
+
+        updateViewData();
     }
 
     private void changeEmegency() {
@@ -298,11 +322,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateButtonEmergency() {
         if (Globals.getInstance().isEmergency()) {
-            buttonEmergency.setText("Emergência\nSolicitada");
-            buttonEmergency.setTextColor(Color.RED);
+            buttonEmergency.setBackgroundTintList(ColorStateList.valueOf(Color.RED));
         } else {
-            buttonEmergency.setText("Emergência");
-            buttonEmergency.setTextColor(Color.BLACK);
+            buttonEmergency.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#A4A4A4")));
         }
     }
 
@@ -328,8 +350,20 @@ public class MainActivity extends AppCompatActivity {
             Globals.getInstance().setSteps(steps);
             Globals.getInstance().setDistance(distance);
             Globals.getInstance().setCalories(calories);
+            updateData();
         }
     };
+
+    private void updateData() {
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = sp.edit();
+        editor.putInt(Globals.getInstance().ParamBattery, Globals.getInstance().getBattery());
+        editor.putInt(Globals.getInstance().ParamSteps, Globals.getInstance().getSteps());
+        editor.putInt(Globals.getInstance().ParamDistance, Globals.getInstance().getDistance());
+        editor.putInt(Globals.getInstance().ParamCalories, Globals.getInstance().getCalories());
+        editor.commit();
+        updateViewData();
+    }
 
     private HeartRateNotifyListener heartRateListener = new HeartRateNotifyListener() {
         @Override
@@ -351,6 +385,57 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onFail(int errorCode, String msg) {
+            log('e', TAG, "errorCode : " + errorCode + ", msg : " + msg);
         }
     };
+
+
+    private void createGraph() {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+
+                SeriesItem seriesItem = new SeriesItem.Builder(Color.parseColor("#FFE2E2E2"))
+                        .setRange(0, 100, 0)
+                        .setInitialVisibility(false)
+                        .build();
+
+                mBackIndex = mDecoView.addSeries(seriesItem);
+
+                mDecoView.executeReset();
+
+                mDecoView.addEvent(new DecoEvent.Builder(DecoDrawEffect.EffectType.EFFECT_SPIRAL_OUT)
+                        .setIndex(mBackIndex)
+                        .setDuration(2000)
+                        .setDelay(1250)
+                        .build());
+
+                mDecoView.addEvent(new DecoEvent.Builder(100f).setIndex(mBackIndex).setDelay(3300).build());
+
+
+                final SeriesItem seriesItemSteps = new SeriesItem.Builder(Color.parseColor("#9ACD32"))
+                        .setRange(0, 1000, 0)
+                        .setInitialVisibility(false)
+                        .build();
+
+                mSeriesIndexSteps = mDecoView.addSeries(seriesItemSteps);
+
+            }
+        });
+
+
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+
+        if(scheduler!=null){
+            scheduler.shutdown();
+        }
+
+        if (mServiceConnection != null) {
+            unbindService(mServiceConnection);
+        }
+    }
 }

@@ -116,7 +116,7 @@ public class BluetoothLeService extends Service {
                 new Handler(Looper.getMainLooper()).post(new Runnable() {
                     @Override
                     public void run() {
-                        Toast.makeText(activity.getBaseContext(), "Pulseira conectada", Toast.LENGTH_LONG).show();
+                        Globals.getInstance().makeToast(activity.getBaseContext(), "Pulseira conectada", Toast.LENGTH_LONG);
                     }
                 });
 

@@ -26,7 +26,6 @@
             android:gravity="center"
             android:padding="10dp"
             android:text="@string/intro_text"
-            android:textColor="@android:color/white"
             android:textSize="20sp"
             />
         <Button

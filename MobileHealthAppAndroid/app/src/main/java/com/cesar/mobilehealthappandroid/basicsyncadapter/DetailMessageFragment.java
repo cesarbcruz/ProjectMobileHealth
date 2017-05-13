@@ -14,7 +14,7 @@ import com.cesar.mobilehealthappandroid.R;
 
 public class DetailMessageFragment extends Fragment {
 
-    private Menu mOptionsMenu;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -31,7 +31,6 @@ public class DetailMessageFragment extends Fragment {
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
-        mOptionsMenu = menu;
         inflater.inflate(R.menu.menu_detail_message, menu);
     }
 

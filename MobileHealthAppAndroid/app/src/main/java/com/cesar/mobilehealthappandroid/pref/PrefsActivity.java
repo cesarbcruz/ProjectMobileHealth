@@ -6,6 +6,11 @@ import android.preference.EditTextPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.widget.Toolbar;
 
 import com.cesar.mobilehealthappandroid.R;
 
@@ -13,19 +18,18 @@ import com.cesar.mobilehealthappandroid.R;
  * Created by cesar on 28/03/17.
  */
 
-public class PrefsActivity extends PreferenceActivity {
+public class PrefsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getFragmentManager().beginTransaction().replace(android.R.id.content, new MyPreferenceFragment()).commit();
+
     }
 
-    public static class MyPreferenceFragment extends PreferenceFragment
-    {
+    public static class MyPreferenceFragment extends PreferenceFragment {
         @Override
-        public void onCreate(final Bundle savedInstanceState)
-        {
+        public void onCreate(final Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             addPreferencesFromResource(R.xml.prefs);
             EditTextPreference textPreference = (EditTextPreference) this.findPreference("minuteSync");
@@ -34,11 +38,11 @@ public class PrefsActivity extends PreferenceActivity {
 
                         @Override
                         public boolean onPreferenceChange(Preference preference, Object newValue) {
-                            try{
-                                int num = Integer.parseInt((String)newValue);
-                                if(num >= 1 && num <= 60 ){
+                            try {
+                                int num = Integer.parseInt((String) newValue);
+                                if (num >= 1 && num <= 60) {
                                     return true;
-                                }else{
+                                } else {
                                     final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                                     builder.setTitle("Valor inválido");
                                     builder.setMessage("Permitido somente valor numérico de 1 até 60");
@@ -46,15 +50,33 @@ public class PrefsActivity extends PreferenceActivity {
                                     builder.show();
                                     return false;
                                 }
-                            }catch(Exception ex){
+                            } catch (Exception ex) {
                                 return false;
                             }
                         }
 
                     });
+            setHasOptionsMenu(true);
         }
 
+
+        @Override
+        public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+            super.onCreateOptionsMenu(menu, inflater);
+            inflater.inflate(R.menu.menu_detail_message, menu);
         }
+
+        @Override
+        public boolean onOptionsItemSelected(MenuItem item) {
+            switch (item.getItemId()) {
+                case R.id.menu_detail_message_previous:
+                    getActivity().onBackPressed();
+                    return true;
+            }
+            return super.onOptionsItemSelected(item);
+        }
+
+    }
 }
 
 

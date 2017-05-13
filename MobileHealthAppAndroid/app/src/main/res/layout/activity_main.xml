@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:background="@drawable/background"
     tools:context="com.cesar.mobilehealthappandroid.MainActivity">
 
     <android.support.design.widget.AppBarLayout
@@ -21,7 +20,36 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_main" />
+
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:layout_below= "@id/toolbar"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" android:id="@+id/frameLayout">
+
+        <include layout="@layout/activity_content" android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+
+        <android.support.design.widget.FloatingActionButton
+            app:backgroundTint="#A4A4A4"
+            android:id="@+id/messages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@android:drawable/ic_dialog_email" />
+
+        <android.support.design.widget.FloatingActionButton
+            app:backgroundTint="#A4A4A4"
+            android:id="@+id/emergency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|start"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@android:drawable/ic_dialog_alert" />
+
+    </FrameLayout>
+
+
+
 
 
 </android.support.design.widget.CoordinatorLayout>

@@ -21,4 +21,7 @@
     <string name="message">Mensagem</string>
     <string name="label_emergency">Em caso de emergência mantenha o botão pressionado por 3 segundos:</string>
     <string name="labelMonitorando">Monitorando:</string>
+    <string name="passosLabel">Passos</string>
+    <string name="distanciaLabel">Distância</string>
+    <string name="calorias">Calorias</string>
 </resources>

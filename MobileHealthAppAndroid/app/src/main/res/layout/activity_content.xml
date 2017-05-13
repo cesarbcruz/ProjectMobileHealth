@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/activity_horizontal_margin"
+                tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/txtDistance">
+
+        <TextView
+            android:id="@+id/txtHeartRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="40sp"/>
+
+        <TextView
+            android:id="@+id/txtLabelHeartRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtHeartRate"
+            android:layout_centerHorizontal="true"
+            android:text="@string/label_heart_rate"
+            android:maxWidth="200dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <com.hookedonplay.decoviewlib.DecoView
+            xmlns:custom="http://schemas.android.com/apk/res-auto"
+            custom:dv_lineWidth="26dp"
+            android:id="@+id/dynamicArcView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+        </com.hookedonplay.decoviewlib.DecoView>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageSteps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/circle_activity1"
+        android:contentDescription="@string/passosLabel"
+        android:padding="12dp"
+        android:src="@drawable/ic_activity2"/>
+
+    <ImageView
+        android:id="@+id/imageDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/circle_activity3"
+        android:contentDescription="@string/distanciaLabel"
+        android:padding="12dp"
+        android:src="@drawable/ic_activity3"/>
+
+    <ImageView
+        android:id="@+id/imageCalories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/imageDistance"
+        android:background="@drawable/circle_activity2"
+        android:contentDescription="@string/calorias"
+        android:padding="12dp"
+        android:src="@drawable/ic_activity1"/>
+
+    <TextView
+        android:id="@+id/txtDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageDistance"
+        android:gravity="center_horizontal"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_alignEnd="@+id/imageDistance"
+        android:layout_alignStart="@+id/imageDistance" />
+
+    <TextView
+        android:id="@+id/txtSteps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageSteps"
+        android:layout_alignEnd="@+id/imageSteps"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/imageSteps"
+        android:gravity="center_horizontal"
+        android:paddingLeft="4dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <TextView
+        android:id="@+id/txtCalories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageCalories"
+        android:layout_alignLeft="@+id/imageCalories"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignStart="@+id/imageCalories"
+        android:gravity="center_horizontal"
+        android:paddingRight="4dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+</RelativeLayout>

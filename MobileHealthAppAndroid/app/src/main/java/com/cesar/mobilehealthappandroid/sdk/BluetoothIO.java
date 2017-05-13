@@ -15,6 +15,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.widget.Toast;
 
+import com.cesar.mobilehealthappandroid.Globals;
 import com.cesar.mobilehealthappandroid.sdk.listeners.NotifyListener;
 import com.cesar.mobilehealthappandroid.sdk.listeners.model.Profile;
 import com.cesar.mobilehealthappandroid.sdk.listeners.model.Protocol;
@@ -415,7 +416,7 @@ public class BluetoothIO extends BluetoothGattCallback {
             new Handler(Looper.getMainLooper()).post(new Runnable() {
                 @Override
                 public void run() {
-                    Toast.makeText(mContext, str, Toast.LENGTH_SHORT).show();
+                    Globals.getInstance().makeToast(mContext, str, Toast.LENGTH_SHORT);
                 }
             });
         }
@@ -465,7 +466,7 @@ public class BluetoothIO extends BluetoothGattCallback {
             this.onSuccess(null);
             broadcastUpdate(ACTION_GATT_SERVICES_DISCOVERED);
 
-//            setConnection();
+            //setConnection();
 
         } else {
             log('i', TAG, "onServicesDiscovered fail");
