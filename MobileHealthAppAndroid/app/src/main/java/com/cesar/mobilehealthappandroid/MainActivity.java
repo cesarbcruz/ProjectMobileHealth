@@ -22,6 +22,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.cesar.mobilehealthappandroid.api.ClientRest;
@@ -55,11 +56,7 @@ public class MainActivity extends AppCompatActivity {
     private FloatingActionButton buttonEmergency;
     private FloatingActionButton messages;
     private DecoView mDecoView;
-    private int mBackIndex;
     private int mSeriesIndexSteps;
-    private int mSeries2Index;
-    private int mSeries3Index;
-    private final float mSeriesMax = 50f;
     private ScheduledExecutorService scheduler;
 
 
@@ -133,6 +130,28 @@ public class MainActivity extends AppCompatActivity {
         connectDevice();
         updateUIState(tvHeartRate, String.valueOf(Globals.getInstance().getHeart_rate()));
         updateButtonEmergency();
+        confLabel();
+    }
+
+    private void confLabel() {
+        ImageView imgSteps = (ImageView) findViewById(R.id.imageSteps);
+        imgSteps.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Globals.getInstance().makeToast(getBaseContext(), "Passos", Toast.LENGTH_SHORT);
+            }
+        });
+        ImageView imgDistance = (ImageView) findViewById(R.id.imageDistance);
+        imgDistance.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Globals.getInstance().makeToast(getBaseContext(), "Distância", Toast.LENGTH_SHORT);
+            }
+        });
+        ImageView imgCalories = (ImageView) findViewById(R.id.imageCalories);
+        imgCalories.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Globals.getInstance().makeToast(getBaseContext(), "Calorias", Toast.LENGTH_SHORT);
+            }
+        });
     }
 
     private void verifyLocation() {
@@ -400,7 +419,7 @@ public class MainActivity extends AppCompatActivity {
                         .setInitialVisibility(false)
                         .build();
 
-                mBackIndex = mDecoView.addSeries(seriesItem);
+                int mBackIndex = mDecoView.addSeries(seriesItem);
 
                 mDecoView.executeReset();
 
