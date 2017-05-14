@@ -24,4 +24,5 @@
     <string name="passosLabel">Passos</string>
     <string name="distanciaLabel">Distância</string>
     <string name="calorias">Calorias</string>
+    <string name="heartsimbol">♥</string>
 </resources>

@@ -10,6 +10,16 @@
         android:layout_height="match_parent"
         android:layout_above="@+id/txtDistance">
 
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/txtHeartRate"
+            android:layout_centerHorizontal="true"
+            android:text="@string/heartsimbol"
+            android:maxWidth="200dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
         <TextView
             android:id="@+id/txtHeartRate"
             android:layout_width="wrap_content"
@@ -17,7 +27,7 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="40sp"/>
+            android:textSize="@dimen/text_heart"/>
 
         <TextView
             android:id="@+id/txtLabelHeartRate"
