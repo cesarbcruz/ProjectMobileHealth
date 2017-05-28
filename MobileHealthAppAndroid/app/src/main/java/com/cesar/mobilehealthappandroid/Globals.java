@@ -113,6 +113,25 @@ public class Globals {
     }
 
     @NonNull
+    public String getUrlUploadEmergency(int idEmergency) {
+        String id = "";
+        if(idEmergency > 0){
+            id = idEmergency+"/";
+        }
+        return "http://mobilehealthweb.herokuapp.com/api/emergencia/"+id+"?format=api";
+    }
+
+    @NonNull
+    public String getUrlDownloadEmergency(long idUser, int idStatus) {
+        return "http://mobilehealthweb.herokuapp.com/api/emergencia/?user__id="+idUser+"&status__lt="+idStatus;
+    }
+
+    @NonNull
+    public String getUrlDeleteEmergency(long idEmergency) {
+        return "http://mobilehealthweb.herokuapp.com/api/emergencia/"+idEmergency+"/";
+    }
+
+    @NonNull
     public String getUrlDeleteMessage(long idMessage) {
         return "http://mobilehealthweb.herokuapp.com/api/message/"+idMessage+"/";
     }

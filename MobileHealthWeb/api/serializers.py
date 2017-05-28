@@ -1,9 +1,15 @@
 from rest_framework import serializers
-from .models import Monitoring, Message
+from .models import Monitoring, Message, Emergency
+
 
 class MonitoringSerializer(serializers.ModelSerializer):
     class Meta:
         model = Monitoring
+        fields = '__all__'
+
+class EmergencySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Emergency
         fields = '__all__'
 
 class MessageSerializer(serializers.ModelSerializer):

@@ -3,16 +3,32 @@ from accounts.models import User
 from django.core.urlresolvers import reverse_lazy
 from django.utils.datetime_safe import datetime
 from rest_framework import viewsets
-from .models import Monitoring, Message
-from .serializers import MonitoringSerializer, MessageSerializer
+from .models import Monitoring, Message, Emergency
+from .serializers import MonitoringSerializer, MessageSerializer, EmergencySerializer
 from rest_framework import filters
 from django.db import models as django_models
 from django.views.generic import CreateView, TemplateView
 
 
+class EmergencyFilter(filters.FilterSet):
+    class Meta:
+        model = Emergency
+        fields = {
+            'user__id': ['exact'],
+            'status': ('lt', 'gt'),
+        }
+
+class EmergencyViewSet(viewsets.ModelViewSet):
+    queryset = Emergency.objects.all()
+    serializer_class = EmergencySerializer
+    filter_backends = (filters.SearchFilter, filters.OrderingFilter, filters.DjangoFilterBackend)
+    filter_fields = ('user__id', 'status')
+    filter_class = EmergencyFilter
+
 class MonitoringViewSet(viewsets.ModelViewSet):
     queryset = Monitoring.objects.all()
     serializer_class = MonitoringSerializer
+
 
 class MessageFilter(filters.FilterSet):
     class Meta:

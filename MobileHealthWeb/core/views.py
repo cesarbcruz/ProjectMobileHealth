@@ -1,5 +1,5 @@
 # coding=utf-8
-from api.models import Monitoring
+from api.models import Monitoring, Emergency, STATUS_CHOICES, DONE
 from chartit import *
 from django.shortcuts import render
 from django.contrib.auth import get_user_model
@@ -88,10 +88,15 @@ def monitoramento(request):
 
 
 def emergencia(request):
-    ids = Monitoring.objects.filter(emergency__gt=0).values('user').annotate(max_id=Max('id')).order_by()
-    monitorings = Monitoring.objects.filter(id__in=ids.values_list('max_id', flat=True))
+    ids_emergency = Emergency.objects.filter(status__lt=DONE).values('user').annotate(max_id=Max('id')).order_by("user")
+    emergencies = Emergency.objects.filter(id__in=ids_emergency.values_list('max_id', flat=True))
+    id_monitorings = Monitoring.objects.filter(user__in=ids_emergency.values_list('user', flat=True)).values('user').annotate(max_id=Max('id')).order_by("user")
+    monitorings = Monitoring.objects.filter(id__in=id_monitorings.values_list('max_id', flat=True))
+
+    emergencies_monitorings = zip(emergencies, monitorings)
+
     context = {
-        'monitorings' : monitorings
+        'emergencies_monitorings' : emergencies_monitorings
     }
     return render(request, 'emergency.html', context)
 

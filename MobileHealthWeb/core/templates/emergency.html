@@ -207,10 +207,11 @@ setTimeout(function() {
 					</thead>
 					<tbody>
 
-                        {% for monitoring in monitorings %}
+                        {% for emergency, monitoring in emergencies_monitorings %}
 						<tr>
 							<td>
 								<p>{{ monitoring.date_time }}</p>
+								<hr />
                                 <p><h4>{{ monitoring.user.name }}</h4></p>
                                 <p><span class="user-subhead">{{monitoring.user.birth_date|timesince}}</span></p>
                                 <p><div id="ImageContainer">
@@ -225,10 +226,13 @@ setTimeout(function() {
 									{% endif %}
 								</a>
                                 </div></p>
-
+								<hr />
                                 <p>Telefone:</p>
                                 <p><strong>{{ monitoring.user.cellphone }}</strong></p>
                                 <p><strong>{{ monitoring.user.phone }}</strong></p>
+								<hr />
+								<p>Status da solicitação:</p>
+								<p><h4>{{ emergency.get_status_display }}</h4></p>
 							</td>
 							<td class="text-center">
 				    			 {% if monitoring.map != None %}

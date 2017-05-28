@@ -14,16 +14,14 @@ public class Monitoring {
     private double latitude;
     private double longitude;
     private int steps;
-    private int emergency;
 
-    public Monitoring(int user, int heart_rate, double latitude, double longitude, int steps, int emergency) {
+    public Monitoring(int user, int heart_rate, double latitude, double longitude, int steps) {
         this.date_time = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(GregorianCalendar.getInstance().getTime());
         this.heart_rate = heart_rate;
         this.user = user;
         this.latitude = latitude;
         this.longitude = longitude;
         this.steps = steps;
-        this.emergency = emergency;
     }
 
     public String getDate_time() {
@@ -56,13 +54,5 @@ public class Monitoring {
 
     public void setSteps(int steps) {
         this.steps = steps;
-    }
-
-    public int getEmergency() {
-        return emergency;
-    }
-
-    public void setEmergency(int emergency) {
-        this.emergency = emergency;
     }
 }

@@ -3,6 +3,23 @@ from django.db import models
 from django.utils.timezone import localtime
 from geopy.geocoders import GoogleV3
 
+PENDING = 0
+PROGRESS = 1
+DONE = 2
+CANCEL = 3
+STATUS_CHOICES = (
+    (PENDING, 'Pendente'),
+    (PROGRESS, 'Em Andamento'),
+    (DONE, 'Finalizado'),
+    (CANCEL, 'Cancelado'),
+)
+
+class Emergency(models.Model):
+    date_time = models.DateTimeField('Data/Hora', blank=False)
+    user = models.ForeignKey(User, verbose_name=u'Paciente', blank=False)
+    status = models.IntegerField("Status", choices=STATUS_CHOICES, default=PENDING)
+
+
 class Monitoring(models.Model):
     date_time = models.DateTimeField('Data/Hora', blank=False)
     heart_rate = models.IntegerField('Frequência Cardíaca', blank=False)
@@ -10,7 +27,6 @@ class Monitoring(models.Model):
     latitude = models.FloatField('Latitude', blank=True, null=True)
     longitude = models.FloatField('Longitude',blank=True, null=True)
     steps = models.IntegerField('Passos', blank=True, null=True)
-    emergency = models.IntegerField('Emergência', default=0)
 
     class Meta:
         verbose_name = "Monitoramento"

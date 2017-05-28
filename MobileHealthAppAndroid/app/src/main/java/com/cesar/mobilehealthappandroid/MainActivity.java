@@ -25,9 +25,13 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.cesar.mobilehealthappandroid.api.ClientRest;
+import com.cesar.mobilehealthappandroid.api.Emergency;
 import com.cesar.mobilehealthappandroid.api.Monitoring;
 import com.cesar.mobilehealthappandroid.api.ObtainGPS;
+import com.cesar.mobilehealthappandroid.api.RemoteServerRest;
+import com.cesar.mobilehealthappandroid.api.StatusEmergencyENUM;
 import com.cesar.mobilehealthappandroid.api.Utils;
 import com.cesar.mobilehealthappandroid.basicsyncadapter.EntryListActivity;
 import com.cesar.mobilehealthappandroid.pref.PrefsActivity;
@@ -39,6 +43,7 @@ import com.hookedonplay.decoviewlib.DecoView;
 import com.hookedonplay.decoviewlib.charts.DecoDrawEffect;
 import com.hookedonplay.decoviewlib.charts.SeriesItem;
 import com.hookedonplay.decoviewlib.events.DecoEvent;
+
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
@@ -62,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
     private int mSeriesIndexSteps;
     private ScheduledExecutorService scheduler;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,7 +78,6 @@ public class MainActivity extends AppCompatActivity {
         buttonEmergency.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sendMonitoring(Globals.getInstance().getHeart_rate(), 100);
                 if (Globals.getInstance().isEmergency()) {
                     Globals.getInstance().makeToast(getBaseContext(), "Para cancelar a solicitação de emergência, mantenha o botão pressionado até visualizar a mensagem de confirmação!", Toast.LENGTH_LONG);
                 } else {
@@ -86,16 +89,29 @@ public class MainActivity extends AppCompatActivity {
         buttonEmergency.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                sendMonitoring(Globals.getInstance().getHeart_rate(), 100);
-                changeEmegency();
-                updateButtonEmergency();
-                vibrate();
-                playSound();
-                if (Globals.getInstance().isEmergency()) {
-                    Globals.getInstance().makeToast(getBaseContext(), "Solicitação de emergência confirmada!", Toast.LENGTH_LONG);
+
+                if (Globals.getInstance().isConfiguredSsyncUser()) {
+                    sendMonitoring(Globals.getInstance().getHeart_rate());
+                    changeEmegency();
+                    updateButtonEmergency();
+                    vibrate();
+                    playSound();
+                    try {
+                        if (Globals.getInstance().isEmergency()) {
+                            RemoteServerRest.requestEmergency(new Emergency(StatusEmergencyENUM.PENDING.getId(), Globals.getInstance().getIdUser()));
+                            Globals.getInstance().makeToast(getBaseContext(), "Solicitação de emergência enviada!", Toast.LENGTH_LONG);
+                        } else {
+                            RemoteServerRest.cancelEmergency(Globals.getInstance().getIdUser());
+                            Globals.getInstance().makeToast(getBaseContext(), "Cancelamento da solicitação de emergência enviado!", Toast.LENGTH_LONG);
+                        }
+                    } catch (Exception e) {
+                        Log.d("LOG", e.getMessage(), e);
+                        Globals.getInstance().makeToast(getBaseContext(), "Falha de comunicação com o servidor:\n"+e.getMessage(), Toast.LENGTH_LONG);
+                    }
                 } else {
-                    Globals.getInstance().makeToast(getBaseContext(), "Cancelamento da solicitação de emergência confirmado!", Toast.LENGTH_LONG);
+                    Globals.getInstance().makeToast(getBaseContext(), Globals.getInstance().MessageUnconfiguredUserSync, Toast.LENGTH_LONG);
                 }
+
                 return true;
             }
         });
@@ -128,8 +144,8 @@ public class MainActivity extends AppCompatActivity {
         tvHeartRate = (TextView) findViewById(R.id.txtHeartRate);
         tvHeartRate.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if(Globals.getInstance().getHeartRateDateTime()!=null){
-                    Globals.getInstance().makeToast(getBaseContext(), "Ultima leitura: "+ new SimpleDateFormat("dd/MM HH:mm").format(Globals.getInstance().getHeartRateDateTime()), Toast.LENGTH_LONG);
+                if (Globals.getInstance().getHeartRateDateTime() != null) {
+                    Globals.getInstance().makeToast(getBaseContext(), "Ultima leitura: " + new SimpleDateFormat("dd/MM HH:mm").format(Globals.getInstance().getHeartRateDateTime()), Toast.LENGTH_LONG);
                 }
             }
         });
@@ -192,15 +208,15 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         if (heartRate > 0) {
-            sendMonitoring(heartRate, getButtonEmergency());
+            sendMonitoring(heartRate);
         } else {
             Globals.getInstance().makeToast(getBaseContext(), Globals.getInstance().MessageDoNotWearMiBand, Toast.LENGTH_LONG);
         }
     }
 
-    private void sendMonitoring(int heartRate, int emergency) {
+    private void sendMonitoring(int heartRate) {
         ObtainGPS gps = new ObtainGPS(getBaseContext());
-        new ClientRest().execute(new Monitoring(Globals.getInstance().getIdUser(), heartRate, gps.getLatitude(), gps.getLongitude(), getTotalSteps(), emergency));
+        new ClientRest().execute(new Monitoring(Globals.getInstance().getIdUser(), heartRate, gps.getLatitude(), gps.getLongitude(), getTotalSteps()));
     }
 
     private int getTotalSteps() {
@@ -301,13 +317,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void updateViewData(){
+    private void updateViewData() {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                ((TextView) findViewById(R.id.txtSteps)).setText(Globals.getInstance().getSteps()+" P");
-                ((TextView) findViewById(R.id.txtDistance)).setText(Globals.getInstance().getDistance()+ " M");
-                ((TextView) findViewById(R.id.txtCalories)).setText(Globals.getInstance().getCalories()+ " Kcal");
+                ((TextView) findViewById(R.id.txtSteps)).setText(Globals.getInstance().getSteps() + " P");
+                ((TextView) findViewById(R.id.txtDistance)).setText(Globals.getInstance().getDistance() + " M");
+                ((TextView) findViewById(R.id.txtCalories)).setText(Globals.getInstance().getCalories() + " Kcal");
 
                 mDecoView.addEvent(new DecoEvent.Builder(Globals.getInstance().getSteps())
                         .setIndex(mSeriesIndexSteps)
@@ -368,9 +384,6 @@ public class MainActivity extends AppCompatActivity {
         mediaPlayer.start();
     }
 
-    public int getButtonEmergency() {
-        return 0;
-    }
 
     private RealtimeListener realtimeListener = new RealtimeListener() {
         @Override
@@ -460,7 +473,7 @@ public class MainActivity extends AppCompatActivity {
     public void onDestroy() {
         super.onDestroy();
 
-        if(scheduler!=null){
+        if (scheduler != null) {
             scheduler.shutdown();
         }
 
