@@ -113,6 +113,11 @@ public class Globals {
     }
 
     @NonNull
+    public String getUrlDeleteMessage(long idMessage) {
+        return "http://mobilehealthweb.herokuapp.com/api/message/"+idMessage+"/";
+    }
+
+    @NonNull
     public String getUrlDownloadServer() {
         return "http://mobilehealthweb.herokuapp.com/api/message/?recipient__id="+ idUser+"&format=json";
     }

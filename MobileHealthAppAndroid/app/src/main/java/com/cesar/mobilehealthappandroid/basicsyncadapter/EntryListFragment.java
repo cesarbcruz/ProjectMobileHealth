@@ -19,29 +19,35 @@ package com.cesar.mobilehealthappandroid.basicsyncadapter;
 import android.accounts.Account;
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
+import android.content.ContentProviderOperation;
 import android.content.ContentResolver;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.OperationApplicationException;
 import android.content.SyncStatusObserver;
 import android.database.Cursor;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.RemoteException;
 import android.support.v4.app.ListFragment;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
 import android.support.v4.widget.SimpleCursorAdapter;
-import android.text.format.Time;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.cesar.mobilehealthappandroid.Globals;
 import com.cesar.mobilehealthappandroid.Message;
@@ -49,25 +55,25 @@ import com.cesar.mobilehealthappandroid.R;
 import com.cesar.mobilehealthappandroid.basicsyncadapter.provider.MessageContract;
 import com.cesar.mobilehealthappandroid.common.accounts.GenericAccountService;
 
-import java.io.InputStream;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 
 /**
  * List fragment containing a list of Atom entry objects (articles) stored in the local database.
- *
+ * <p>
  * <p>Database access is mediated by a content provider, specified in
  * {@link com.cesar.mobilehealthappandroid.basicsyncadapter.provider.FeedProvider}. This content
  * provider is
  * automatically populated by  {@link SyncService}.
- *
+ * <p>
  * <p>Selecting an item from the displayed list displays the article in the default browser.
- *
+ * <p>
  * <p>If the content provider doesn't return any data, then the first sync hasn't run yet. This sync
  * adapter assumes data exists in the provider once a sync has run. If your app doesn't work like
  * this, you should add a flag that notes if a sync has run, so you can differentiate between "no
  * available data" and "no initial sync", and display this in the UI.
- *
+ * <p>
  * <p>The ActionBar displays a "Refresh" button. When the user clicks "Refresh", the sync adapter
  * runs immediately. An indeterminate ProgressBar element is displayed, showing that the sync is
  * occurring.
@@ -85,7 +91,7 @@ public class EntryListFragment extends ListFragment
     /**
      * Handle to a SyncObserver. The ProgressBar element is visible until the SyncObserver reports
      * that the sync is complete.
-     *
+     * <p>
      * <p>This allows us to delete our SyncObserver once the application is no longer in the
      * foreground.
      */
@@ -113,13 +119,21 @@ public class EntryListFragment extends ListFragment
 
     // Column indexes. The index of a column in the Cursor is the same as its relative position in
     // the projection.
-    /** Column index for _ID */
+    /**
+     * Column index for _ID
+     */
     private static final int COLUMN_ID = 0;
-    /** Column index for title */
+    /**
+     * Column index for title
+     */
     private static final int COLUMN_TITLE = 1;
-    /** Column index for link */
+    /**
+     * Column index for link
+     */
     private static final int COLUMN_MSG = 2;
-    /** Column index for published */
+    /**
+     * Column index for published
+     */
     private static final int COLUMN_DATE = 3;
     private static final int COLUMN_ISSUER = 4;
     private static final int COLUMN_RECIPIENT = 5;
@@ -149,7 +163,8 @@ public class EntryListFragment extends ListFragment
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
      */
-    public EntryListFragment() {}
+    public EntryListFragment() {
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -159,7 +174,7 @@ public class EntryListFragment extends ListFragment
 
     /**
      * Create SyncAccount at launch, if needed.
-     *
+     * <p>
      * <p>This will create a new account with the system for our application, register our
      * {@link SyncService} with it, and establish a sync schedule.
      */
@@ -189,10 +204,10 @@ public class EntryListFragment extends ListFragment
                 if (i == COLUMN_DATE) {
                     ((TextView) view).setText(new SimpleDateFormat("dd/MM/yyyy HH:mm").format(new Timestamp(cursor.getLong(i))));
                     return true;
-                }else if (i == COLUMN_ISSUER_IMG) {
+                } else if (i == COLUMN_ISSUER_IMG) {
                     Bitmap bmp = Globals.getInstance().convertBlobToBitmap(cursor.getBlob(i));
-                    if(bmp!=null){
-                        ((ImageView) view ).setImageBitmap(bmp);
+                    if (bmp != null) {
+                        ((ImageView) view).setImageBitmap(bmp);
                     }
                     return true;
                 } else {
@@ -202,12 +217,13 @@ public class EntryListFragment extends ListFragment
             }
         });
         setListAdapter(mAdapter);
-        if(Globals.getInstance().isConfiguredSsyncUser()){
+        if (Globals.getInstance().isConfiguredSsyncUser()) {
             setEmptyText(getText(R.string.loading));
-        }else{
+        } else {
             setEmptyText(Globals.getInstance().MessageUnconfiguredUserSync);
         }
         getLoaderManager().initLoader(0, null, this);
+
     }
 
     @Override
@@ -232,7 +248,7 @@ public class EntryListFragment extends ListFragment
 
     /**
      * Query the content provider for data.
-     *
+     * <p>
      * <p>Loaders do queries in a background thread. They also provide a ContentObserver that is
      * triggered when data in the content provider changes. When the sync adapter updates the
      * content provider, the ContentObserver responds by resetting the loader and then reloading
@@ -292,8 +308,32 @@ public class EntryListFragment extends ListFragment
             case R.id.menu_previous:
                 getActivity().onBackPressed();
                 return true;
+            case R.id.menu_delete_all_msg:
+                deleteMessage(0);
+                return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void deleteMessage(long id) {
+        try {
+
+            ArrayList<ContentProviderOperation> batch = new ArrayList<ContentProviderOperation>();
+            if (id > 0) {
+                String[] args = new String[]{String.valueOf(id)};
+                batch.add(ContentProviderOperation.newDelete(MessageContract.Entry.CONTENT_URI).withSelection(MessageContract.Entry._ID + "=?", args).build());
+            } else {
+                batch.add(ContentProviderOperation.newDelete(MessageContract.Entry.CONTENT_URI).build());
+            }
+
+            getContext().getContentResolver().applyBatch(MessageContract.CONTENT_AUTHORITY, batch);
+            getContext().getContentResolver().notifyChange(
+                    MessageContract.Entry.CONTENT_URI,
+                    null,
+                    false);
+        } catch (Exception ex) {
+            Globals.getInstance().makeToast(getContext(), ex.getMessage(), Toast.LENGTH_LONG);
+        }
     }
 
     /**
@@ -393,5 +433,44 @@ public class EntryListFragment extends ListFragment
             });
         }
     };
+
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        // TODO Auto-generated method stub
+        super.onActivityCreated(savedInstanceState);
+
+        AdapterView.OnItemLongClickListener listener = new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> arg0, View arg1, int position, long id) {
+                final Cursor c = (Cursor) mAdapter.getItem(position);
+
+
+                AlertDialog confirm = new AlertDialog.Builder(getActivity())
+                        .setTitle(R.string.delete_question)
+                        .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                deleteMessage(c.getInt(COLUMN_ID));
+                            }
+                        })
+                        .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                            }
+                        })
+                        .create();
+
+                confirm.show();
+
+                return true;
+            }
+        };
+
+        getListView().setOnItemLongClickListener(listener);
+
+    }
+
 
 }

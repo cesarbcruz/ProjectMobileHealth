@@ -8,8 +8,10 @@
     <string name="heart_rate">0</string>
     <string name="loading">Aguarde, sincronizando...</string>
     <string name="description_refresh">Atualizar</string>
+    <string name="description_delete_all_msg">Excluir todas mensagens</string>
     <string name="description_previous">Voltar</string>
     <string name="exit_question">Tem certeza que deseja sair do monitoramento?</string>
+    <string name="delete_question">Tem certeza que deseja excluir a mensagem?</string>
     <string name="yes">Sim</string>
     <string name="no">Não</string>
     <string name="intro_text">Aponte a câmera para o Qrcode</string>

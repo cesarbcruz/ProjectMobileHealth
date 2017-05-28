@@ -165,6 +165,7 @@ class SyncAdapter extends AbstractThreadedSyncAdapter {
                 List<Message> messages = new Gson().fromJson(reader,listType);
                 if(messages!=null && !messages.isEmpty()){
                     updateMessageData(messages, syncResult);
+                    deleteMessage(messages);
                 }
             } finally {
                 if (stream != null) {
@@ -197,6 +198,24 @@ class SyncAdapter extends AbstractThreadedSyncAdapter {
             return;
         }
         Log.i(TAG, "Network synchronization complete");
+    }
+
+    private void deleteMessage(List<Message> messages) throws IOException {
+
+        for (Message msg: messages) {
+
+            URL url = new URL(Globals.getInstance().getUrlDeleteMessage(msg.getId()));
+
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setDoInput(true);
+            connection.setInstanceFollowRedirects(false);
+            connection.setRequestMethod("DELETE");
+            connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+            connection.setRequestProperty("charset", "utf-8");
+            connection.setUseCaches (false);
+            System.out.println("Response code DELETE MSG:  " + connection.getResponseCode());
+
+        }
     }
 
     /**

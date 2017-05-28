@@ -23,4 +23,7 @@ limitations under the License.
     <item android:id="@+id/menu_previous"
         android:title="@string/description_previous"
         android:orderInCategory="2" />
+    <item android:id="@+id/menu_delete_all_msg"
+        android:title="@string/description_delete_all_msg"
+        android:orderInCategory="3" />
 </menu>
