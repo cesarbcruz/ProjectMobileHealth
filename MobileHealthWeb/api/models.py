@@ -19,6 +19,9 @@ class Emergency(models.Model):
     user = models.ForeignKey(User, verbose_name=u'Paciente', blank=False)
     status = models.IntegerField("Status", choices=STATUS_CHOICES, default=PENDING)
 
+    class Meta:
+        verbose_name = "Emergência"
+        verbose_name_plural = "Emergências"
 
 class Monitoring(models.Model):
     date_time = models.DateTimeField('Data/Hora', blank=False)
@@ -68,6 +71,10 @@ class Message(models.Model):
     date_time = models.DateTimeField('Data/Hora', blank=False)
     subject = models.CharField('Assunto', max_length=1000)
     msg = models.TextField('Mensagem', blank=False)
+
+    class Meta:
+        verbose_name = "Mensagem"
+        verbose_name_plural = "Mensagens"
 
     def __str__(self):
         return '%s | %s | %s' % (self.issuer, self.recipient, self.subject )
