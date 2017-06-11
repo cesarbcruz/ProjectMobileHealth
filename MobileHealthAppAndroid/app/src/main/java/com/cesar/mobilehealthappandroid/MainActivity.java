@@ -1,18 +1,24 @@
 package com.cesar.mobilehealthappandroid;
 
+import android.Manifest;
 import android.bluetooth.BluetoothGattCharacteristic;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.media.MediaPlayer;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.Vibrator;
 import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -66,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
     private DecoView mDecoView;
     private int mSeriesIndexSteps;
     private ScheduledExecutorService scheduler;
+    private static final int REQUEST_CALL_PHONE = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,22 +98,29 @@ public class MainActivity extends AppCompatActivity {
             public boolean onLongClick(View v) {
 
                 if (Globals.getInstance().isConfiguredSsyncUser()) {
-                    sendMonitoring(Globals.getInstance().getHeart_rate());
-                    changeEmegency();
-                    updateButtonEmergency();
-                    vibrate();
-                    playSound();
+
                     try {
-                        if (Globals.getInstance().isEmergency()) {
-                            RemoteServerRest.requestEmergency(new Emergency(StatusEmergencyENUM.PENDING.getId(), Globals.getInstance().getIdUser()));
-                            Globals.getInstance().makeToast(getBaseContext(), "Solicitação de emergência enviada!", Toast.LENGTH_LONG);
+                        if (RemoteServerRest.isConnected(getApplicationContext())) {
+                            sendMonitoring(Globals.getInstance().getHeart_rate());
+                            changeEmegency();
+                            updateButtonEmergency();
+                            vibrate();
+                            playSound();
+                            if (Globals.getInstance().isEmergency()) {
+
+                                    RemoteServerRest.requestEmergency(new Emergency(StatusEmergencyENUM.PENDING.getId(), Globals.getInstance().getIdUser()));
+                                    Globals.getInstance().makeToast(getBaseContext(), "Solicitação de emergência enviada!", Toast.LENGTH_LONG);
+
+                            } else {
+                                RemoteServerRest.cancelEmergency(Globals.getInstance().getIdUser());
+                                Globals.getInstance().makeToast(getBaseContext(), "Cancelamento da solicitação de emergência enviado!", Toast.LENGTH_LONG);
+                            }
                         } else {
-                            RemoteServerRest.cancelEmergency(Globals.getInstance().getIdUser());
-                            Globals.getInstance().makeToast(getBaseContext(), "Cancelamento da solicitação de emergência enviado!", Toast.LENGTH_LONG);
+                            call_action_emergency();
                         }
                     } catch (Exception e) {
                         Log.d("LOG", e.getMessage(), e);
-                        Globals.getInstance().makeToast(getBaseContext(), "Falha de comunicação com o servidor:\n"+e.getMessage(), Toast.LENGTH_LONG);
+                        Globals.getInstance().makeToast(getBaseContext(), "Falha de comunicação com o servidor:\n" + e.getMessage(), Toast.LENGTH_LONG);
                     }
                 } else {
                     Globals.getInstance().makeToast(getBaseContext(), Globals.getInstance().MessageUnconfiguredUserSync, Toast.LENGTH_LONG);
@@ -157,6 +171,22 @@ public class MainActivity extends AppCompatActivity {
         updateUIState(tvHeartRate, String.valueOf(Globals.getInstance().getHeart_rate()));
         updateButtonEmergency();
         confLabel();
+    }
+
+    public void call_action_emergency() {
+
+        int checkPermission = ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE);
+        if (checkPermission != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(
+                    this,
+                    new String[]{Manifest.permission.CALL_PHONE},
+                    REQUEST_CALL_PHONE);
+        }
+
+        String phnum = "*8000";
+        Intent callIntent = new Intent(Intent.ACTION_CALL);
+        callIntent.setData(Uri.parse("tel:" + phnum));
+        startActivity(callIntent);
     }
 
     private void confLabel() {

@@ -1,5 +1,8 @@
 package com.cesar.mobilehealthappandroid.api;
 
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.util.Log;
 
 import com.cesar.mobilehealthappandroid.Globals;
@@ -100,6 +103,15 @@ public class RemoteServerRest {
 
             }
         }).start();
+    }
+
+
+    public final static boolean isConnected( Context context )
+    {
+        final ConnectivityManager connectivityManager =
+                (ConnectivityManager) context.getSystemService( Context.CONNECTIVITY_SERVICE );
+        final NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+        return networkInfo != null && networkInfo.isConnected();
     }
 
 }
