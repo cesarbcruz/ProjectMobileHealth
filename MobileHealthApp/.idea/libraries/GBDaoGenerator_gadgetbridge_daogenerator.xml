@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="GBDaoGenerator.gadgetbridge-daogenerator">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/GBDaoGenerator/build/libs/gadgetbridge-daogenerator.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
