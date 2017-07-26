@@ -1,8 +1,11 @@
 # coding=utf-8
+from accounts.models import User
 from api.models import Monitoring
 from django import forms
 from django.core.mail import send_mail
 from django.conf import settings
+
+
 
 
 class ContactForm(forms.Form):
@@ -22,16 +25,14 @@ class ContactForm(forms.Form):
         )
 
 class MonitoringForm(forms.Form):
-    date = forms.DateField(label='Data',widget=forms.widgets.DateInput(attrs={'type': 'date'}))
+    user = forms.ModelChoiceField(label='Paciente', queryset=User.objects.all())
+    date = forms.DateField(label='Data', widget=forms.widgets.DateInput(attrs={'type': 'date'}))
     autorefresh = forms.IntegerField(label='Atualizar resultado automaticamente (minuto)', initial=1, min_value=1, max_value=60)
 
-    def getPkUser(self, user):
-        return user.pk if user else 1;
+    def buscar(self):
+        return Monitoring.objects.filter(date_time__date=self.cleaned_data['date'], user_id=self.cleaned_data['user'].pk, heart_rate__gt=0)
 
-    def buscar(self, user):
-        return Monitoring.objects.filter(date_time__date=self.cleaned_data['date'], user_id=self.getPkUser(user), heart_rate__gt=0)
-
-    def dataSteps(self, user, max_steps):
+    def dataSteps(self, max_steps):
         steps = 0
         if max_steps and max_steps.steps:
             steps = max_steps.steps
@@ -47,6 +48,6 @@ class MonitoringForm(forms.Form):
             if sql:
                 sql += " union "
             sql += " SELECT 'Pendente' as label , " + str(steps_pending) + " as passos, 2 as id"
-        return self.buscar(user).raw(sql)
+        return self.buscar().raw(sql)
 
 

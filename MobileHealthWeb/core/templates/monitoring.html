@@ -11,7 +11,17 @@
         <h2>Monitoramento: {{ user }}</h2>
     {% else %}
 
-        <div class="well">Informe uma <strong>Data</strong> "exemplo 07/03/2017" e acione o comando para <strong>Buscar</strong> os dados demonstrativos!</div>
+        <div class="well">
+            <p><strong>
+                Exemplo:
+            </strong></p>
+            <p>
+                Selecione o <strong>Paciente:</strong> "{{ example.user }}" e informe a <strong>Data:</strong> "{{ example.date_time|date:"d/m/Y"  }}"
+            </p>
+            <p>
+                Depois acione o comando para <strong>Buscar</strong> os dados demonstrativos!
+            </p>
+        </div>
 
     {% endif %}
 

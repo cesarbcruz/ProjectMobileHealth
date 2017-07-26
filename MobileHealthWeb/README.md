@@ -2,21 +2,21 @@
 
 -Heroku Deploy-
 
-heroku login
-heroku create mobilehealthweb
+heroku login <br />
+heroku create mobilehealthweb <br />
 
-git init
-heroku git:remote -a nome-da-sua-app
-git add .
-git commit -am "Commit inicial"
-git push heroku master
+git init <br />
+heroku git:remote -a nome-da-sua-app <br />
+git add . <br />
+git commit -am "Commit inicial" <br />
+git push heroku master <br />
 
--Configure email-
-heroku config:set EMAIL_HOST_PASSWORD=<password email>
-#Solution ERROR 500 send email: https://accounts.google.com/DisplayUnlockCaptcha
+-Configure email- <br />
+heroku config:set EMAIL_HOST_PASSWORD=<password email> <br />
+#Solution ERROR 500 send email: https://accounts.google.com/DisplayUnlockCaptcha <br />
 
--Configure database-
-heroku run python manage.py migrate
+-Configure database- <br />
+heroku run python manage.py migrate <br />
 
--Configure user admin-
-heroku run python manage.py createsuperuser
+-Configure user admin- <br />
+heroku run python manage.py createsuperuser <br />

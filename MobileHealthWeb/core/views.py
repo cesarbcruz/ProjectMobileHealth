@@ -3,8 +3,8 @@ from api.models import Monitoring, Emergency, STATUS_CHOICES, DONE
 from chartit import *
 from django.shortcuts import render
 from django.contrib.auth import get_user_model
-from django.db.models import Min,Max,Avg
-from django.utils.timezone import localtime
+from django.db.models import Min, Max, Avg
+from django.utils.timezone import localtime, now
 from .forms import ContactForm, MonitoringForm
 from django.views.generic import TemplateView
 import traceback
@@ -45,9 +45,9 @@ def solucao(request):
     return render(request, 'solution.html')
 
 def monitoramento(request):
-    user = None
-    if request.user.is_authenticated():
-        user = request.user
+    example = None
+    if not request.user.is_authenticated():
+        example = Monitoring.objects.filter(heart_rate__gt=0, steps__gt=0, date_time__date__lte=now()).latest('date_time')
 
     monitorings = None
     min_monitoring = None
@@ -60,7 +60,7 @@ def monitoramento(request):
     form = MonitoringForm(request.POST or None)
     message = None
     if form.is_valid():
-        monitorings = form.buscar(user)
+        monitorings = form.buscar()
         if monitorings:
             min_monitoring = (monitorings.annotate(Min('heart_rate')).order_by('heart_rate')[0])
             max_monitoring = (monitorings.annotate(Max('heart_rate')).latest('heart_rate'))
@@ -68,9 +68,9 @@ def monitoramento(request):
             last_monitoring = (monitorings.annotate(Max('date_time')).latest('date_time'))
             max_steps = (monitorings.annotate(Max('steps')).latest('steps'))
             chart_heart_rate = build_chart(monitorings)
-            chart_steps = build_chart_steps(form.dataSteps(user, max_steps))
+            chart_steps = build_chart_steps(form.dataSteps(max_steps))
         else:
-            message = "Não foram encontrados dados para a data informada!"
+            message = "Não foram encontrados dados para o paciente e data informada!"
 
 
     context = {
@@ -83,6 +83,7 @@ def monitoramento(request):
         'max_steps' : max_steps,
         'charts' :  [chart_heart_rate, chart_steps],
         'message' : message,
+        'example' : example,
     }
     return render(request, 'monitoring.html', context)
 
