@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bd52a478-d50c-4871-960e-d921ea658290" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/templates/api/sendmessage.html" afterPath="$PROJECT_DIR$/api/templates/api/sendmessage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/forms.py" afterPath="$PROJECT_DIR$/core/forms.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/monitoring.html" afterPath="$PROJECT_DIR$/core/templates/monitoring.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/presentation.html" afterPath="$PROJECT_DIR$/core/templates/presentation.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/views.py" afterPath="$PROJECT_DIR$/core/views.py" />
     </list>
     <ignored path="MobileHealthWeb.iws" />
@@ -31,8 +27,8 @@
       <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="32" column="41" lean-forward="false" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="56" />
+            <state relative-caret-position="253">
+              <caret line="27" column="8" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="8" />
               <folding>
                 <element signature="e#15#47#0" expanded="true" />
               </folding>
@@ -43,8 +39,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="49" column="96" lean-forward="false" selection-start-line="49" selection-start-column="96" selection-end-line="49" selection-end-column="96" />
+            <state relative-caret-position="213">
+              <caret line="51" column="22" lean-forward="true" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
               <folding>
                 <element signature="e#15#81#0" expanded="true" />
               </folding>
@@ -55,8 +51,8 @@
       <file leaf-file-name="monitoring.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/templates/monitoring.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+            <state relative-caret-position="200">
+              <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -134,8 +130,8 @@
         <option value="$PROJECT_DIR$/api/models.py" />
         <option value="$PROJECT_DIR$/core/templates/presentation.html" />
         <option value="$PROJECT_DIR$/api/templates/api/sendmessage.html" />
-        <option value="$PROJECT_DIR$/core/forms.py" />
         <option value="$PROJECT_DIR$/core/templates/monitoring.html" />
+        <option value="$PROJECT_DIR$/core/forms.py" />
         <option value="$PROJECT_DIR$/core/views.py" />
       </list>
     </option>
@@ -820,16 +816,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/templates/monitoring.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+        <state relative-caret-position="200">
+          <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="32" column="41" lean-forward="false" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="56" />
+        <state relative-caret-position="253">
+          <caret line="27" column="8" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="8" />
           <folding>
             <element signature="e#15#47#0" expanded="true" />
           </folding>
@@ -838,8 +834,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="49" column="96" lean-forward="false" selection-start-line="49" selection-start-column="96" selection-end-line="49" selection-end-column="96" />
+        <state relative-caret-position="213">
+          <caret line="51" column="22" lean-forward="true" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
           <folding>
             <element signature="e#15#81#0" expanded="true" />
           </folding>

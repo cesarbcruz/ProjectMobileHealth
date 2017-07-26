@@ -57,7 +57,7 @@ def monitoramento(request):
     max_steps = None
     chart_heart_rate = None
     chart_steps = None
-    form = MonitoringForm(request.POST or None)
+    form = MonitoringForm(request.POST or None, initial={'user': request.user})
     message = None
     if form.is_valid():
         monitorings = form.buscar()
